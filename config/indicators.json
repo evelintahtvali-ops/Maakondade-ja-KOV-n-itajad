@@ -213,6 +213,21 @@
    "higher_is_better": false
   },
   {
+   "id": "diabeet2_n",
+   "group": "Haigestumus",
+   "name": "Naiste 2. tüüpi diabeedi esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "EH04",
+   "trend_years": 6,
+   "select": {
+    "diagnoos": "II tüüpi",
+    "sugu": "^naised$",
+    "vanuserühm": "^vanuserühmad kokku$"
+   },
+   "higher_is_better": false
+  },
+  {
    "id": "vahk",
    "group": "Haigestumus",
    "name": "Pahaloomuliste kasvajate esmashaigestumus",
@@ -223,6 +238,20 @@
    "select": {
     "paige": "^kõik paikmed \\(C00-C97\\)$",
     "sugu": "^mehed ja naised$"
+   },
+   "higher_is_better": false
+  },
+  {
+   "id": "vahk_n",
+   "group": "Haigestumus",
+   "name": "Naiste pahaloomuliste kasvajate esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "PK40",
+   "trend_years": 6,
+   "select": {
+    "paige": "^kõik paikmed \\(C00-C97\\)$",
+    "sugu": "^naised$"
    },
    "higher_is_better": false
   },
@@ -240,6 +269,19 @@
    "higher_is_better": false
   },
   {
+   "id": "vahk_kops_n",
+   "group": "Haigestumus",
+   "name": "Naiste hingamiselundite kasvajate esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "PK40",
+   "select": {
+    "paige": "^hingamis",
+    "sugu": "^naised$"
+   },
+   "higher_is_better": false
+  },
+  {
    "id": "vigastus_ravi",
    "group": "Haigestumus",
    "name": "Vigastuse tõttu ravi vajanud",
@@ -250,6 +292,21 @@
    "select": {
     "välispõhjus": "kokku",
     "sugu": "^mehed ja naised$",
+    "vanuserühm": "^vanuserühmad kokku$"
+   },
+   "higher_is_better": false
+  },
+  {
+   "id": "vigastus_ravi_n",
+   "group": "Haigestumus",
+   "name": "Vigastuse tõttu ravi vajanud naised",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "VIG14",
+   "trend_years": 6,
+   "select": {
+    "välispõhjus": "kokku",
+    "sugu": "^naised$",
     "vanuserühm": "^vanuserühmad kokku$"
    },
    "higher_is_better": false
