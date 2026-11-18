@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T16:41Z",
+ "generated": "2026-11-18T16:46Z",
  "indicators": [
   {
    "id": "rahvaarv",
@@ -1169,21 +1169,21 @@
    "table": "SD35",
    "eesti": 13.11,
    "values": {
-    "Harju maakond": 10.45,
-    "Järva maakond": 14.38,
-    "Valga maakond": 18.01,
-    "Pärnu maakond": 15.17,
-    "Jõgeva maakond": 20.51,
-    "Lääne maakond": 18.18,
-    "Hiiu maakond": 13.25,
-    "Tartu maakond": 13.04,
     "Viljandi maakond": 12.14,
-    "Ida-Viru maakond": 12.19,
-    "Võru maakond": 19.41,
-    "Põlva maakond": 21.89,
     "Saare maakond": 23.45,
+    "Jõgeva maakond": 20.51,
+    "Tartu maakond": 13.04,
+    "Lääne-Viru maakond": 24.21,
+    "Pärnu maakond": 15.17,
+    "Põlva maakond": 21.89,
+    "Ida-Viru maakond": 12.19,
+    "Hiiu maakond": 13.25,
+    "Harju maakond": 10.45,
     "Rapla maakond": 7.56,
-    "Lääne-Viru maakond": 24.21
+    "Võru maakond": 19.41,
+    "Lääne maakond": 18.18,
+    "Valga maakond": 18.01,
+    "Järva maakond": 14.38
    },
    "note": "standarditud kordaja, 3 aasta keskmine"
   },
