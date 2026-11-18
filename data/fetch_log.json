@@ -66,6 +66,165 @@
   "eesti": 1360745
  },
  {
+  "id": "vanus65",
+  "ok": true,
+  "url": "https://andmed.stat.ee/api/v1/et/stat/RV063U",
+  "title": "RV063U: ÜLALPEETAVATE MÄÄR PIIRKONNA/HALDUSÜKSUSE JÄRGI, 1. JAANUAR",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 10,
+    "sample": [
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024"
+    ]
+   },
+   {
+    "code": "Piirkond/Haldusüksus",
+    "text": "Piirkond/Haldusüksus",
+    "n": 101,
+    "sample": [
+     "Kogu Eesti",
+     "Põhja-Eesti",
+     "Kesk-Eesti",
+     "Kirde-Eesti",
+     "Lõuna-Eesti",
+     "Lääne-Eesti",
+     "HARJU MAAKOND",
+     "..Anija vald"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 5,
+    "sample": [
+     "Rahvaarv",
+     "Rahvastik vanuses 0-14",
+     "Rahvastik vanuses 15-64",
+     "Rahvastik vanuses 65 ja enam",
+     "Ülalpeetavate määr"
+    ]
+   }
+  ],
+  "year": "2026",
+  "n_areas": 93,
+  "eesti": 21.38
+ },
+ {
+  "id": "vanus0_14",
+  "ok": true,
+  "url": "https://andmed.stat.ee/api/v1/et/stat/RV063U",
+  "title": "RV063U: ÜLALPEETAVATE MÄÄR PIIRKONNA/HALDUSÜKSUSE JÄRGI, 1. JAANUAR",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 10,
+    "sample": [
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024"
+    ]
+   },
+   {
+    "code": "Piirkond/Haldusüksus",
+    "text": "Piirkond/Haldusüksus",
+    "n": 101,
+    "sample": [
+     "Kogu Eesti",
+     "Põhja-Eesti",
+     "Kesk-Eesti",
+     "Kirde-Eesti",
+     "Lõuna-Eesti",
+     "Lääne-Eesti",
+     "HARJU MAAKOND",
+     "..Anija vald"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 5,
+    "sample": [
+     "Rahvaarv",
+     "Rahvastik vanuses 0-14",
+     "Rahvastik vanuses 15-64",
+     "Rahvastik vanuses 65 ja enam",
+     "Ülalpeetavate määr"
+    ]
+   }
+  ],
+  "year": "2026",
+  "n_areas": 93,
+  "eesti": 15.08
+ },
+ {
+  "id": "ylalpeetavad",
+  "ok": true,
+  "url": "https://andmed.stat.ee/api/v1/et/stat/RV063U",
+  "title": "RV063U: ÜLALPEETAVATE MÄÄR PIIRKONNA/HALDUSÜKSUSE JÄRGI, 1. JAANUAR",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 10,
+    "sample": [
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024"
+    ]
+   },
+   {
+    "code": "Piirkond/Haldusüksus",
+    "text": "Piirkond/Haldusüksus",
+    "n": 101,
+    "sample": [
+     "Kogu Eesti",
+     "Põhja-Eesti",
+     "Kesk-Eesti",
+     "Kirde-Eesti",
+     "Lõuna-Eesti",
+     "Lääne-Eesti",
+     "HARJU MAAKOND",
+     "..Anija vald"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 5,
+    "sample": [
+     "Rahvaarv",
+     "Rahvastik vanuses 0-14",
+     "Rahvastik vanuses 15-64",
+     "Rahvastik vanuses 65 ja enam",
+     "Ülalpeetavate määr"
+    ]
+   }
+  ],
+  "year": "2026",
+  "n_areas": 93,
+  "eesti": 57.4
+ },
+ {
   "id": "eluiga_mehed",
   "ok": true,
   "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/05Eluiga/OE0452.px",
@@ -318,6 +477,719 @@
   "eesti": 60
  },
  {
+  "id": "sur_vereringe",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/04Surmad/SD23.px",
+  "title": "SD23: Standarditud suremuskordajad 100 000 elaniku kohta põhjuse, soo ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 21,
+    "sample": [
+     "2005",
+     "2006",
+     "2007",
+     "2008",
+     "2009",
+     "2010",
+     "2011",
+     "2012"
+    ]
+   },
+   {
+    "code": "Kordaja liik",
+    "text": "Kordaja liik",
+    "n": 2,
+    "sample": [
+     "Suremuse üldkordaja",
+     "Standarditud suremuskordaja"
+    ]
+   },
+   {
+    "code": "Surma põhjus",
+    "text": "Surma põhjus",
+    "n": 4,
+    "sample": [
+     "Kõik põhjused (A00-Y89)",
+     "Pahaloomulised kasvajad (C00-C97)",
+     "Vereringeelundite haigused (I00-I99)",
+     "Õnnetusjuhtumid, mürgistused ja traumad (V01-Y89)"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 16,
+    "sample": [
+     "Eesti kokku",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 484.66
+ },
+ {
+  "id": "sur_kasvajad",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/04Surmad/SD23.px",
+  "title": "SD23: Standarditud suremuskordajad 100 000 elaniku kohta põhjuse, soo ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 21,
+    "sample": [
+     "2005",
+     "2006",
+     "2007",
+     "2008",
+     "2009",
+     "2010",
+     "2011",
+     "2012"
+    ]
+   },
+   {
+    "code": "Kordaja liik",
+    "text": "Kordaja liik",
+    "n": 2,
+    "sample": [
+     "Suremuse üldkordaja",
+     "Standarditud suremuskordaja"
+    ]
+   },
+   {
+    "code": "Surma põhjus",
+    "text": "Surma põhjus",
+    "n": 4,
+    "sample": [
+     "Kõik põhjused (A00-Y89)",
+     "Pahaloomulised kasvajad (C00-C97)",
+     "Vereringeelundite haigused (I00-I99)",
+     "Õnnetusjuhtumid, mürgistused ja traumad (V01-Y89)"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 16,
+    "sample": [
+     "Eesti kokku",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 247.14
+ },
+ {
+  "id": "sur_vigastused",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/04Surmad/SD23.px",
+  "title": "SD23: Standarditud suremuskordajad 100 000 elaniku kohta põhjuse, soo ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 21,
+    "sample": [
+     "2005",
+     "2006",
+     "2007",
+     "2008",
+     "2009",
+     "2010",
+     "2011",
+     "2012"
+    ]
+   },
+   {
+    "code": "Kordaja liik",
+    "text": "Kordaja liik",
+    "n": 2,
+    "sample": [
+     "Suremuse üldkordaja",
+     "Standarditud suremuskordaja"
+    ]
+   },
+   {
+    "code": "Surma põhjus",
+    "text": "Surma põhjus",
+    "n": 4,
+    "sample": [
+     "Kõik põhjused (A00-Y89)",
+     "Pahaloomulised kasvajad (C00-C97)",
+     "Vereringeelundite haigused (I00-I99)",
+     "Õnnetusjuhtumid, mürgistused ja traumad (V01-Y89)"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 16,
+    "sample": [
+     "Eesti kokku",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 58.31
+ },
+ {
+  "id": "sur_alkohol",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/04Surmad/SD40.px",
+  "title": "SD40: Surmad alkoholi tarvitamisest põhjustatud haigustesse soo ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 18,
+    "sample": [
+     "2008",
+     "2009",
+     "2010",
+     "2011",
+     "2012",
+     "2013",
+     "2014",
+     "2015"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Surma põhjus",
+    "text": "Surma põhjus",
+    "n": 14,
+    "sample": [
+     "Alkoholi tarvitamisest põhjustatud haigused kokku",
+     "Suremuse üldkordaja 100 000 elaniku kohta alkoholist põhjustatud haigustesse",
+     "Standarditud suremuskordaja 100 000 elaniku kohta alkoholist põhjustatud haigustesse",
+     "Alkoholi tarvitamisest tingitud psüühika- ja käitumishäired (F10)",
+     "Närvisüsteemi alkoholdegeneratsioon (G31.2)",
+     "Alkoholpolüneuropaatia (G62.1)",
+     "Alkoholmüopaatia (G72.1)",
+     "Alkohoolne kardio(müo)paatia (I42.6)"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 19,
+    "sample": [
+     "Eesti kokku",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 16,
+  "eesti": 46.21
+ },
+ {
+  "id": "suitsiid",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/04Surmad/SD35.px",
+  "title": "SD35: Suitsiidid, standarditud suitsiidikordaja ja suitsiidide üldkordaja 100 000 elaniku kohta soo, maakonna, vanuserühma, haridustaseme või rahvuse järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 26,
+    "sample": [
+     "2000",
+     "2001",
+     "2002",
+     "2003",
+     "2004",
+     "2005",
+     "2006",
+     "2007"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Kategooria",
+    "text": "Kategooria",
+    "n": 28,
+    "sample": [
+     "Eesti kokku",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 3,
+    "sample": [
+     "Suitsiidide koguarv",
+     "Standarditud suitsiidikordaja 100 000 elaniku kohta",
+     "Suitsiidide üldkordaja 100 000 elaniku kohta"
+    ]
+   }
+  ],
+  "year": "2023–2025",
+  "n_areas": 15,
+  "eesti": 13.11
+ },
+ {
+  "id": "diabeet2",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/01Esmashaigestumus/EH04.px",
+  "title": "EH04: Diabeedi esmashaigestumus 100 000 elaniku kohta soo, vanuserühma ja elukoha järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 10,
+    "sample": [
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023"
+    ]
+   },
+   {
+    "code": "Diagnoos (RHK-10)",
+    "text": "Diagnoos (RHK-10)",
+    "n": 4,
+    "sample": [
+     "Diabeet e suhkurtõbi (E10-E14)",
+     "..Insuliinisõltuv (I tüüpi) suhkurtõbi (E10)",
+     "..Insuliinisõltumatu (II tüüpi) suhkurtõbi (E11)",
+     "..Muu suhkurtõbi (E12-E14)"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Elukoht",
+    "text": "Elukoht",
+    "n": 16,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   },
+   {
+    "code": "Vanuserühm",
+    "text": "Vanuserühm",
+    "n": 12,
+    "sample": [
+     "Vanuserühmad kokku",
+     "0-17",
+     "18 ja vanemad",
+     "0-14",
+     "15-24",
+     "25-34",
+     "35-44",
+     "45-54"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 464.3
+ },
+ {
+  "id": "vahk",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/04PahaloomulisedKasvajad/PK40.px",
+  "title": "PK40: Pahaloomuliste kasvajate haigestumuskordajad 100 000 elaniku kohta paikmegruppide / valitud paikmete, soo ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 25,
+    "sample": [
+     "2000",
+     "2001",
+     "2002",
+     "2003",
+     "2004",
+     "2005",
+     "2006",
+     "2007"
+    ]
+   },
+   {
+    "code": "Paige/paikmegrupp",
+    "text": "Paige/paikmegrupp",
+    "n": 29,
+    "sample": [
+     "Kõik paikmed (C00-C97)",
+     "Kõik paikmed v.a nahk (muu) (C00-C97 v.a C44)",
+     "Huul, suuõõs, neel (C00-C14)",
+     "Seedeelundid (C15-C26)",
+     "..Söögitoru (C15)",
+     "..Magu (C16)",
+     "..Käärsool (C18)",
+     "..Pärasool jm (C19-C21)"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 18,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   }
+  ],
+  "year": "2024",
+  "n_areas": 16,
+  "eesti": 723.3
+ },
+ {
+  "id": "vahk_kops_m",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/04PahaloomulisedKasvajad/PK40.px",
+  "title": "PK40: Pahaloomuliste kasvajate haigestumuskordajad 100 000 elaniku kohta paikmegruppide / valitud paikmete, soo ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 25,
+    "sample": [
+     "2000",
+     "2001",
+     "2002",
+     "2003",
+     "2004",
+     "2005",
+     "2006",
+     "2007"
+    ]
+   },
+   {
+    "code": "Paige/paikmegrupp",
+    "text": "Paige/paikmegrupp",
+    "n": 29,
+    "sample": [
+     "Kõik paikmed (C00-C97)",
+     "Kõik paikmed v.a nahk (muu) (C00-C97 v.a C44)",
+     "Huul, suuõõs, neel (C00-C14)",
+     "Seedeelundid (C15-C26)",
+     "..Söögitoru (C15)",
+     "..Magu (C16)",
+     "..Käärsool (C18)",
+     "..Pärasool jm (C19-C21)"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 18,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   }
+  ],
+  "year": "2024",
+  "n_areas": 16,
+  "eesti": 97.6
+ },
+ {
+  "id": "vigastus_ravi",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/09Vigastused/VIG14.px",
+  "title": "VIG14: Vigastuse tõttu ravi vajanud isikud 100 000 elaniku kohta välispõhjuse, soo, vanuserühma ja elukoha järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 10,
+    "sample": [
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023"
+    ]
+   },
+   {
+    "code": "Elukoht",
+    "text": "Elukoht",
+    "n": 16,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Välispõhjus (RHK-10)",
+    "text": "Välispõhjus (RHK-10)",
+    "n": 14,
+    "sample": [
+     "Vigastuste välispõhjused kokku (V01-Y34 või põhjus teadmata)",
+     "Õnnetusjuhtumid (V01-X59)",
+     "..Sõidukiõnnetused (V01-V99)",
+     "..Muud juhuvigastuse põhjused (W00-X59)",
+     "....Kukkumine (W00-W19)",
+     "....Eluta mehhaanilise jõu toime (W20-W49)",
+     "....Elusolendi mehhaanilise jõu toime (W50-W64)",
+     "....Suitsu, tule ja leekide toime (X00-X09)"
+    ]
+   },
+   {
+    "code": "Vanuserühm",
+    "text": "Vanuserühm",
+    "n": 13,
+    "sample": [
+     "Vanuserühmad kokku",
+     "0-17",
+     "18 ja vanemad",
+     "0-4",
+     "5-14",
+     "15-24",
+     "25-34",
+     "35-44"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 82.2
+ },
+ {
+  "id": "ylekaal_1kl",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/05Uuringud/10COSI/COSI02.px",
+  "title": "COSI02: 1., 4. ja 7. klassi laste kehamassiindeksi kategooriad erinevate meetodite, soo ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Uuringu aasta",
+    "text": "Uuringu aasta",
+    "n": 3,
+    "sample": [
+     "2015/2016",
+     "2018/2019",
+     "2021/2022"
+    ]
+   },
+   {
+    "code": "Klass",
+    "text": "Klass",
+    "n": 3,
+    "sample": [
+     "1. klass",
+     "4. klass",
+     "7. klass"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Poisid ja tüdrukud",
+     "Poisid",
+     "Tüdrukud"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 18,
+    "sample": [
+     "Eesti kokku",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   },
+   {
+    "code": "Meetod",
+    "text": "Meetod",
+    "n": 2,
+    "sample": [
+     "WHO",
+     "IOTF"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 2,
+    "sample": [
+     "arv",
+     "protsent"
+    ]
+   },
+   {
+    "code": "Kehamassiindeksi kategooria",
+    "text": "Kehamassiindeksi kategooria",
+    "n": 2,
+    "sample": [
+     "Normaalkaal",
+     "Ülemäärane kehakaal"
+    ]
+   }
+  ],
+  "year": "2021/2022",
+  "n_areas": 16,
+  "eesti": 28.1
+ },
+ {
   "id": "soel_rind",
   "ok": true,
   "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/07Soeluuringud/VSR03.px",
@@ -481,5 +1353,649 @@
   "year": "2025",
   "n_areas": 16,
   "eesti": 60.4
+ },
+ {
+  "id": "vakts_mmr",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/02Nakkushaigused/NH11.px",
+  "title": "NH11: 2-aastaste laste immuniseerimisega hõlmatus haiguse ja maakonna järgi (%)",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 24,
+    "sample": [
+     "2002",
+     "2003",
+     "2004",
+     "2005",
+     "2006",
+     "2007",
+     "2008",
+     "2009"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 19,
+    "sample": [
+     "Eesti kokku",
+     "Harju maakond*",
+     "Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond*",
+     "Narva linn",
+     "Jõgeva maakond",
+     "Järva maakond"
+    ]
+   },
+   {
+    "code": "Haigus",
+    "text": "Haigus",
+    "n": 6,
+    "sample": [
+     "Difteeria ja teetanus",
+     "Läkaköha",
+     "Poliomüeliit",
+     "Leetrid, mumps, punetised",
+     "B-hepatiit",
+     "Haemophilus influenzae tüüp B (Hib)"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 17,
+  "eesti": 82.8
+ },
+ {
+  "id": "vakts_dtap",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/02Nakkushaigused/NH11.px",
+  "title": "NH11: 2-aastaste laste immuniseerimisega hõlmatus haiguse ja maakonna järgi (%)",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 24,
+    "sample": [
+     "2002",
+     "2003",
+     "2004",
+     "2005",
+     "2006",
+     "2007",
+     "2008",
+     "2009"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 19,
+    "sample": [
+     "Eesti kokku",
+     "Harju maakond*",
+     "Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond*",
+     "Narva linn",
+     "Jõgeva maakond",
+     "Järva maakond"
+    ]
+   },
+   {
+    "code": "Haigus",
+    "text": "Haigus",
+    "n": 6,
+    "sample": [
+     "Difteeria ja teetanus",
+     "Läkaköha",
+     "Poliomüeliit",
+     "Leetrid, mumps, punetised",
+     "B-hepatiit",
+     "Haemophilus influenzae tüüp B (Hib)"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 17,
+  "eesti": 82.3
+ },
+ {
+  "id": "vt_uimasti",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/07Terviseprofiilid/02MKKOV/PO03.px",
+  "title": "PO03: Väärteod (avaliku korra, alkoholiseaduse, alaealiste uimastite ja joobes juhtimise rikkumised) ja kordaja 100 000 elaniku kohta haldusüksuse järgi, haldusjaotus seisuga 01.01.2018",
+  "variables": [
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 2,
+    "sample": [
+     "Arv",
+     "Kordaja 100 000 elaniku kohta"
+    ]
+   },
+   {
+    "code": "Haldusüksus",
+    "text": "Haldusüksus",
+    "n": 101,
+    "sample": [
+     "EESTI KOKKU",
+     "Harju maakond",
+     "..Anija vald",
+     "..Harku vald",
+     "..Jõelähtme vald",
+     "..Keila linn",
+     "..Kiili vald",
+     "..Kose vald"
+    ]
+   },
+   {
+    "code": "Väärteo liik",
+    "text": "Väärteo liik",
+    "n": 4,
+    "sample": [
+     "Avaliku korra rikkumised (KarS § 262)",
+     "Alkoholiseaduse rikkumised",
+     "Alaealiste uimastiväärteod (alkoholi- ja tubakaseaduse rikkumine, narkoväärtegu (NPALS))",
+     "Joobes juhtimised (liiklusseadus § 224)"
+    ]
+   },
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 9,
+    "sample": [
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 98,
+  "eesti": 109.9
+ },
+ {
+  "id": "vt_avalik",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/07Terviseprofiilid/02MKKOV/PO03.px",
+  "title": "PO03: Väärteod (avaliku korra, alkoholiseaduse, alaealiste uimastite ja joobes juhtimise rikkumised) ja kordaja 100 000 elaniku kohta haldusüksuse järgi, haldusjaotus seisuga 01.01.2018",
+  "variables": [
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 2,
+    "sample": [
+     "Arv",
+     "Kordaja 100 000 elaniku kohta"
+    ]
+   },
+   {
+    "code": "Haldusüksus",
+    "text": "Haldusüksus",
+    "n": 101,
+    "sample": [
+     "EESTI KOKKU",
+     "Harju maakond",
+     "..Anija vald",
+     "..Harku vald",
+     "..Jõelähtme vald",
+     "..Keila linn",
+     "..Kiili vald",
+     "..Kose vald"
+    ]
+   },
+   {
+    "code": "Väärteo liik",
+    "text": "Väärteo liik",
+    "n": 4,
+    "sample": [
+     "Avaliku korra rikkumised (KarS § 262)",
+     "Alkoholiseaduse rikkumised",
+     "Alaealiste uimastiväärteod (alkoholi- ja tubakaseaduse rikkumine, narkoväärtegu (NPALS))",
+     "Joobes juhtimised (liiklusseadus § 224)"
+    ]
+   },
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 9,
+    "sample": [
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 98,
+  "eesti": 47.5
+ },
+ {
+  "id": "vt_alkoseadus",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/07Terviseprofiilid/02MKKOV/PO03.px",
+  "title": "PO03: Väärteod (avaliku korra, alkoholiseaduse, alaealiste uimastite ja joobes juhtimise rikkumised) ja kordaja 100 000 elaniku kohta haldusüksuse järgi, haldusjaotus seisuga 01.01.2018",
+  "variables": [
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 2,
+    "sample": [
+     "Arv",
+     "Kordaja 100 000 elaniku kohta"
+    ]
+   },
+   {
+    "code": "Haldusüksus",
+    "text": "Haldusüksus",
+    "n": 101,
+    "sample": [
+     "EESTI KOKKU",
+     "Harju maakond",
+     "..Anija vald",
+     "..Harku vald",
+     "..Jõelähtme vald",
+     "..Keila linn",
+     "..Kiili vald",
+     "..Kose vald"
+    ]
+   },
+   {
+    "code": "Väärteo liik",
+    "text": "Väärteo liik",
+    "n": 4,
+    "sample": [
+     "Avaliku korra rikkumised (KarS § 262)",
+     "Alkoholiseaduse rikkumised",
+     "Alaealiste uimastiväärteod (alkoholi- ja tubakaseaduse rikkumine, narkoväärtegu (NPALS))",
+     "Joobes juhtimised (liiklusseadus § 224)"
+    ]
+   },
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 9,
+    "sample": [
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 98,
+  "eesti": 93.2
+ },
+ {
+  "id": "joobes_juhid",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/07Terviseprofiilid/02MKKOV/PO02.px",
+  "title": "PO02: Politsei tabatud joobes mootorsõidukijuhid (isikud) ja kordaja 100 000 elaniku kohta haldusüksuse järgi, haldusjaotus seisuga 01.01.2018",
+  "variables": [
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 2,
+    "sample": [
+     "Arv",
+     "Kordaja 100 000 elaniku kohta"
+    ]
+   },
+   {
+    "code": "Haldusüksus",
+    "text": "Haldusüksus",
+    "n": 101,
+    "sample": [
+     "EESTI KOKKU",
+     "Harju maakond",
+     "..Anija vald",
+     "..Harku vald",
+     "..Jõelähtme vald",
+     "..Keila linn",
+     "..Kiili vald",
+     "..Kose vald"
+    ]
+   },
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 9,
+    "sample": [
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 98,
+  "eesti": 393.8
+ },
+ {
+  "id": "palk",
+  "ok": true,
+  "url": "https://andmed.stat.ee/api/v1/et/stat/PA117",
+  "title": "PA117: KESKMINE BRUTOKUUPALK, MEDIAAN JA TÖÖTAJATE ARV HALDUSÜKSUSE JÄRGI (KVARTALID)",
+  "variables": [
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 4,
+    "sample": [
+     "Keskmine brutokuupalk, eurot",
+     "Töötajate arv",
+     "Brutokuupalga mediaan (V detsiil), eurot",
+     "Keskmise brutokuupalga muutus võrreldes eelmise aasta sama perioodiga, %"
+    ]
+   },
+   {
+    "code": "Haldusüksus",
+    "text": "Haldusüksus",
+    "n": 102,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "Anija vald",
+     "Harku vald",
+     "Jõelähtme vald",
+     "Keila linn",
+     "Kiili vald",
+     "Kose vald"
+    ]
+   },
+   {
+    "code": "Vaatlusperiood",
+    "text": "Vaatlusperiood",
+    "n": 22,
+    "sample": [
+     "2021 I kvartal",
+     "2021 II kvartal",
+     "2021 III kvartal",
+     "2021 IV kvartal",
+     "2022 I kvartal",
+     "2022 II kvartal",
+     "2022 III kvartal",
+     "2022 IV kvartal"
+    ]
+   }
+  ],
+  "year": "2026 II kvartal",
+  "n_areas": 93,
+  "eesti": 2243
+ },
+ {
+  "id": "palk_mediaan",
+  "ok": true,
+  "url": "https://andmed.stat.ee/api/v1/et/stat/PA117",
+  "title": "PA117: KESKMINE BRUTOKUUPALK, MEDIAAN JA TÖÖTAJATE ARV HALDUSÜKSUSE JÄRGI (KVARTALID)",
+  "variables": [
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 4,
+    "sample": [
+     "Keskmine brutokuupalk, eurot",
+     "Töötajate arv",
+     "Brutokuupalga mediaan (V detsiil), eurot",
+     "Keskmise brutokuupalga muutus võrreldes eelmise aasta sama perioodiga, %"
+    ]
+   },
+   {
+    "code": "Haldusüksus",
+    "text": "Haldusüksus",
+    "n": 102,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "Anija vald",
+     "Harku vald",
+     "Jõelähtme vald",
+     "Keila linn",
+     "Kiili vald",
+     "Kose vald"
+    ]
+   },
+   {
+    "code": "Vaatlusperiood",
+    "text": "Vaatlusperiood",
+    "n": 22,
+    "sample": [
+     "2021 I kvartal",
+     "2021 II kvartal",
+     "2021 III kvartal",
+     "2021 IV kvartal",
+     "2022 I kvartal",
+     "2022 II kvartal",
+     "2022 III kvartal",
+     "2022 IV kvartal"
+    ]
+   }
+  ],
+  "year": "2026 II kvartal",
+  "n_areas": 93,
+  "eesti": 1840
+ },
+ {
+  "id": "pension",
+  "ok": true,
+  "url": "https://andmed.stat.ee/api/v1/et/stat/SK154",
+  "title": "SK154: KESKMINE PENSION KUUS MAAKONNA JÄRGI, 1. JAANUAR",
+  "variables": [
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 18,
+    "sample": [
+     "Kogu Eesti",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   },
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 22,
+    "sample": [
+     "2005",
+     "2006",
+     "2007",
+     "2008",
+     "2009",
+     "2010",
+     "2011",
+     "2012"
+    ]
+   }
+  ],
+  "year": "2026",
+  "n_areas": 16,
+  "eesti": 814.54
+ },
+ {
+  "id": "vaesus",
+  "ok": true,
+  "url": "https://andmed.stat.ee/api/v1/et/stat/LES20",
+  "title": "LES20: VAESUSE JA ILMAJÄETUSE MÄÄR ELUKOHA JÄRGI",
+  "variables": [
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 5,
+    "sample": [
+     "Suhtelise vaesuse määr, %",
+     "Absoluutse vaesuse määr, %",
+     "Materiaalse ilmajäetuse määr, %",
+     "Sügava materiaalse ilmajäetuse määr, %",
+     "Ilmajäetuse määr, %"
+    ]
+   },
+   {
+    "code": "Elukoht",
+    "text": "Elukoht",
+    "n": 27,
+    "sample": [
+     "Eesti",
+     "Linnaline asula",
+     "Maa-asula",
+     "Linnaline või väikelinnaline asustuspiirkond",
+     "Maaline asustuspiirkond",
+     "Põhja-Eesti",
+     "Kesk-Eesti",
+     "Kirde-Eesti"
+    ]
+   },
+   {
+    "code": "Vaatlusperiood",
+    "text": "Vaatlusperiood",
+    "n": 29,
+    "sample": [
+     "1997",
+     "1998",
+     "1999",
+     "2000",
+     "2001",
+     "2002",
+     "2003",
+     "2004"
+    ]
+   }
+  ],
+  "year": "2024",
+  "n_areas": 17,
+  "eesti": 19.5
+ },
+ {
+  "id": "toimetulek",
+  "ok": true,
+  "url": "https://andmed.stat.ee/api/v1/et/stat/SK410",
+  "title": "SK410: TOIMETULEKUTOETUSED PIIRKONNA/HALDUSÜKSUSE JÄRGI",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 13,
+    "sample": [
+     "2013",
+     "2014",
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020"
+    ]
+   },
+   {
+    "code": "Piirkond/Haldusüksus",
+    "text": "Piirkond/Haldusüksus",
+    "n": 100,
+    "sample": [
+     "Kogu Eesti",
+     "Põhja-Eesti",
+     "Kesk-Eesti",
+     "Kirde-Eesti",
+     "Lääne-Eesti",
+     "Lõuna-Eesti",
+     "Harju maakond",
+     "..Anija vald"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 7,
+    "sample": [
+     "Toetus toimetulekupiiri tagamiseks, eurot",
+     "Rahuldatud taotluste arv toimetulekupiiri tagamiseks",
+     "Toetus toimetulekupiiri tagamiseks rahuldatud taotluse kohta, eurot",
+     "Toetus toimetulekupiiri tagamiseks elaniku kohta, eurot",
+     "Rahuldatud taotluste arv toimetulekupiiri tagamiseks 1000 elaniku kohta",
+     "Rahuldatud taotluste arv toimetulekutoetusest eluasemekulude kompenseerimiseks",
+     "Toimetulekutoetus normpinna kulude katteks, eurot"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 93,
+  "eesti": 59
+ },
+ {
+  "id": "puue",
+  "ok": true,
+  "url": "https://andmed.stat.ee/api/v1/et/stat/THV21",
+  "title": "THV21: PUUDEGA INIMESED MAAKONNA JÄRGI, 1. JAANUAR",
+  "variables": [
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 18,
+    "sample": [
+     "Kogu Eesti",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   },
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 23,
+    "sample": [
+     "2004",
+     "2005",
+     "2006",
+     "2007",
+     "2008",
+     "2009",
+     "2010",
+     "2011"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 2,
+    "sample": [
+     "Puudega inimeste arv",
+     "Puudega inimeste osatähtsus, %"
+    ]
+   }
+  ],
+  "year": "2026",
+  "n_areas": 16,
+  "eesti": 7.4
  }
 ]
