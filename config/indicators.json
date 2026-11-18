@@ -411,6 +411,34 @@
    "higher_is_better": true
   },
   {
+   "id": "gripp60_hooaeg",
+   "group": "Vaktsineerimine",
+   "name": "60+ gripivaktsineerimise hõlmatus (viimane lõppenud hooaeg)",
+   "unit": "%",
+   "source": "tehik_flu",
+   "season": "previous",
+   "ages": [
+    "60-79",
+    "80+"
+   ],
+   "higher_is_better": true,
+   "note": "TEHIK avaandmed; võrdlus eelmise hooajaga"
+  },
+  {
+   "id": "gripp60_jooksev",
+   "group": "Vaktsineerimine",
+   "name": "60+ gripivaktsineerimise hõlmatus (käimasolev hooaeg)",
+   "unit": "%",
+   "source": "tehik_flu",
+   "season": "current",
+   "ages": [
+    "60-79",
+    "80+"
+   ],
+   "higher_is_better": true,
+   "note": "TEHIK avaandmed; hooaeg on pooleli"
+  },
+  {
    "id": "vt_uimasti",
    "group": "Turvalisus",
    "name": "Alaealiste uimastiväärteod",

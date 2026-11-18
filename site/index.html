@@ -88,7 +88,7 @@
     <textarea id="memo"></textarea>
     <div class="note">Tekst on kopeeritud lõikelauale. Kontrolli enne memosse panemist üle.</div>
   </div>
-  <p class="note">Värvid: <span class="g">&nbsp;roheline&nbsp;</span> Eesti keskmisest parem, <span class="a">&nbsp;kollane&nbsp;</span> keskmise lähedal (±1,5%), <span class="r">&nbsp;punane&nbsp;</span> keskmisest halvem. Koht 1 = parim; kui näitajal pole head/halba suunda, on järjestus suuremast väiksemani. Andmed uuenevad automaatselt kord nädalas (Statistikaamet, Tervise Arengu Instituut).</p>
+  <p class="note">Värvid: <span class="g">&nbsp;roheline&nbsp;</span> Eesti keskmisest parem, <span class="a">&nbsp;kollane&nbsp;</span> keskmise lähedal (±1,5%), <span class="r">&nbsp;punane&nbsp;</span> keskmisest halvem. Koht 1 = parim; kui näitajal pole head/halba suunda, on järjestus suuremast väiksemani. Andmed uuenevad automaatselt kord nädalas (Statistikaamet, Tervise Arengu Instituut, TEHIK).</p>
 </main>
 <script>
 const S = {data:null, area:'Rapla maakond', tab:'profile', ind:null, filter:'kov'};
@@ -224,7 +224,7 @@ function renderCmp(){
     const diff = ind.eesti!=null ? (ind.unit==='%' ? `${v-ind.eesti>0?'+':''}${(v-ind.eesti).toLocaleString('et-EE',{maximumFractionDigits:1})} pp` : `${v>=ind.eesti?'+':''}${((v/ind.eesti-1)*100).toLocaleString('et-EE',{maximumFractionDigits:1})}%`) : '';
     h += `<tr class="${name===sel?'sel':''} ${isMk?'mk':''}" data-a="${esc(name)}"><td>${k}.</td><td>${esc(name)}${mode==='all'?`<span class="tag ${isMk?'mk':''}">${isMk?'maakond':'KOV'}</span>`:''}</td><td class="small">${isMk?'':esc(county(name))}</td><td class="num">${fmt(v,ind.unit)}</td><td class="num ${st==='n'?'':st}">${diff}</td><td class="small">${changeTxt(ind,name,true)}</td><td class="barcell"><div class="bar ${st==='n'?'':st}" style="width:${Math.max(1,Math.abs(v)/max*100)}%"></div></td></tr>`;
   }
-  h += `</table><p class="note">${ind.note?esc(ind.note)+' │ ':''}Ühik: ${esc(ind.unit||'—')} │ Allikas: <a href="${ind.source_url}" target="_blank">${ind.source==='tai'?'Tervise Arengu Instituut':'Statistikaamet'}, ${esc(ind.table||'')}</a> │ Klõpsa real, et see piirkond valida.</p>`;
+  h += `</table><p class="note">${ind.note?esc(ind.note)+' │ ':''}Ühik: ${esc(ind.unit||'—')} │ Allikas: <a href="${ind.source_url}" target="_blank">${({tai:'Tervise Arengu Instituut',stat:'Statistikaamet',tehik:'TEHIK'})[ind.source]||ind.source}, ${esc(ind.table||'')}</a> │ Klõpsa real, et see piirkond valida.</p>`;
   c.innerHTML = h;
   c.querySelectorAll('tr[data-a]').forEach(tr=>tr.onclick=()=>{S.area=tr.dataset.a;document.getElementById('area').value=S.area;render();});
   const selRow = c.querySelector('tr.sel'); if (selRow && S.scroll){ selRow.scrollIntoView({block:'center'}); S.scroll=false; }

@@ -10,6 +10,7 @@ import traceback
 HERE = os.path.dirname(__file__)
 sys.path.insert(0, HERE)
 import pxweb  # noqa: E402
+import tehik  # noqa: E402
 
 ROOT = os.path.join(HERE, "..")
 CONFIG = os.path.join(ROOT, "config", "indicators.json")
@@ -107,6 +108,30 @@ def main():
     for ind in cfg["indicators"]:
         entry = {"id": ind["id"], "ok": False}
         try:
+            if ind["source"] == "tehik_flu":
+                res = tehik.flu_coverage(ind.get("age_filter", "AgeGroup2"), tuple(ind.get("ages", ["60-79", "80+"])))
+                seasons = sorted(res)
+                entry["seasons"] = {k: {"date": v["date"], "eesti": v["eesti"], "n": len(v["values"]), "sample": dict(list(v["values"].items())[:3])} for k, v in res.items()}
+                idx = -1 if ind.get("season", "current") == "current" else -2
+                season = seasons[idx]
+                cur = res[season]
+                values = {clean(k): v for k, v in cur["values"].items() if level_of(k) == "maakond"}
+                if not values:
+                    raise RuntimeError(f"Maakondi ei leitud: {list(cur['values'])[:5]}")
+                base = {k: ind[k] for k in ("id", "group", "name", "unit", "higher_is_better")}
+                rec = {**base, "year": f"{season}" + (f" seis {cur['date']}" if idx == -1 else ""), "source": "tehik",
+                       "source_url": "https://teabekeskus.tehik.ee/et/avaandmed/gripp/", "table": "TEHIK avaandmed", "eesti": cur["eesti"], "values": values}
+                if ind.get("note"):
+                    rec["note"] = ind["note"]
+                if idx == -2 and len(seasons) >= 3:
+                    ps = seasons[idx - 1]
+                    pv = res[ps]
+                    rec["prev"] = {"year": ps, "eesti": pv["eesti"], "values": {clean(k): v for k, v in pv["values"].items() if clean(k) in values}}
+                out["indicators"].append(rec)
+                entry.update(ok=True, year=rec["year"], n_areas=len(values), eesti=cur["eesti"])
+                print(f"OK  {ind['id']}: {rec['year']}, {len(values)} maakonda, Eesti={cur['eesti']}")
+                log.append(entry)
+                continue
             url = resolve_table(ind, catalog)
             entry["url"] = url
             sel = dict(ind.get("select") or {})
