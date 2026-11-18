@@ -894,6 +894,83 @@
   "eesti": 464.3
  },
  {
+  "id": "diabeet2_m",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/01Esmashaigestumus/EH04.px",
+  "title": "EH04: Diabeedi esmashaigestumus 100 000 elaniku kohta soo, vanuserühma ja elukoha järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 10,
+    "sample": [
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023"
+    ]
+   },
+   {
+    "code": "Diagnoos (RHK-10)",
+    "text": "Diagnoos (RHK-10)",
+    "n": 4,
+    "sample": [
+     "Diabeet e suhkurtõbi (E10-E14)",
+     "..Insuliinisõltuv (I tüüpi) suhkurtõbi (E10)",
+     "..Insuliinisõltumatu (II tüüpi) suhkurtõbi (E11)",
+     "..Muu suhkurtõbi (E12-E14)"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Elukoht",
+    "text": "Elukoht",
+    "n": 16,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   },
+   {
+    "code": "Vanuserühm",
+    "text": "Vanuserühm",
+    "n": 12,
+    "sample": [
+     "Vanuserühmad kokku",
+     "0-17",
+     "18 ja vanemad",
+     "0-14",
+     "15-24",
+     "25-34",
+     "35-44",
+     "45-54"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 490.1
+ },
+ {
   "id": "diabeet2_n",
   "ok": true,
   "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/01Esmashaigestumus/EH04.px",

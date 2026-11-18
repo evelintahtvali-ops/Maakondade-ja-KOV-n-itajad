@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T16:53Z",
+ "generated": "2026-11-18T17:24Z",
  "indicators": [
   {
    "id": "rahvaarv",
@@ -1169,19 +1169,19 @@
    "table": "SD35",
    "eesti": 13.11,
    "values": {
-    "Jõgeva maakond": 20.51,
-    "Valga maakond": 18.01,
-    "Ida-Viru maakond": 12.19,
-    "Põlva maakond": 21.89,
-    "Viljandi maakond": 12.14,
-    "Hiiu maakond": 13.25,
-    "Saare maakond": 23.45,
-    "Lääne-Viru maakond": 24.21,
-    "Järva maakond": 14.38,
     "Rapla maakond": 7.56,
-    "Pärnu maakond": 15.17,
-    "Tartu maakond": 13.04,
+    "Valga maakond": 18.01,
+    "Hiiu maakond": 13.25,
     "Võru maakond": 19.41,
+    "Põlva maakond": 21.89,
+    "Järva maakond": 14.38,
+    "Saare maakond": 23.45,
+    "Tartu maakond": 13.04,
+    "Jõgeva maakond": 20.51,
+    "Pärnu maakond": 15.17,
+    "Viljandi maakond": 12.14,
+    "Ida-Viru maakond": 12.19,
+    "Lääne-Viru maakond": 24.21,
     "Harju maakond": 10.45,
     "Lääne maakond": 18.18
    },
@@ -1234,6 +1234,56 @@
      "Valga maakond": 277.7,
      "Viljandi maakond": 362.9,
      "Võru maakond": 335.6
+    }
+   }
+  },
+  {
+   "id": "diabeet2_m",
+   "group": "Haigestumus",
+   "name": "Meeste 2. tüüpi diabeedi esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "higher_is_better": false,
+   "year": "2025",
+   "source": "tai",
+   "source_url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/01Esmashaigestumus/EH04.px",
+   "table": "EH04",
+   "eesti": 490.1,
+   "values": {
+    "Harju maakond": 433.5,
+    "Hiiu maakond": 715,
+    "Ida-Viru maakond": 634.2,
+    "Jõgeva maakond": 693.5,
+    "Järva maakond": 563.7,
+    "Lääne maakond": 503.2,
+    "Lääne-Viru maakond": 487.1,
+    "Põlva maakond": 624.8,
+    "Pärnu maakond": 446.6,
+    "Rapla maakond": 604.8,
+    "Saare maakond": 602.1,
+    "Tartu maakond": 398.8,
+    "Valga maakond": 462.9,
+    "Viljandi maakond": 672,
+    "Võru maakond": 578.6
+   },
+   "prev": {
+    "year": "2020",
+    "eesti": 344.6,
+    "values": {
+     "Harju maakond": 281,
+     "Hiiu maakond": 230.5,
+     "Ida-Viru maakond": 538.1,
+     "Jõgeva maakond": 398.4,
+     "Järva maakond": 436.5,
+     "Lääne maakond": 336.9,
+     "Lääne-Viru maakond": 456.4,
+     "Põlva maakond": 407.1,
+     "Pärnu maakond": 377.5,
+     "Rapla maakond": 375,
+     "Saare maakond": 348.8,
+     "Tartu maakond": 303.9,
+     "Valga maakond": 326.7,
+     "Viljandi maakond": 353.8,
+     "Võru maakond": 346
     }
    }
   },
