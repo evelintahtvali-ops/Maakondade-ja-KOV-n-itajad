@@ -349,6 +349,73 @@
    "note": "WHO meetod; ülekaal koos rasvumisega"
   },
   {
+   "id": "ylekaal_1kl_p",
+   "group": "Laste tervis",
+   "name": "1. klassi poiste ülemäärane kehakaal",
+   "unit": "%",
+   "source": "tai",
+   "table": "COSI02",
+   "trend_years": 3,
+   "select": {
+    "klass": "^1\\. klass$",
+    "sugu": "^poisid$",
+    "meetod": "^WHO$",
+    "näitaja": "^protsent$",
+    "kategooria": "ülemäärane"
+   },
+   "higher_is_better": false,
+   "note": "WHO meetod; ülekaal koos rasvumisega"
+  },
+  {
+   "id": "ylekaal_1kl_t",
+   "group": "Laste tervis",
+   "name": "1. klassi tüdrukute ülemäärane kehakaal",
+   "unit": "%",
+   "source": "tai",
+   "table": "COSI02",
+   "trend_years": 3,
+   "select": {
+    "klass": "^1\\. klass$",
+    "sugu": "^tüdrukud$",
+    "meetod": "^WHO$",
+    "näitaja": "^protsent$",
+    "kategooria": "ülemäärane"
+   },
+   "higher_is_better": false,
+   "note": "WHO meetod; ülekaal koos rasvumisega"
+  },
+  {
+   "id": "enesekahj_0_17",
+   "group": "Laste tervis",
+   "name": "Tahtliku enesekahjustuse tõttu ravi vajanud 0–17-aastased",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "VIG14",
+   "avg_years": 3,
+   "select": {
+    "välispõhjus": "tahtlik enesekahjustus",
+    "sugu": "^mehed ja naised$",
+    "vanuserühm": "^0-17$"
+   },
+   "higher_is_better": false,
+   "note": "3 aasta keskmine; vaimse tervise kaudne näitaja"
+  },
+  {
+   "id": "vigastus_0_17",
+   "group": "Laste tervis",
+   "name": "Vigastuse tõttu ravi vajanud 0–17-aastased",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "VIG14",
+   "trend_years": 6,
+   "select": {
+    "välispõhjus": "kokku",
+    "sugu": "^mehed ja naised$",
+    "vanuserühm": "^0-17$"
+   },
+   "higher_is_better": false
+  },
+  {
    "id": "soel_rind",
    "group": "Sõeluuringud",
    "name": "Rinnavähi sõeluuringu hõlmatus",
