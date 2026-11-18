@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T16:46Z",
+ "generated": "2026-11-18T16:53Z",
  "indicators": [
   {
    "id": "rahvaarv",
@@ -1169,21 +1169,21 @@
    "table": "SD35",
    "eesti": 13.11,
    "values": {
-    "Viljandi maakond": 12.14,
-    "Saare maakond": 23.45,
     "Jõgeva maakond": 20.51,
-    "Tartu maakond": 13.04,
-    "Lääne-Viru maakond": 24.21,
-    "Pärnu maakond": 15.17,
-    "Põlva maakond": 21.89,
-    "Ida-Viru maakond": 12.19,
-    "Hiiu maakond": 13.25,
-    "Harju maakond": 10.45,
-    "Rapla maakond": 7.56,
-    "Võru maakond": 19.41,
-    "Lääne maakond": 18.18,
     "Valga maakond": 18.01,
-    "Järva maakond": 14.38
+    "Ida-Viru maakond": 12.19,
+    "Põlva maakond": 21.89,
+    "Viljandi maakond": 12.14,
+    "Hiiu maakond": 13.25,
+    "Saare maakond": 23.45,
+    "Lääne-Viru maakond": 24.21,
+    "Järva maakond": 14.38,
+    "Rapla maakond": 7.56,
+    "Pärnu maakond": 15.17,
+    "Tartu maakond": 13.04,
+    "Võru maakond": 19.41,
+    "Harju maakond": 10.45,
+    "Lääne maakond": 18.18
    },
    "note": "standarditud kordaja, 3 aasta keskmine"
   },
@@ -1234,6 +1234,56 @@
      "Valga maakond": 277.7,
      "Viljandi maakond": 362.9,
      "Võru maakond": 335.6
+    }
+   }
+  },
+  {
+   "id": "diabeet2_n",
+   "group": "Haigestumus",
+   "name": "Naiste 2. tüüpi diabeedi esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "higher_is_better": false,
+   "year": "2025",
+   "source": "tai",
+   "source_url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/01Esmashaigestumus/EH04.px",
+   "table": "EH04",
+   "eesti": 440.9,
+   "values": {
+    "Harju maakond": 370.5,
+    "Hiiu maakond": 560.5,
+    "Ida-Viru maakond": 662.5,
+    "Jõgeva maakond": 573.7,
+    "Järva maakond": 529,
+    "Lääne maakond": 456.2,
+    "Lääne-Viru maakond": 549.8,
+    "Põlva maakond": 474,
+    "Pärnu maakond": 396.2,
+    "Rapla maakond": 398.2,
+    "Saare maakond": 592.2,
+    "Tartu maakond": 384.9,
+    "Valga maakond": 502.8,
+    "Viljandi maakond": 523.5,
+    "Võru maakond": 546.1
+   },
+   "prev": {
+    "year": "2020",
+    "eesti": 334.6,
+    "values": {
+     "Harju maakond": 274.4,
+     "Hiiu maakond": 109.3,
+     "Ida-Viru maakond": 625.7,
+     "Jõgeva maakond": 505,
+     "Järva maakond": 352.1,
+     "Lääne maakond": 435.3,
+     "Lääne-Viru maakond": 497.6,
+     "Põlva maakond": 244.4,
+     "Pärnu maakond": 305.5,
+     "Rapla maakond": 348,
+     "Saare maakond": 281.1,
+     "Tartu maakond": 256.1,
+     "Valga maakond": 230.6,
+     "Viljandi maakond": 371.5,
+     "Võru maakond": 325.5
     }
    }
   },
@@ -1290,6 +1340,58 @@
    }
   },
   {
+   "id": "vahk_n",
+   "group": "Haigestumus",
+   "name": "Naiste pahaloomuliste kasvajate esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "higher_is_better": false,
+   "year": "2024",
+   "source": "tai",
+   "source_url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/04PahaloomulisedKasvajad/PK40.px",
+   "table": "PK40",
+   "eesti": 688.7,
+   "values": {
+    "Harju maakond": 628,
+    "Tallinn": 660.9,
+    "Hiiu maakond": 1068.2,
+    "Ida-Viru maakond": 789.1,
+    "Jõgeva maakond": 809.7,
+    "Järva maakond": 748.3,
+    "Lääne maakond": 737,
+    "Lääne-Viru maakond": 747.2,
+    "Põlva maakond": 762.1,
+    "Pärnu maakond": 771.8,
+    "Rapla maakond": 646.1,
+    "Saare maakond": 712.7,
+    "Tartu maakond": 675.6,
+    "Valga maakond": 737.1,
+    "Viljandi maakond": 758.7,
+    "Võru maakond": 761.7
+   },
+   "prev": {
+    "year": "2019",
+    "eesti": 649.26,
+    "values": {
+     "Harju maakond": 603.07,
+     "Tallinn": 610.37,
+     "Hiiu maakond": 674.35,
+     "Ida-Viru maakond": 798.45,
+     "Jõgeva maakond": 737.65,
+     "Järva maakond": 821.66,
+     "Lääne maakond": 753.9,
+     "Lääne-Viru maakond": 627.55,
+     "Põlva maakond": 540.19,
+     "Pärnu maakond": 660.31,
+     "Rapla maakond": 771.39,
+     "Saare maakond": 698.59,
+     "Tartu maakond": 619.21,
+     "Valga maakond": 726.92,
+     "Viljandi maakond": 599.66,
+     "Võru maakond": 674.93
+    }
+   }
+  },
+  {
    "id": "vahk_kops_m",
    "group": "Haigestumus",
    "name": "Meeste hingamiselundite kasvajate esmashaigestumus",
@@ -1317,6 +1419,36 @@
     "Valga maakond": 134.7,
     "Viljandi maakond": 110.3,
     "Võru maakond": 158.3
+   }
+  },
+  {
+   "id": "vahk_kops_n",
+   "group": "Haigestumus",
+   "name": "Naiste hingamiselundite kasvajate esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "higher_is_better": false,
+   "year": "2024",
+   "source": "tai",
+   "source_url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/04PahaloomulisedKasvajad/PK40.px",
+   "table": "PK40",
+   "eesti": 42.1,
+   "values": {
+    "Harju maakond": 41.4,
+    "Tallinn": 43.1,
+    "Hiiu maakond": 23.2,
+    "Ida-Viru maakond": 42.4,
+    "Jõgeva maakond": 63.4,
+    "Järva maakond": 57.6,
+    "Lääne maakond": 55.3,
+    "Lääne-Viru maakond": 55,
+    "Põlva maakond": 41,
+    "Pärnu maakond": 51.6,
+    "Rapla maakond": 40,
+    "Saare maakond": 18,
+    "Tartu maakond": 37.1,
+    "Valga maakond": 27.8,
+    "Viljandi maakond": 38.1,
+    "Võru maakond": 40.1
    }
   },
   {
@@ -1366,6 +1498,56 @@
      "Valga maakond": 71.2,
      "Viljandi maakond": 152.1,
      "Võru maakond": 176.4
+    }
+   }
+  },
+  {
+   "id": "vigastus_ravi_n",
+   "group": "Haigestumus",
+   "name": "Vigastuse tõttu ravi vajanud naised",
+   "unit": "100 000 el kohta",
+   "higher_is_better": false,
+   "year": "2025",
+   "source": "tai",
+   "source_url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/09Vigastused/VIG14.px",
+   "table": "VIG14",
+   "eesti": 87.9,
+   "values": {
+    "Harju maakond": 75.7,
+    "Hiiu maakond": 140.1,
+    "Ida-Viru maakond": 51.7,
+    "Jõgeva maakond": 150.6,
+    "Järva maakond": 283.9,
+    "Lääne maakond": 149,
+    "Lääne-Viru maakond": 130.9,
+    "Põlva maakond": 174.6,
+    "Pärnu maakond": 99.6,
+    "Rapla maakond": 109.7,
+    "Saare maakond": 84.6,
+    "Tartu maakond": 55.7,
+    "Valga maakond": 127.5,
+    "Viljandi maakond": 103,
+    "Võru maakond": 81.3
+   },
+   "prev": {
+    "year": "2020",
+    "eesti": 103.4,
+    "values": {
+     "Harju maakond": 87.5,
+     "Hiiu maakond": 218.5,
+     "Ida-Viru maakond": 41.8,
+     "Jõgeva maakond": 297.5,
+     "Järva maakond": 456.5,
+     "Lääne maakond": 246,
+     "Lääne-Viru maakond": 129.4,
+     "Põlva maakond": 154.8,
+     "Pärnu maakond": 77.5,
+     "Rapla maakond": 84,
+     "Saare maakond": 95.7,
+     "Tartu maakond": 60.3,
+     "Valga maakond": 62.9,
+     "Viljandi maakond": 164.6,
+     "Võru maakond": 207.7
     }
    }
   },
