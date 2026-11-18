@@ -90,7 +90,7 @@ function status(ind, v){
 function context(ind, v, ri){
   if (v==null) return '';
   const parts=[];
-  if (ind.eesti!=null){
+  if (ind.eesti!=null && ind.unit!=='inimest'){
     const d = v-ind.eesti;
     if (ind.higher_is_better==null) parts.push(d>0?'Eesti keskmisest kõrgem':'Eesti keskmisest madalam');
     else parts.push(status(ind,v)==='g'?'Eesti keskmisest parem':status(ind,v)==='r'?'Eesti keskmisest halvem':'Eesti keskmise lähedal');
