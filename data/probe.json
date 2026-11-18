@@ -1,5 +1,101 @@
 {
  "tables": {
+  "KU121": {
+   "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/05Uuringud/03HBSC/01Tervis/KU121.px",
+   "title": "KU121: Depressiivsete episoodide esinemine piirkonna järgi",
+   "variables": [
+    {
+     "code": "Aasta",
+     "text": "Aasta",
+     "time": false,
+     "values": [
+      "2005/2006",
+      "2009/2010",
+      "2013/2014",
+      "2017/2018",
+      "2021/2022"
+     ]
+    },
+    {
+     "code": "Episood",
+     "text": "Episood",
+     "time": false,
+     "values": [
+      "Ei ole esinenud",
+      "On esinenud"
+     ]
+    },
+    {
+     "code": "Piirkond",
+     "text": "Piirkond",
+     "time": false,
+     "values": [
+      "Eesti keskmine",
+      "Harju ja Rapla maakond",
+      "Ida-Viru ja Lääne-Viru maakond",
+      "Järva, Pärnu ja Viljandi maakond",
+      "Tartu, Jõgeva, Põlva, Valga ja Võru maakond",
+      "Hiiu, Saare ja Lääne maakond"
+     ]
+    }
+   ]
+  },
+  "PTU700": {
+   "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/05Uuringud/05PTU/07Vaimnetervis/PTU700.px",
+   "title": "PTU700: Depressioonisümptomite esinemine soo ja maakonna järgi",
+   "variables": [
+    {
+     "code": "Aasta",
+     "text": "Aasta",
+     "time": true,
+     "values": [
+      "2011"
+     ]
+    },
+    {
+     "code": "Depressioonisümptomite esinemine",
+     "text": "Depressioonisümptomite esinemine",
+     "time": false,
+     "values": [
+      "Depressioonisümptomeid ei esine",
+      "Depressioonisümptomeid esineb"
+     ]
+    },
+    {
+     "code": "Sugu",
+     "text": "Sugu",
+     "time": false,
+     "values": [
+      "Mehed ja naised",
+      "Mehed",
+      "Naised"
+     ]
+    },
+    {
+     "code": "Maakond",
+     "text": "Maakond",
+     "time": false,
+     "values": [
+      "Eesti kokku",
+      "Harju maakond",
+      "Hiiu maakond",
+      "Ida-Viru maakond",
+      "Jõgeva maakond",
+      "Järva maakond",
+      "Lääne maakond",
+      "Lääne-Viru maakond",
+      "Põlva maakond",
+      "Pärnu maakond",
+      "Rapla maakond",
+      "Saare maakond",
+      "Tartu maakond",
+      "Valga maakond",
+      "Viljandi maakond",
+      "Võru maakond"
+     ]
+    }
+   ]
+  },
   "SD23": {
    "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/04Surmad/SD23.px",
    "title": "SD23: Standarditud suremuskordajad 100 000 elaniku kohta põhjuse, soo ja maakonna järgi",
@@ -1519,6 +1615,87 @@
       "Liiklusõnnetus joobes mootorsõidukijuhi osalusel",
       "Liiklusõnnetuses vigastatud",
       "Liiklusõnnetuses hukkunud"
+     ]
+    }
+   ]
+  },
+  "LES85": {
+   "url": "https://andmed.stat.ee/api/v1/et/stat/LES85",
+   "title": "LES85: LASTE VAESUSE JA ILMAJÄETUSE MÄÄR ELUKOHA JÄRGI",
+   "variables": [
+    {
+     "code": "Näitaja",
+     "text": "Näitaja",
+     "time": false,
+     "values": [
+      "Suhtelise vaesuse määr, %",
+      "Absoluutse vaesuse määr, %",
+      "Materiaalse ilmajäetuse määr, %",
+      "Sügava materiaalse ilmajäetuse määr, %",
+      "Ilmajäetuse määr, %"
+     ]
+    },
+    {
+     "code": "Elukoht",
+     "text": "Elukoht",
+     "time": false,
+     "values": [
+      "Eesti",
+      "Linnaline asula",
+      "Maa-asula",
+      "Linnaline või väikelinnaline asustuspiirkond",
+      "Maaline asustuspiirkond",
+      "Põhja-Eesti",
+      "Kesk-Eesti",
+      "Kirde-Eesti",
+      "Lääne-Eesti",
+      "Lõuna-Eesti",
+      "Harju maakond",
+      "Tallinn",
+      "Harju maakond, v.a Tallinn",
+      "Hiiu maakond",
+      "Ida-Viru maakond",
+      "Jõgeva maakond",
+      "Järva maakond",
+      "Lääne maakond",
+      "Lääne-Viru maakond",
+      "Põlva maakond",
+      "Pärnu maakond",
+      "Rapla maakond",
+      "Saare maakond",
+      "Tartu maakond",
+      "Valga maakond",
+      "Viljandi maakond",
+      "Võru maakond"
+     ]
+    },
+    {
+     "code": "Vaatlusperiood",
+     "text": "Vaatlusperiood",
+     "time": true,
+     "values": [
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
      ]
     }
    ]
@@ -3172,160 +3349,170 @@
   }
  },
  "search": {
-  "suhtelise vaesuse määr maakond": "'ascii' codec can't encode characters in position 50-51: ordinal not in range(128)",
-  "registreeritud töötud": "'ascii' codec can't encode characters in position 45-46: ordinal not in range(128)",
-  "hooldus": [
+  "lastekaitse": [],
+  "asendushooldus": [],
+  "abivajav laps": [],
+  "laste vaesus": [
    [
-    "KM0011.PX",
-    "KM0011: KAUPADE JA MOOTORSÕIDUKITE HOOLDUSE JA REMONDITEENUSTE MÜÜK"
+    "LES81.px",
+    "LES81: LASTE VAESUS JA ILMAJÄETUS VANUSERÜHMA JA SOO JÄRGI"
    ],
    [
-    "IA1482.px",
-    "IA1482: PÕLLUMAJANDUSSAADUSTE TOOTMISE VAHENDITE OSTUHINNAINDEKSI MUUTUS VÕRRELDES EELMISE AASTAGA, 2020=100"
+    "LES81.PX",
+    "LES81: LASTE VAESUS JA ILMAJÄETUS VANUSERÜHMA JA SOO JÄRGI"
    ],
    [
-    "IA148.PX",
-    "IA148: PÕLLUMAJANDUSSAADUSTE TOOTMISE VAHENDITE OSTUHINNAINDEKSI MUUTUS VÕRRELDES EELMISE AASTAGA (2004–2023)"
-   ],
-   [
-    "TTP08.PX",
-    "TTP08: VIIMASE 12 KUU JOOKSUL HOOLDUSTEENUST VAJANUD 15-AASTASED JA VANEMAD ISIKUD KASUTATUD HOOLDUSTEENUSE LIIGI JÄRGI, 2010"
-   ],
-   [
-    "IA1492.px",
-    "IA1492: PÕLLUMAJANDUSSAADUSTE TOOTMISE VAHENDITE OSTUHINNAINDEKS, 2020 = 100 (KVARTALID)"
-   ],
-   [
-    "IA149.PX",
-    "IA149: PÕLLUMAJANDUSSAADUSTE TOOTMISE VAHENDITE OSTUHINNAINDEKS, 2005 = 100 (2003–2018, KVARTALID)"
-   ],
-   [
-    "IA1491.px",
-    "IA1491: PÕLLUMAJANDUSSAADUSTE TOOTMISE VAHENDITE OSTUHINNAINDEKS, 2015 = 100 (2015–2023, KVARTALID)"
-   ],
-   [
-    "KM071.PX",
-    "KM071: KAUPADE JAEMÜÜK JAEKAUBANDUSETTEVÕTETES JOOKSEVHINDADES TEGEVUSALA (EMTAK 2003) JA KAUBAGRUPI JÄRGI (2000–2007)"
-   ],
-   [
-    "KM061.PX",
-    "KM061: KAUPADE JAEMÜÜK JOOKSEVHINDADES TEGEVUSALA (EMTAK 2003) JÄRGI (2000–2007)"
-   ],
-   [
-    "KM1011.PX",
-    "KM1011: KAUPADE JAEMÜÜK TEGEVUSALA (EMTAK 2003) JÄRGI (1998–2008, KVARTALID)"
-   ],
-   [
-    "KM102.PX",
-    "KM102: JAEMÜÜGI MAHUINDEKS TEGEVUSALA (EMTAK 2003) JÄRGI, EELMINE PERIOOD = 100 (2001–2008, KVARTALID)"
-   ],
-   [
-    "KM103.PX",
-    "KM103: JAEMÜÜGI MAHUINDEKS TEGEVUSALA (EMTAK 2003) JÄRGI, EELMISE AASTA VASTAV PERIOOD = 100 (2001–2008, KVARTALID)"
-   ],
-   [
-    "KM2011.PX",
-    "KM2011: KAUPADE JAEMÜÜK TEGEVUSALA (EMTAK 2003) JÄRGI (1998–2008, KUUD)"
-   ],
-   [
-    "KM202.PX",
-    "KM202: JAEMÜÜGI MAHUINDEKS TEGEVUSALA (EMTAK 2003) JÄRGI, EELMINE PERIOOD = 100 (2001–2008, KUUD)"
-   ],
-   [
-    "KM203.PX",
-    "KM203: JAEMÜÜGI MAHUINDEKS TEGEVUSALA (EMTAK 2003) JÄRGI, EELMISE AASTA VASTAV PERIOOD = 100 (2001–2008, KUUD)"
-   ],
-   [
-    "KM21.PX",
-    "KM21: KAUBANDUSETTEVÕTETE (V.A HULGIMÜÜK JA VAHENDUSKAUBANDUS) MÜÜGITULU TEGEVUSALA (EMTAK 2003) JÄRGI (1998-2008, KUUD)"
-   ],
-   [
-    "KM0032.PX",
-    "KM0032: JAEMÜÜGI MAHUINDEKS TEGEVUSALA (EMTAK 2008) JÄRGI, EELMINE AASTA = 100 (2006–2017)"
-   ],
-   [
-    "KM104.PX",
-    "KM104: KAUPADE JAEMÜÜK JAEKAUBANDUSETTEVÕTETES TEGEVUSALA (EMTAK 2003) JA KAUBAGRUPI JÄRGI (2000–2008, KVARTALID)"
-   ],
-   [
-    "KM0021.PX",
-    "KM0021: KAUPADE JA MOOTORSÕIDUKITE HOOLDUSE JA REMONDITEENUSTE MÜÜK PIIRKONNA JÄRGI"
-   ],
-   [
-    "KM051.PX",
-    "KM051: KAUPADE HULGIMÜÜK HULGIKAUBANDUSETTEVÕTETES JOOKSEVHINDADES TEGEVUSALA (EMTAK 2003) JA KAUBAGRUPI JÄRGI (2000–2007)"
-   ],
-   [
-    "KM1000.PX",
-    "KM1000: KAUPADE HULGIMÜÜK TEGEVUSALA (EMTAK 2003) JÄRGI (2001–2008, KVARTALID)"
-   ],
-   [
-    "PM55.PX",
-    "PM55: PÕLLUMAJANDUSTOODANG, VAHETARBIMINE, LISANDVÄÄRTUS JA KAPITALI KOGUMAHUTUS EELMISE AASTA ALUSHINDADES"
-   ],
-   [
-    "KM0102.PX",
-    "KM0102: JAEMÜÜGI MAHUINDEKSI MUUTUS TEGEVUSALA (EMTAK 2008) JÄRGI (KVARTALID)"
-   ],
-   [
-    "KM020.PX",
-    "KM020: MOOTORSÕIDUKITE MÜÜGI- NING REMONDI- JA JAEKAUBANDUSETTEVÕTETE MÜÜGITULU JA MAHUINDEKS TEGEVUSALA (EMTAK 2008) JÄRGI (KUUD)"
-   ],
-   [
-    "KM0104.PX",
-    "KM0104: KAUPADE JAEMÜÜK TEGEVUSALA (EMTAK 2008) JA KAUBAGRUPI JÄRGI (KVARTALID)"
-   ],
-   [
-    "KM020.PX",
-    "KM020: MOOTORSÕIDUKITE MÜÜGI- NING REMONDI- JA JAEKAUBANDUSETTEVÕTETE MÜÜGITULU JA MAHUINDEKS TEGEVUSALA (EMTAK 2008) JÄRGI (KUUD)"
-   ],
-   [
-    "KM0051.PX",
-    "KM0051: KAUPADE HULGIMÜÜK HULGIKAUBANDUSETTEVÕTETES JOOKSEVHINDADES TEGEVUSALA (EMTAK 2008) JA KAUBAGRUPI JÄRGI"
-   ],
-   [
-    "KM0071.PX",
-    "KM0071: KAUPADE JAEMÜÜK JAEKAUBANDUSETTEVÕTETES JOOKSEVHINDADES TEGEVUSALA (EMTAK 2008) JA KAUBAGRUPI JÄRGI (2005–2017)"
-   ],
-   [
-    "EM47.PX",
-    "EM47: ETTEVÕTETE ÜLDKOGUM, VALIM JA VASTANUD TEGEVUSALA (EMTAK 2003) JÄRGI (2002–2008, KVARTALID)"
-   ],
-   [
-    "KM0100.PX",
-    "KM0100: KAUPADE HULGIMÜÜK TEGEVUSALA (EMTAK 2008) JÄRGI (KVARTALID) (2001–2021)"
-   ]
-  ],
-  "vaesus maakond": [
-   [
-    "LES51.PX",
-    "LES51: EESTI SOTSIAALUURINGU VASTAMISMÄÄR MAAKONNA JÄRGI"
-   ],
-   [
-    "LES20.PX",
-    "LES20: VAESUSE JA ILMAJÄETUSE MÄÄR ELUKOHA JÄRGI"
+    "LES84.PX",
+    "LES84: LASTE VAESUSE JA ILMAJÄETUSE MÄÄR LEIBKONNAPEA / LEIBKONNA TÜÜBI JÄRGI"
    ],
    [
     "LES85.PX",
     "LES85: LASTE VAESUSE JA ILMAJÄETUSE MÄÄR ELUKOHA JÄRGI"
    ],
    [
-    "LES50.PX",
-    "LES50: MUDELIPÕHINE SUHTELINE VAESUSE MÄÄR JA GINI KOEFITSIENT HALDUSÜKSUSE JÄRGI, 2011"
+    "LES87.PX",
+    "LES87: 0−14-AASTASED LAPSED ASUTUSEKESKSES LASTEHOIUS VANUSERÜHMA, OSALETUD TUNDIDE ARVU JA SOO JÄRGI"
+   ],
+   [
+    "LES821.PX",
+    "LES821: LAPSED ILMAJÄETUSEGA LEIBKONDADES ILMAJÄETUST ISELOOMUSTAVA KOMPONENDI JÄRGI"
+   ],
+   [
+    "LES86.PX",
+    "LES86: MAKSERASKUSTES LEIBKONNAD MAKSERASKUSE LIIGI JA LEIBKONNA TÜÜBI (LAPSE VANUS 0−17) JÄRGI"
+   ],
+   [
+    "LES88.PX",
+    "LES88: LEIBKONNA LASTEHOIUKULUTUSED KUUS LEIBKONNA TÜÜBI (LAPSE VANUS 0−17) JÄRGI"
+   ],
+   [
+    "LES93.PX",
+    "LES93: SUHTLEMINE KONTAKTISIKUGA VÄHEMALT KORD NÄDALAS JA ELUSOLEVATE LASTE KESKMINE ARV VANEMAEALISE SOO, VANUSE JA ELUKOHA/RAHVUSE JÄRGI"
+   ],
+   [
+    "LES83.PX",
+    "LES83: LASTE SÜGAVA MATERIAALSE ILMAJÄETUSE MÄÄR VAESUSPIIRI JÄRGI (2005–2018)"
+   ],
+   [
+    "LES39.PX",
+    "LES39: 15−34-AASTASED MITTETÖÖTAVAD NOORED, KES EI ÕPI EGA OSALE KOOLITUSEL (NEET-NOORED) VANUSERÜHMA JA ISIKUTE RÜHMA (SUGU, RAHVUS, HARIDUSTASE JM) JÄRGI"
    ]
   ],
-  "sotsiaalhoolekanne omavalitsus": [
+  "noored": [
    [
-    "UA14.px",
-    "UA14: TÖÖGA SEOTUD SISSETULEKUD ISIKU ELUKOHA (OMAVALITSUS) JA TEGEVUSALA JÄRGI"
+    "TT81.PX",
+    "TT81: 15–34-AASTASED ISIKUTE RÜHMA JA ÕPINGUTE AJAL TÖÖTAMISE JÄRGI, 2016"
    ],
    [
-    "ER026.PX",
-    "ER026: STATISTILISSE PROFIILI KUULUVAD ETTEVÕTTED OMANIKU LIIGI JA TEGEVUSALA (EMTAK 2008) JÄRGI"
+    "TT82.PX",
+    "TT82: 15–34-AASTASED ISIKUTE RÜHMA JA VIIMASTE ÕPINGUTE JÄRGI, 2016"
    ],
    [
-    "ER0260.px",
-    "ER0260: STATISTILISSE PROFIILI KUULUVAD ETTEVÕTTED OMANIKU LIIGI JA TEGEVUSALA (EMTAK 2025) JÄRGI"
+    "TT83.PX",
+    "TT83: 15–34-AASTASED ISIKUTE RÜHMA NING TÖÖGA SEOTUD KOLIMISE JA KODUST KAUGEL TÖÖLKÄIMISE JÄRGI, 2016"
+   ],
+   [
+    "TT84.PX",
+    "TT84: 15–34-AASTASED HÕIVATUD HÕIVATUTE RÜHMA, TÖÖSAAMISVIISI NING TÖÖ JA HARIDUSTASEME VASTAVUSE JÄRGI, 2016"
+   ],
+   [
+    "KU109.PX",
+    "KU109: TEATRITE ETENDUSED SIHTGRUPI JÄRGI"
+   ],
+   [
+    "NH01.PX",
+    "NH01: NOORED VANUSERÜHMA, SOO JA HALDUSÜKSUSE JÄRGI, 1. JAANUAR"
+   ],
+   [
+    "LES39.PX",
+    "LES39: 15−34-AASTASED MITTETÖÖTAVAD NOORED, KES EI ÕPI EGA OSALE KOOLITUSEL (NEET-NOORED) VANUSERÜHMA JA ISIKUTE RÜHMA (SUGU, RAHVUS, HARIDUSTASE JM) JÄRGI"
+   ],
+   [
+    "NH10.PX",
+    "NH10: HUVIKOOLIS ÕPPIVAD NOORED VANUSERÜHMA, HUVIALA VALDKONNA JA ELUKOHA HALDUSÜKSUSE JÄRGI"
+   ],
+   [
+    "NH15.px",
+    "NH15: MADALA HARIDUSTASEMEGA NOORED SOO, VANUSERÜHMA, MAAKONNA JA ASUSTUSPIIRKONNA LIIGI JÄRGI, 1. JAANUAR"
+   ],
+   [
+    "NH16.px",
+    "NH16: 18-26-AASTASED MADALA HARIDUSTASEMEGA NOORED SOO JA HALDUSÜKSUSE JÄRGI, 1. JAANUAR"
+   ],
+   [
+    "TLN37.px",
+    "TLN37: 18-24-AASTASED ESIMESE TASEME VÕI MADALAMA HARIDUSEGA ÕPINGUID MITTEJÄTKAVAD TALLINNA NOORED"
+   ],
+   [
+    "LES37.PX",
+    "LES37: 18-24-AASTASED ESIMESE TASEME VÕI MADALAMA HARIDUSEGA ÕPINGUID MITTEJÄTKAVAD NOORED RAHVUSE JÄRGI (2000–2019)"
+   ],
+   [
+    "LES38.PX",
+    "LES38: 18-24-AASTASED ESIMESE TASEME VÕI MADALAMA HARIDUSEGA ÕPINGUID MITTEJÄTKAVAD NOORED KODAKONDSUSE JÄRGI (2000–2019)"
+   ],
+   [
+    "LES11.PX",
+    "LES11: 18−24-AASTASED ESIMESE TASEME VÕI MADALAMA HARIDUSEGA ÕPINGUID MITTEJÄTKAVAD NOORED ISIKUTE RÜHMA (SUGU, RAHVUS, KODAKONDSUS) JÄRGI"
+   ],
+   [
+    "KU206.PX",
+    "KU206: SPORDIKLUBID MAAKONNA JÄRGI (2003–2009)"
+   ],
+   [
+    "KU62.PX",
+    "KU62: RAHVAKULTUURI HARRASTAJAD MAAKONNA, TEGEVUSVALDKONNA JA EA JÄRGI"
+   ],
+   [
+    "KU18.PX",
+    "KU18: TALIOLÜMPIAALADEL TEGUTSEJAD SPORDIALA JA MAAKONNA JÄRGI (1995–2009)"
+   ],
+   [
+    "KU17.PX",
+    "KU17: SUVEOLÜMPIAALADEL TEGUTSEJAD SPORDIALA JA MAAKONNA JÄRGI (1995–2009)"
+   ],
+   [
+    "KU19.PX",
+    "KU19: ROK-I TUNNUSTATUD SPORDIALADEL (V.A OLÜMPIAALAD) TEGUTSEJAD SPORDIALA JA MAAKONNA JÄRGI (1995–2009)"
+   ],
+   [
+    "KU20.PX",
+    "KU20: ROK-I POOLT TUNNUSTAMATA SPORDIALADEL TEGUTSEJAD SPORDIALA JA MAAKONNA JÄRGI (1995–2009)"
+   ],
+   [
+    "SN10.PX",
+    "SN10: SÄÄSTVA ARENGU NÄITAJAD ÜRO EESMÄRKIDE PÕHJAL (2000-2021)"
+   ],
+   [
+    "SN11.px",
+    "SN11: SÄÄSTVA ARENGU NÄITAJAD ÜRO EESMÄRKIDE PÕHJAL"
+   ]
+  ],
+  "puudega lapsed": [],
+  "perekonnas hooldamine": [],
+  "huviharidus": [
+   [
+    "RR302.PX",
+    "RR302: KOHALIKE EELARVETE PÕHITEGEVUSE KULUD JA INVESTEERIMISTEGEVUSE VÄLJAMINEKUD PIIRKONNA/HALDUSÜKSUSE JÄRGI"
+   ],
+   [
+    "RR301.PX",
+    "RR301: KOHALIKE EELARVETE PÕHITEGEVUSE KULUD JA INVESTEERIMISTEGEVUSE VÄLJAMINEKUD PIIRKONNA/HALDUSÜKSUSE JÄRGI (2012–2017)"
+   ]
+  ],
+  "koolist väljalangenud": [],
+  "NEET": [
+   [
+    "LES39.PX",
+    "LES39: 15−34-AASTASED MITTETÖÖTAVAD NOORED, KES EI ÕPI EGA OSALE KOOLITUSEL (NEET-NOORED) VANUSERÜHMA JA ISIKUTE RÜHMA (SUGU, RAHVUS, HARIDUSTASE JM) JÄRGI"
+   ],
+   [
+    "NH24.PX",
+    "NH24: NEET-NOORTE OSATÄHTSUS 15-26-AASTASTE HULGAS SOO JÄRGI (2005-2024)"
+   ],
+   [
+    "VK11.px",
+    "VK11: KAUPADE EKSPORT JA IMPORT KAUBA (KN4) JA RIIGI JÄRGI (2018–2022, KUUD)"
    ]
   ]
  }
