@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T17:24Z",
+ "generated": "2026-11-18T17:28Z",
  "indicators": [
   {
    "id": "rahvaarv",
@@ -1169,21 +1169,21 @@
    "table": "SD35",
    "eesti": 13.11,
    "values": {
-    "Rapla maakond": 7.56,
-    "Valga maakond": 18.01,
-    "Hiiu maakond": 13.25,
-    "Võru maakond": 19.41,
-    "Põlva maakond": 21.89,
-    "Järva maakond": 14.38,
-    "Saare maakond": 23.45,
     "Tartu maakond": 13.04,
+    "Harju maakond": 10.45,
+    "Lääne-Viru maakond": 24.21,
     "Jõgeva maakond": 20.51,
+    "Valga maakond": 18.01,
+    "Lääne maakond": 18.18,
+    "Põlva maakond": 21.89,
+    "Hiiu maakond": 13.25,
     "Pärnu maakond": 15.17,
     "Viljandi maakond": 12.14,
-    "Ida-Viru maakond": 12.19,
-    "Lääne-Viru maakond": 24.21,
-    "Harju maakond": 10.45,
-    "Lääne maakond": 18.18
+    "Järva maakond": 14.38,
+    "Saare maakond": 23.45,
+    "Võru maakond": 19.41,
+    "Rapla maakond": 7.56,
+    "Ida-Viru maakond": 12.19
    },
    "note": "standarditud kordaja, 3 aasta keskmine"
   },
@@ -1915,6 +1915,87 @@
      "Võru maakond": 77.6
     }
    }
+  },
+  {
+   "id": "gripp60_hooaeg",
+   "group": "Vaktsineerimine",
+   "name": "60+ gripivaktsineerimise hõlmatus (viimane lõppenud hooaeg)",
+   "unit": "%",
+   "higher_is_better": true,
+   "year": "2025/2026",
+   "source": "tehik",
+   "source_url": "https://teabekeskus.tehik.ee/et/avaandmed/gripp/",
+   "table": "TEHIK avaandmed",
+   "eesti": 22.7,
+   "values": {
+    "Hiiu maakond": 45.2,
+    "Jõgeva maakond": 34.4,
+    "Pärnu maakond": 25.5,
+    "Põlva maakond": 33.7,
+    "Saare maakond": 31.2,
+    "Lääne-Viru maakond": 31.7,
+    "Valga maakond": 28.7,
+    "Viljandi maakond": 23.7,
+    "Võru maakond": 29.8,
+    "Harju maakond": 14.7,
+    "Tartu maakond": 35.4,
+    "Ida-Viru maakond": 18.5,
+    "Lääne maakond": 33.7,
+    "Järva maakond": 33.1,
+    "Rapla maakond": 25.7
+   },
+   "note": "TEHIK avaandmed; võrdlus eelmise hooajaga",
+   "prev": {
+    "year": "2024/2025",
+    "eesti": 23.5,
+    "values": {
+     "Rapla maakond": 24.4,
+     "Viljandi maakond": 29.6,
+     "Hiiu maakond": 41.8,
+     "Järva maakond": 28.9,
+     "Lääne-Viru maakond": 28.1,
+     "Põlva maakond": 30.8,
+     "Lääne maakond": 31.7,
+     "Jõgeva maakond": 30.2,
+     "Tartu maakond": 31.4,
+     "Ida-Viru maakond": 17.4,
+     "Pärnu maakond": 23.8,
+     "Valga maakond": 22.0,
+     "Saare maakond": 26.9,
+     "Võru maakond": 24.6,
+     "Harju maakond": 20.2
+    }
+   }
+  },
+  {
+   "id": "gripp60_jooksev",
+   "group": "Vaktsineerimine",
+   "name": "60+ gripivaktsineerimise hõlmatus (käimasolev hooaeg)",
+   "unit": "%",
+   "higher_is_better": true,
+   "year": "2026/2027 seis 2026-11-16",
+   "source": "tehik",
+   "source_url": "https://teabekeskus.tehik.ee/et/avaandmed/gripp/",
+   "table": "TEHIK avaandmed",
+   "eesti": 3.7,
+   "values": {
+    "Jõgeva maakond": 0.6,
+    "Ida-Viru maakond": 0.3,
+    "Põlva maakond": 10.0,
+    "Lääne-Viru maakond": 11.0,
+    "Valga maakond": 6.7,
+    "Järva maakond": 4.6,
+    "Võru maakond": 8.5,
+    "Saare maakond": 7.1,
+    "Rapla maakond": 0.7,
+    "Pärnu maakond": 4.9,
+    "Viljandi maakond": 2.7,
+    "Lääne maakond": 1.2,
+    "Hiiu maakond": 11.0,
+    "Tartu maakond": 6.3,
+    "Harju maakond": 2.4
+   },
+   "note": "TEHIK avaandmed; hooaeg on pooleli"
   },
   {
    "id": "vt_uimasti",

@@ -1830,6 +1830,124 @@
   "eesti": 82.3
  },
  {
+  "id": "gripp60_hooaeg",
+  "ok": true,
+  "seasons": {
+   "2022/2023": {
+    "date": "2023-10-01",
+    "eesti": 23.9,
+    "n": 15,
+    "sample": {
+     "Pärnu maakond": 23.3,
+     "Jõgeva maakond": 30.8,
+     "Viljandi maakond": 27.3
+    }
+   },
+   "2023/2024": {
+    "date": "2024-09-29",
+    "eesti": 24.2,
+    "n": 15,
+    "sample": {
+     "Järva maakond": 27.9,
+     "Põlva maakond": 30.4,
+     "Saare maakond": 26.5
+    }
+   },
+   "2024/2025": {
+    "date": "2025-09-28",
+    "eesti": 23.5,
+    "n": 15,
+    "sample": {
+     "Rapla maakond": 24.4,
+     "Viljandi maakond": 29.6,
+     "Hiiu maakond": 41.8
+    }
+   },
+   "2025/2026": {
+    "date": "2026-09-27",
+    "eesti": 22.7,
+    "n": 15,
+    "sample": {
+     "Hiiu maakond": 45.2,
+     "Jõgeva maakond": 34.4,
+     "Pärnu maakond": 25.5
+    }
+   },
+   "2026/2027": {
+    "date": "2026-11-16",
+    "eesti": 3.7,
+    "n": 15,
+    "sample": {
+     "Valga maakond": 6.7,
+     "Hiiu maakond": 11.0,
+     "Tartu maakond": 6.3
+    }
+   }
+  },
+  "year": "2025/2026",
+  "n_areas": 15,
+  "eesti": 22.7
+ },
+ {
+  "id": "gripp60_jooksev",
+  "ok": true,
+  "seasons": {
+   "2022/2023": {
+    "date": "2023-10-01",
+    "eesti": 23.9,
+    "n": 15,
+    "sample": {
+     "Rapla maakond": 23.7,
+     "Lääne maakond": 26.9,
+     "Jõgeva maakond": 30.8
+    }
+   },
+   "2023/2024": {
+    "date": "2024-09-29",
+    "eesti": 24.2,
+    "n": 15,
+    "sample": {
+     "Põlva maakond": 30.4,
+     "Viljandi maakond": 30.1,
+     "Järva maakond": 27.9
+    }
+   },
+   "2024/2025": {
+    "date": "2025-09-28",
+    "eesti": 23.5,
+    "n": 15,
+    "sample": {
+     "Tartu maakond": 31.4,
+     "Ida-Viru maakond": 17.4,
+     "Lääne maakond": 31.7
+    }
+   },
+   "2025/2026": {
+    "date": "2026-09-27",
+    "eesti": 22.7,
+    "n": 15,
+    "sample": {
+     "Viljandi maakond": 23.7,
+     "Järva maakond": 33.1,
+     "Tartu maakond": 35.4
+    }
+   },
+   "2026/2027": {
+    "date": "2026-11-16",
+    "eesti": 3.7,
+    "n": 15,
+    "sample": {
+     "Jõgeva maakond": 0.6,
+     "Ida-Viru maakond": 0.3,
+     "Põlva maakond": 10.0
+    }
+   }
+  },
+  "year": "2026/2027 seis 2026-11-16",
+  "n_areas": 15,
+  "eesti": 3.7
+ },
+ {
   "id": "vt_uimasti",
   "ok": true,
   "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/07Terviseprofiilid/02MKKOV/PO03.px",
