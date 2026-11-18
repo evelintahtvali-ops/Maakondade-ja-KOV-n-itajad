@@ -1,0 +1,485 @@
+[
+ {
+  "id": "rahvaarv",
+  "ok": true,
+  "url": "https://andmed.stat.ee/api/v1/et/stat/RV0240",
+  "title": "RV0240: RAHVASTIK SOO, VANUSE JA ELUKOHA JÄRGI, 1. JAANUAR",
+  "variables": [
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Elukoht",
+    "text": "Elukoht",
+    "n": 246,
+    "sample": [
+     "Kogu Eesti",
+     "..Linnaline asustuspiirkond",
+     "..Väikelinnaline asustuspiirkond",
+     "..Maaline asustuspiirkond",
+     "Maakond teadmata",
+     "Põhja-Eesti",
+     "..Põhja-Eesti linnaline asustuspiirkond",
+     "..Põhja-Eesti väikelinnaline asustuspiirkond"
+    ]
+   },
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 12,
+    "sample": [
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022"
+    ]
+   },
+   {
+    "code": "Vanus",
+    "text": "Vanus",
+    "n": 106,
+    "sample": [
+     "Kokku",
+     "0-17",
+     "18-64",
+     "65 ja vanemad",
+     "85 ja vanemad",
+     "0",
+     "1",
+     "2"
+    ]
+   }
+  ],
+  "year": "2026",
+  "n_areas": 93,
+  "eesti": 1360745
+ },
+ {
+  "id": "eluiga_mehed",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/05Eluiga/OE0452.px",
+  "title": "OE0452: Oodatav eluiga sünnimomendil ja elada jäänud aastad soo, vanuserühma ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 19,
+    "sample": [
+     "2006/2007",
+     "2007/2008",
+     "2008/2009",
+     "2009/2010",
+     "2010/2011",
+     "2011/2012",
+     "2012/2013",
+     "2013/2014"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 17,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Vanuserühm",
+    "text": "Vanuserühm",
+    "n": 19,
+    "sample": [
+     "0",
+     "1-4",
+     "5-9",
+     "10-14",
+     "15-19",
+     "20-24",
+     "25-29",
+     "30-34"
+    ]
+   }
+  ],
+  "year": "2024/2025",
+  "n_areas": 16,
+  "eesti": 75.6
+ },
+ {
+  "id": "eluiga_naised",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/05Eluiga/OE0452.px",
+  "title": "OE0452: Oodatav eluiga sünnimomendil ja elada jäänud aastad soo, vanuserühma ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 19,
+    "sample": [
+     "2006/2007",
+     "2007/2008",
+     "2008/2009",
+     "2009/2010",
+     "2010/2011",
+     "2011/2012",
+     "2012/2013",
+     "2013/2014"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 17,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Vanuserühm",
+    "text": "Vanuserühm",
+    "n": 19,
+    "sample": [
+     "0",
+     "1-4",
+     "5-9",
+     "10-14",
+     "15-19",
+     "20-24",
+     "25-29",
+     "30-34"
+    ]
+   }
+  ],
+  "year": "2024/2025",
+  "n_areas": 16,
+  "eesti": 83.57
+ },
+ {
+  "id": "tervena_mehed",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/06TEaastad/TE753.px",
+  "title": "TE753: Tervena elada jäänud aastad soo, vanuse ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 19,
+    "sample": [
+     "2006/2007",
+     "2007/2008",
+     "2008/2009",
+     "2009/2010",
+     "2010/2011",
+     "2011/2012",
+     "2012/2013",
+     "2013/2014"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 16,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   },
+   {
+    "code": "Vanus",
+    "text": "Vanus",
+    "n": 2,
+    "sample": [
+     "0",
+     "65-69"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   }
+  ],
+  "year": "2024/2025",
+  "n_areas": 15,
+  "eesti": 56.2
+ },
+ {
+  "id": "tervena_naised",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/06TEaastad/TE753.px",
+  "title": "TE753: Tervena elada jäänud aastad soo, vanuse ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 19,
+    "sample": [
+     "2006/2007",
+     "2007/2008",
+     "2008/2009",
+     "2009/2010",
+     "2010/2011",
+     "2011/2012",
+     "2012/2013",
+     "2013/2014"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 16,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   },
+   {
+    "code": "Vanus",
+    "text": "Vanus",
+    "n": 2,
+    "sample": [
+     "0",
+     "65-69"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   }
+  ],
+  "year": "2024/2025",
+  "n_areas": 15,
+  "eesti": 60
+ },
+ {
+  "id": "soel_rind",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/07Soeluuringud/VSR03.px",
+  "title": "VSR03: Rinnavähi sõeluuringu sihtrühma hõlmatus mammograafilise uuringuga maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 11,
+    "sample": [
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 19,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 3,
+    "sample": [
+     "Sihtrühm",
+     "Uuringul käinud",
+     "Sihtrühma uuringuga hõlmatus (%)"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 16,
+  "eesti": 64.6
+ },
+ {
+  "id": "soel_emakakael",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/07Soeluuringud/VSR13.px",
+  "title": "VSR13: Emakakaelavähi sõeluuringu sihtrühma hõlmatus uuringuga maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 11,
+    "sample": [
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 19,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 5,
+    "sample": [
+     "Sihtrühm",
+     "Uuringul käinud",
+     "Sihtrühma uuringuga hõlmatus (%)",
+     "Uuringul käinutest kodutesti teinud",
+     "Kodutesti teinud naiste osakaal (%)"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 16,
+  "eesti": 65.2
+ },
+ {
+  "id": "soel_sool",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/07Soeluuringud/VSR23.px",
+  "title": "VSR23: Soolevähi sõeluuringu sihtrühma hõlmatus uuringuga maakonna ja soo järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 10,
+    "sample": [
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 19,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 3,
+    "sample": [
+     "Sihtrühm",
+     "Uuringul käinud",
+     "Sihtrühma uuringuga hõlmatus (%)"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 16,
+  "eesti": 60.4
+ }
+]
