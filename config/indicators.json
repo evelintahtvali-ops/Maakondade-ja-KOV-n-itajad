@@ -77,7 +77,8 @@
     "sugu": "^mehed$",
     "vanus": "^0$|^0 |sünnihetk|^0-"
    },
-   "higher_is_better": true
+   "higher_is_better": true,
+   "trend_years": 11
   },
   {
    "id": "eluiga_naised",
@@ -90,7 +91,8 @@
     "sugu": "^naised$",
     "vanus": "^0$|^0 |sünnihetk|^0-"
    },
-   "higher_is_better": true
+   "higher_is_better": true,
+   "trend_years": 11
   },
   {
    "id": "tervena_mehed",
@@ -103,7 +105,8 @@
     "sugu": "^mehed$",
     "vanus": "^0$|^0 |sünnihetk|^0-"
    },
-   "higher_is_better": true
+   "higher_is_better": true,
+   "trend_years": 11
   },
   {
    "id": "tervena_naised",
@@ -116,7 +119,8 @@
     "sugu": "^naised$",
     "vanus": "^0$|^0 |sünnihetk|^0-"
    },
-   "higher_is_better": true
+   "higher_is_better": true,
+   "trend_years": 11
   },
   {
    "id": "sur_vereringe",

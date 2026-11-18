@@ -131,23 +131,66 @@ function change(ind, name){
   const pp = ind.unit==='%' ? (v-p) : null;
   return {year:ind.prev.year, p, d:v-p, pp, rel:(v/p-1)*100};
 }
+const absUnit = u => u==='%' ? ' pp' : (u==='aastat' ? ' a' : null);
+const num1 = x => x.toLocaleString('et-EE',{maximumFractionDigits:1});
+const signed = x => (x>0?'+':'')+num1(x);
+function changeAmount(ind, d, rel){
+  const au = absUnit(ind.unit);
+  return au ? signed(d)+au : signed(rel)+'%';
+}
 function changeTxt(ind, name, short){
   const c = change(ind,name); if(!c) return '';
   const better = ind.higher_is_better==null ? null : (ind.higher_is_better ? c.d>0 : c.d<0);
   const cls = better==null||Math.abs(c.rel)<0.5 ? '' : (better?'up':'down');
   const arrow = c.d>0?'▲':(c.d<0?'▼':'■');
-  const amount = ind.unit==='%' ? `${c.d>0?'+':''}${c.d.toLocaleString('et-EE',{maximumFractionDigits:1})} pp` : `${c.rel>0?'+':''}${c.rel.toLocaleString('et-EE',{maximumFractionDigits:1})}%`;
-  return `<span class="${cls}">${arrow} ${amount}</span>${short?'':` <span class="small">vs ${c.year} (${fmt(c.p,ind.unit)})</span>`}`;
+  return `<span class="${cls}">${arrow} ${changeAmount(ind,c.d,c.rel)}</span>${short?'':` <span class="small">vs ${c.year} (${fmt(c.p,ind.unit)})</span>`}`;
 }
-function context(ind, v, ri){
+function gapTxt(ind, v){
+  const d = v-ind.eesti, au = absUnit(ind.unit);
+  const amount = au ? num1(Math.abs(d))+au : num1(Math.abs(d/ind.eesti*100))+'%';
+  return `${amount} ${d>0?'üle':'alla'} Eesti keskmise`;
+}
+function context(ind, v, ri, name){
   const parts=[];
   if (ind.eesti!=null && ind.unit!=='inimest'){
-    if (ind.higher_is_better==null) parts.push(v>ind.eesti?'Eesti keskmisest kõrgem':'Eesti keskmisest madalam');
-    else { const s=status(ind,v); parts.push(s==='g'?'Eesti keskmisest parem':s==='r'?'Eesti keskmisest halvem':'Eesti keskmise lähedal'); }
+    if (Math.abs(v-ind.eesti)/Math.abs(ind.eesti||1) < 0.005) parts.push('Eesti keskmisel tasemel');
+    else {
+      const s=status(ind,v);
+      parts.push(gapTxt(ind,v) + (s==='g'?' (parem)':s==='r'?' (halvem)':''));
+    }
   }
-  if (ind.higher_is_better!=null && ri.n>1 && ri.rank===ri.n) parts.push('viimane koht');
-  if (ind.higher_is_better!=null && ri.rank===1) parts.push('parim');
-  return parts.join(' │ ');
+  const c = name ? change(ind,name) : null;
+  if (c){
+    let t = `${c.year} → ${ind.year}: ${changeAmount(ind,c.d,c.rel)}`;
+    const pe = ind.prev && ind.prev.eesti;
+    if (pe!=null && ind.eesti!=null){
+      const ed = ind.eesti-pe, erel=(ind.eesti/pe-1)*100;
+      t += ` (Eesti ${changeAmount(ind,ed,erel)})`;
+      const gapNow = Math.abs(v-ind.eesti), gapThen = Math.abs(c.p-pe);
+      const crossed = Math.sign(v-ind.eesti)!==Math.sign(c.p-pe);
+      const tol = Math.max(Math.abs(ind.eesti)*0.005, absUnit(ind.unit)?0.1:0);
+      if (crossed && gapNow>tol && gapThen>tol) {
+        const nowBetter = ind.higher_is_better==null ? null : (ind.higher_is_better ? v>ind.eesti : v<ind.eesti);
+        t += nowBetter==null ? ', ületas Eesti keskmise' : (nowBetter ? ', tõusis Eesti keskmisest paremaks' : ', langes Eesti keskmisest halvemaks');
+      } else if (gapNow < gapThen - tol) t += ', vahe Eestiga vähenenud';
+      else if (gapNow > gapThen + tol) t += ', vahe Eestiga suurenenud';
+    }
+    parts.push(t);
+    if (ind.higher_is_better!=null){
+      const pool = Object.keys(ind.prev.values).filter(k=>lvlOf(k)===lvlOf(name));
+      const dir = ind.higher_is_better===false ? 1 : -1;
+      const prevList = pool.sort((a,b)=>dir*(ind.prev.values[a]-ind.prev.values[b]));
+      const pr = prevList.indexOf(name)+1;
+      if (pr>0 && pr!==ri.rank) parts.push(`koht ${pr}. → ${ri.rank}.`);
+    }
+  }
+  if (ind.higher_is_better!=null && ri.n>3){
+    if (ri.rank===1) parts.push('parim');
+    else if (ri.rank===ri.n) parts.push('viimane');
+    else if (ri.rank<=3) parts.push('esikolmikus');
+    else if (ri.rank>ri.n-3) parts.push('viimase kolme seas');
+  }
+  return parts.join('; ');
 }
 
 /* ---------- PROFIIL ---------- */
@@ -159,7 +202,7 @@ function renderProfile(){
   if (!Object.keys(groups).length){ c.innerHTML='<div class="empty">Selle piirkonna kohta andmeid ei leitud.</div>'; return; }
     let h = isKov ? `<p class="note"><b>${esc(S.area)}</b> asub maakonnas <b>${esc(mk)}</b>. Hallis kirjas on maakonna väärtus, kui KOV-i tasemel andmeid pole.</p>` : '';
   for (const [g, list] of Object.entries(groups)){
-    h += `<h2>${esc(g)}</h2><table class="prof"><colgroup><col style="width:30%"><col style="width:9%">${isKov?'<col style="width:9%">':''}<col style="width:8%"><col style="width:11%"><col style="width:17%"><col></colgroup><tr><th>Näitaja</th><th>${esc(S.area)}</th>${isKov?`<th>${esc(mk)}</th>`:''}<th>Eesti</th><th>Koht</th><th>Muutus</th><th>Kontekst</th></tr>`;
+    h += `<h2>${esc(g)}</h2><table class="prof"><colgroup><col style="width:24%"><col style="width:8%">${isKov?'<col style="width:8%">':''}<col style="width:7%"><col style="width:9%"><col style="width:14%"><col></colgroup><tr><th>Näitaja</th><th>${esc(S.area)}</th>${isKov?`<th>${esc(mk)}</th>`:''}<th>Eesti</th><th>Koht</th><th>Muutus</th><th>Kontekst</th></tr>`;
     for (const i of list){
       const own = i.values[S.area];
       const v = own!=null ? own : i.values[mk];
@@ -169,7 +212,7 @@ function renderProfile(){
       const rank = i.higher_is_better==null ? '' : `${ri.rank}/${ri.n} <span class="small">${own==null||!isKov?'maakondade':'KOV-ide'} seas</span>`;
       const valCell = own!=null ? `<td class="val ${st}">${fmt(v,i.unit)}</td>` : `<td class="val fromcounty">–</td>`;
       const mkCell = isKov ? `<td class="${own==null?'val '+st:'small'}">${fmt(i.values[mk],i.unit)}</td>` : '';
-      h += `<tr><td class="name">${esc(i.name)}${unitTxt(i.unit)?`<span class="small">,${unitTxt(i.unit)}</span>`:''} <span class="small">(${i.year}${i.note?'; '+esc(i.note):''})</span> <a class="dl" href="${i.source_url}" target="_blank" title="${esc(srcName(i))} ${esc(i.table||'')}">andmed ↗</a></td>${valCell}${mkCell}<td>${fmt(i.eesti,i.unit)}</td><td>${rank}</td><td>${changeTxt(i,who)}</td><td class="ctx">${context(i,v,ri)}</td></tr>`;
+      h += `<tr><td class="name">${esc(i.name)}${unitTxt(i.unit)?`<span class="small">,${unitTxt(i.unit)}</span>`:''} <span class="small">(${i.year}${i.note?'; '+esc(i.note):''})</span> <a class="dl" href="${i.source_url}" target="_blank" title="${esc(srcName(i))} ${esc(i.table||'')}">andmed ↗</a></td>${valCell}${mkCell}<td>${fmt(i.eesti,i.unit)}</td><td>${rank}</td><td>${changeTxt(i,who)}</td><td class="ctx">${context(i,v,ri,who)}</td></tr>`;
     }
     h += '</table>';
   }
@@ -201,7 +244,7 @@ function renderCmp(){
     const ahead = pos>0 ? list[pos-1] : null, behind = pos>=0 && pos<list.length-1 ? list[pos+1] : null;
     const word = ind.higher_is_better==null ? ['suurem','väiksem'] : ['ees','taga'];
     h += `<div class="summary">
-      <div class="card ${st}"><div class="lbl">${esc(sel)}</div><div class="big">${fmt(v,ind.unit)}</div><div class="lbl">Eesti ${fmt(ind.eesti,ind.unit)}${ind.prev?' │ '+changeTxt(ind,sel):''}</div></div>
+      <div class="card ${st}"><div class="lbl">${esc(sel)}</div><div class="big">${fmt(v,ind.unit)}</div><div class="lbl">Eesti ${fmt(ind.eesti,ind.unit)}${ind.prev?' │ '+changeTxt(ind,sel):''}</div><div class="lbl" style="margin-top:4px;font-style:italic">${context(ind,v,rMk,sel)}</div></div>
       <div class="card"><div class="lbl">Koht ${lvlOf(sel)==='kov'?'KOV-ide':'maakondade'} seas</div><div class="big">${rMk.rank}/${rMk.n}</div>${rAll?`<div class="lbl">kõigi seas ${rAll.rank}/${rAll.n}</div>`:''}</div>
       <div class="card"><div class="lbl">Vahetult ${word[0]} (${modeTxt} seas)</div><div class="big" style="font-size:16px">${ahead?esc(ahead)+' – '+fmt(ind.values[ahead],ind.unit):'—'}</div>
         <div class="lbl">Vahetult ${word[1]}: ${behind?esc(behind)+' – '+fmt(ind.values[behind],ind.unit):'—'}</div></div>
