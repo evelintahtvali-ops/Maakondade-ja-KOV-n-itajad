@@ -172,8 +172,12 @@ function context(ind, v, ri, name){
       if (crossed && gapNow>tol && gapThen>tol) {
         const nowBetter = ind.higher_is_better==null ? null : (ind.higher_is_better ? v>ind.eesti : v<ind.eesti);
         t += nowBetter==null ? ', ületas Eesti keskmise' : (nowBetter ? ', tõusis Eesti keskmisest paremaks' : ', langes Eesti keskmisest halvemaks');
-      } else if (gapNow < gapThen - tol) t += ', vahe Eestiga vähenenud';
-      else if (gapNow > gapThen + tol) t += ', vahe Eestiga suurenenud';
+      } else if (Math.abs(gapNow-gapThen) > tol) {
+        const shrank = gapNow < gapThen;
+        const ahead = ind.higher_is_better==null ? null : (ind.higher_is_better ? v>ind.eesti : v<ind.eesti);
+        const noun = ahead==null ? 'vahe Eestiga' : (ahead ? 'edumaa Eesti keskmise ees' : 'mahajäämus Eesti keskmisest');
+        t += `, ${noun} ${shrank?'vähenenud':'suurenenud'}`;
+      }
     }
     parts.push(t);
     if (ind.higher_is_better!=null){
