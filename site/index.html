@@ -29,7 +29,8 @@
   table{width:100%;border-collapse:collapse;background:#fff}
   th{background:var(--navy);color:#fff;text-align:left;font-weight:600;padding:8px 10px;font-size:13px;position:sticky;top:0;z-index:1}
   td{padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
-  td.name{background:#F5F5F5;font-weight:600;width:32%}
+  td.name{background:#F5F5F5;font-weight:600}
+  table.prof{table-layout:fixed}
   td.val{font-weight:700;white-space:nowrap}
   td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
   td.ctx{color:var(--muted);font-style:italic;font-size:13px}
@@ -124,7 +125,7 @@ function status(ind, v){
 function change(ind, name){
   if (!ind.prev) return null;
   const p = ind.prev.values[name], v = ind.values[name];
-  if (p==null || v==null) return null;
+  if (p==null || v==null || p===0) return null;
   const pp = ind.unit==='%' ? (v-p) : null;
   return {year:ind.prev.year, p, d:v-p, pp, rel:(v/p-1)*100};
 }
@@ -154,17 +155,16 @@ function renderProfile(){
   const groups = {};
   S.data.indicators.forEach(i=>{ if(i.values[S.area]!=null || (isKov && i.values[mk]!=null)) (groups[i.group] ||= []).push(i); });
   if (!Object.keys(groups).length){ c.innerHTML='<div class="empty">Selle piirkonna kohta andmeid ei leitud.</div>'; return; }
-  const lvlWord = isKov ? 'KOV-ide' : 'maakondade';
-  let h = isKov ? `<p class="note"><b>${esc(S.area)}</b> asub maakonnas <b>${esc(mk)}</b>. Hallis kirjas on maakonna väärtus, kui KOV-i tasemel andmeid pole.</p>` : '';
+    let h = isKov ? `<p class="note"><b>${esc(S.area)}</b> asub maakonnas <b>${esc(mk)}</b>. Hallis kirjas on maakonna väärtus, kui KOV-i tasemel andmeid pole.</p>` : '';
   for (const [g, list] of Object.entries(groups)){
-    h += `<h2>${esc(g)}</h2><table><tr><th>Näitaja</th><th>${esc(S.area)}</th>${isKov?`<th>${esc(mk)}</th>`:''}<th>Eesti</th><th>Koht ${lvlWord} seas</th><th>Muutus</th><th>Kontekst</th></tr>`;
+    h += `<h2>${esc(g)}</h2><table class="prof"><colgroup><col style="width:30%"><col style="width:9%">${isKov?'<col style="width:9%">':''}<col style="width:8%"><col style="width:11%"><col style="width:17%"><col></colgroup><tr><th>Näitaja</th><th>${esc(S.area)}</th>${isKov?`<th>${esc(mk)}</th>`:''}<th>Eesti</th><th>Koht</th><th>Muutus</th><th>Kontekst</th></tr>`;
     for (const i of list){
       const own = i.values[S.area];
       const v = own!=null ? own : i.values[mk];
       const who = own!=null ? S.area : mk;
       const ri = rankIn(i, who, poolFor(i, lvlOf(who)));
       const st = status(i,v);
-      const rank = i.higher_is_better==null ? '' : `${ri.rank}/${ri.n}${own==null?' <span class="small">(maakond)</span>':''}`;
+      const rank = i.higher_is_better==null ? '' : `${ri.rank}/${ri.n} <span class="small">${own==null||!isKov?'maakondade':'KOV-ide'} seas</span>`;
       const valCell = own!=null ? `<td class="val ${st}">${fmt(v,i.unit)}</td>` : `<td class="val fromcounty">–</td>`;
       const mkCell = isKov ? `<td class="${own==null?'val '+st:'small'}">${fmt(i.values[mk],i.unit)}</td>` : '';
       h += `<tr><td class="name">${esc(i.name)}${unitTxt(i.unit)?`<span class="small">,${unitTxt(i.unit)}</span>`:''} <span class="small">(${i.year}${i.note?'; '+esc(i.note):''})</span></td>${valCell}${mkCell}<td>${fmt(i.eesti,i.unit)}</td><td>${rank}</td><td>${changeTxt(i,who)}</td><td class="ctx">${context(i,v,ri)}</td></tr>`;
@@ -236,11 +236,12 @@ function memoText(){
   for (const i of S.data.indicators){
     const v=i.values[S.area]; if (v==null) continue;
     const ri=rankIn(i,S.area,poolFor(i,lvlOf(S.area)));
-    let t = `${i.name} ${i.year}: ${fmt(v,i.unit)}${unitTxt(i.unit)}`;
+    let t = `${i.name}${String(i.name).includes(String(i.year).slice(0,4))?'':' ('+i.year+')'}: ${fmt(v,i.unit)}${unitTxt(i.unit)}`;
     if (i.eesti!=null && i.unit!=='inimest') t += ` (Eesti ${fmt(i.eesti,i.unit)})`;
-    if (i.higher_is_better!=null) t += `, ${isKov?'KOV-ide':'maakondade'} seas ${ri.rank}. kohal ${ri.n}-st`;
+    if (i.higher_is_better!=null) t += `, ${isKov?'KOV-ide':'maakondade'} seas ${ri.rank}. kohal (${ri.n}-st)`;
     const c=change(i,S.area);
-    if (c) t += i.unit==='%' ? `; ${c.year}. aastaga võrreldes ${c.d>=0?'+':''}${c.d.toLocaleString('et-EE',{maximumFractionDigits:1})} pp` : `; ${c.year}. aastaga võrreldes ${c.rel>=0?'+':''}${c.rel.toLocaleString('et-EE',{maximumFractionDigits:1})}%`;
+    if (c){ const base = /^\d{4}$/.test(c.year) ? `${c.year}. aastaga` : `perioodiga ${c.year}`;
+      t += `; ${base} võrreldes ` + (i.unit==='%' ? `${c.d>=0?'+':''}${c.d.toLocaleString('et-EE',{maximumFractionDigits:1})} pp` : `${c.rel>=0?'+':''}${c.rel.toLocaleString('et-EE',{maximumFractionDigits:1})}%`); }
     lines.push('• '+t+'.');
   }
   return `${S.area}\n`+lines.join('\n');

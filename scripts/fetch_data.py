@@ -23,7 +23,7 @@ EESTI_RE = re.compile(r"^(kogu eesti|eesti kokku|eesti|kokku|eesti keskmine)$", 
 
 
 def clean(name):
-    n = re.sub(r"^[.\s]+", "", str(name)).strip().rstrip("*").strip()
+    n = re.sub(r"^[.\s\u2026]+", "", str(name)).strip().rstrip("*").strip()
     if n.isupper():  # nt "RAPLA MAAKOND" -> "Rapla maakond"
         n = n.lower()
         n = "-".join(w[:1].upper() + w[1:] for w in n.split("-"))
@@ -34,6 +34,8 @@ def level_of(name):
     n = clean(name).lower()
     if EESTI_RE.match(n):
         return "eesti"
+    if "v.a" in n or "linnasisene" in n or "kuni 20" in n:
+        return None
     if n.endswith("maakond"):
         return "maakond"
     if re.search(r"(vald|linn)(\s*\(.*\))?$", n):
