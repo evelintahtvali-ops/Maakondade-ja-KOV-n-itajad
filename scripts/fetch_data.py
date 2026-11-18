@@ -23,7 +23,7 @@ EESTI_RE = re.compile(r"^(kogu eesti|eesti kokku|eesti|kokku|eesti keskmine)$", 
 
 
 def clean(name):
-    n = re.sub(r"^[.\s]+", "", str(name)).strip()
+    n = re.sub(r"^[.\s]+", "", str(name)).strip().rstrip("*").strip()
     if n.isupper():  # nt "RAPLA MAAKOND" -> "Rapla maakond"
         n = n.lower()
         n = "-".join(w[:1].upper() + w[1:] for w in n.split("-"))
@@ -58,7 +58,8 @@ def resolve_table(ind, catalog):
     return hits[0]["url"]
 
 
-def extract(rows, info):
+def extract(rows, info, key=None):
+    """Tagastab {aasta: {piirkond: väärtus}}; key andmisel {aasta: {key_väärtus: {piirkond: väärtus}}}."""
     tcode, acode = info.get("time"), info.get("area")
     if not acode:
         raise RuntimeError("Piirkonna dimensiooni ei tuvastatud")
@@ -67,8 +68,33 @@ def extract(rows, info):
         if r["value"] is None:
             continue
         y = r.get(tcode, "") if tcode else ""
-        by_year.setdefault(y, {})[clean(r[acode])] = r["value"]
+        d = by_year.setdefault(y, {})
+        if key:
+            d = d.setdefault(r[key], {})
+        d[clean(r[acode])] = r["value"]
     return by_year
+
+
+def var_code(m, rx):
+    for v in m["variables"]:
+        if re.search(rx, v["text"], re.I) or re.search(rx, v["code"], re.I):
+            return v["code"]
+    raise RuntimeError(f"Muutujat {rx} ei leitud")
+
+
+def compute(ind, m, info, rows):
+    """Tagastab {aasta: {piirkond: väärtus}} arvestades ratio/avg_years seadeid."""
+    r = ind.get("ratio")
+    if r:
+        code = var_code(m, r["var"])
+        raw = extract(rows, info, key=code)
+        out = {}
+        for y, parts in raw.items():
+            num = next((v for k, v in parts.items() if re.search(r["num"], k, re.I)), {})
+            den = next((v for k, v in parts.items() if re.search(r["den"], k, re.I)), {})
+            out[y] = {a: round(num[a] / den[a] * r.get("scale", 100), 2) for a in num if den.get(a)}
+        return out
+    return extract(rows, info)
 
 
 def main():
@@ -81,19 +107,41 @@ def main():
         try:
             url = resolve_table(ind, catalog)
             entry["url"] = url
-            m, info, rows = pxweb.fetch_table(url, years=ind.get("years", 1), select=ind.get("select"), area_var=ind.get("area_var"))
+            sel = dict(ind.get("select") or {})
+            if ind.get("ratio"):
+                r = ind["ratio"]
+                sel[r["var"]] = f"({r['num']})|({r['den']})"
+            nyears = max(ind.get("years", 1), ind.get("avg_years", 1), ind.get("trend_years", 1))
+            m, info, rows = pxweb.fetch_table(url, years=nyears, select=sel, area_var=ind.get("area_var"))
             entry["title"] = m.get("title")
             entry["variables"] = [{"code": v["code"], "text": v["text"], "n": len(v["values"]), "sample": v.get("valueTexts", v["values"])[:8]} for v in m["variables"]]
-            by_year = extract(rows, info)
+            by_year = compute(ind, m, info, rows)
             years = sorted(by_year)
             last = years[-1]
-            vals = by_year[last]
+            vals = dict(by_year[last])
+            year_label = last
+            if ind.get("avg_years", 1) > 1:
+                use = years[-ind["avg_years"]:]
+                keys = set().union(*(by_year[y] for y in use))
+                vals = {k: round(sum(by_year[y][k] for y in use) / len(use), 2) for k in keys if all(k in by_year[y] for y in use)}
+                year_label = f"{use[0]}–{use[-1]}"
             eesti = next((v for k, v in vals.items() if level_of(k) == "eesti"), None)
             values = {k: v for k, v in vals.items() if level_of(k) in ("maakond", "kov")}
             if not values:
                 raise RuntimeError(f"Piirkondi ei leitud; näiteid: {list(vals)[:10]}")
+            prev = None
+            if ind.get("trend_years", 1) > 1 and len(years) > 1:
+                fy = years[0]
+                pv = by_year[fy]
+                prev = {"year": fy, "eesti": next((v for k, v in pv.items() if level_of(k) == "eesti"), None),
+                        "values": {k: v for k, v in pv.items() if k in values}}
             base = {k: ind[k] for k in ("id", "group", "name", "unit", "higher_is_better")}
-            out["indicators"].append({**base, "year": last, "source": ind["source"], "source_url": url, "eesti": eesti, "values": values})
+            rec = {**base, "year": year_label, "source": ind["source"], "source_url": url, "table": (m.get("title") or "").split(":")[0], "eesti": eesti, "values": values}
+            if ind.get("note"):
+                rec["note"] = ind["note"]
+            if prev:
+                rec["prev"] = prev
+            out["indicators"].append(rec)
             # KOV -> maakond seos järjekorra põhjal (Statistikaameti haldusüksuste loend)
             if ind["id"] == "rahvaarv":
                 cur = None
@@ -113,7 +161,7 @@ def main():
                 ee = round((eesti / first.get(next(k for k in first if level_of(k) == "eesti")) - 1) * 100, 1) if eesti else None
                 out["indicators"].append({"id": d["id"], "group": ind["group"], "name": f"{d['name']} {years[0]}–{last}", "unit": d["unit"], "higher_is_better": None,
                                           "year": last, "source": ind["source"], "source_url": url, "eesti": ee, "values": ch})
-            entry.update(ok=True, year=last, n_areas=len(values), eesti=eesti)
+            entry.update(ok=True, year=year_label, n_areas=len(values), eesti=eesti)
             print(f"OK  {ind['id']}: {last}, {len(values)} piirkonda, Eesti={eesti}")
         except Exception as e:
             entry["error"] = f"{e}"

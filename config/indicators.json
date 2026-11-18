@@ -1,87 +1,479 @@
 {
-  "_juhend": "Iga näitaja: source = stat (Statistikaamet) või tai (Tervise Arengu Instituut). table = tabeli kood; TAI puhul võib anda ka find_regex, mille järgi tabel kataloogist otsitakse. select = {muutuja: väärtus} regulaaravaldistena. higher_is_better: true/false/null (null = ei värvi).",
-  "indicators": [
-    {
-      "id": "rahvaarv",
-      "group": "Rahvastik",
-      "name": "Rahvaarv (1. jaanuar)",
-      "unit": "inimest",
-      "source": "stat",
-      "table": "RV0240",
-      "years": 9,
-      "select": {"sugu": "mehed ja naised|kokku", "vanus": "kokku|vanuserühmad kokku"},
-      "higher_is_better": null,
-      "derive_change_from_first_year": {"id": "rahvaarvu_muutus", "name": "Rahvaarvu muutus", "unit": "%"}
-    },
-    {
-      "id": "eluiga_mehed",
-      "group": "Tervise põhinäitajad",
-      "name": "Meeste oodatav eluiga sünnihetkel",
-      "unit": "aastat",
-      "source": "tai",
-      "find_regex": "oodatav eluiga.*(maakon|elukoh)",
-      "select": {"sugu": "^mehed$", "vanus": "^0$|^0 |sünnihetk|^0-"},
-      "higher_is_better": true
-    },
-    {
-      "id": "eluiga_naised",
-      "group": "Tervise põhinäitajad",
-      "name": "Naiste oodatav eluiga sünnihetkel",
-      "unit": "aastat",
-      "source": "tai",
-      "find_regex": "oodatav eluiga.*(maakon|elukoh)",
-      "select": {"sugu": "^naised$", "vanus": "^0$|^0 |sünnihetk|^0-"},
-      "higher_is_better": true
-    },
-    {
-      "id": "tervena_mehed",
-      "group": "Tervise põhinäitajad",
-      "name": "Meeste tervena elada jäänud aastad sünnihetkel",
-      "unit": "aastat",
-      "source": "tai",
-      "find_regex": "tervena elada jäänud.*(maakon|elukoh)",
-      "select": {"sugu": "^mehed$", "vanus": "^0$|^0 |sünnihetk|^0-"},
-      "higher_is_better": true
-    },
-    {
-      "id": "tervena_naised",
-      "group": "Tervise põhinäitajad",
-      "name": "Naiste tervena elada jäänud aastad sünnihetkel",
-      "unit": "aastat",
-      "source": "tai",
-      "find_regex": "tervena elada jäänud.*(maakon|elukoh)",
-      "select": {"sugu": "^naised$", "vanus": "^0$|^0 |sünnihetk|^0-"},
-      "higher_is_better": true
-    },
-    {
-      "id": "soel_rind",
-      "group": "Sõeluuringud",
-      "name": "Rinnavähi sõeluuringu hõlmatus",
-      "unit": "%",
-      "source": "tai",
-      "table": "VSR03",
-      "select": {"näitaja|tunnus": "hõlmatus"},
-      "higher_is_better": true
-    },
-    {
-      "id": "soel_emakakael",
-      "group": "Sõeluuringud",
-      "name": "Emakakaelavähi sõeluuringu hõlmatus",
-      "unit": "%",
-      "source": "tai",
-      "table": "VSR13",
-      "select": {"näitaja|tunnus": "sihtrühma uuringuga hõlmatus"},
-      "higher_is_better": true
-    },
-    {
-      "id": "soel_sool",
-      "group": "Sõeluuringud",
-      "name": "Soolevähi sõeluuringu hõlmatus",
-      "unit": "%",
-      "source": "tai",
-      "table": "VSR23",
-      "select": {"sugu": "mehed ja naised", "näitaja|tunnus": "hõlmatus"},
-      "higher_is_better": true
-    }
-  ]
+ "_juhend": "Iga näitaja: source = stat (Statistikaamet) või tai (Tervise Arengu Instituut). table = tabeli kood; TAI puhul võib anda ka find_regex, mille järgi tabel kataloogist otsitakse. select = {muutuja: väärtus} regulaaravaldistena. higher_is_better: true/false/null (null = ei värvi). Lisavõimalused: trend_years = mitu aastat tagasi võrdlusaasta; avg_years = mitme viimase aasta keskmine; ratio = {var, num, den, scale} kahe väärtuse suhe; area_var = piirkonna muutuja nimi; note = märkus.",
+ "indicators": [
+  {
+   "id": "rahvaarv",
+   "group": "Rahvastik",
+   "name": "Rahvaarv (1. jaanuar)",
+   "unit": "inimest",
+   "source": "stat",
+   "table": "RV0240",
+   "years": 9,
+   "select": {
+    "sugu": "mehed ja naised|kokku",
+    "vanus": "kokku|vanuserühmad kokku"
+   },
+   "higher_is_better": null,
+   "derive_change_from_first_year": {
+    "id": "rahvaarvu_muutus",
+    "name": "Rahvaarvu muutus",
+    "unit": "%"
+   }
+  },
+  {
+   "id": "vanus65",
+   "group": "Rahvastik",
+   "name": "65-aastaste ja vanemate osakaal",
+   "unit": "%",
+   "source": "stat",
+   "table": "RV063U",
+   "trend_years": 9,
+   "ratio": {
+    "var": "näitaja",
+    "num": "65 ja enam",
+    "den": "^rahvaarv$",
+    "scale": 100
+   },
+   "higher_is_better": null
+  },
+  {
+   "id": "vanus0_14",
+   "group": "Rahvastik",
+   "name": "0–14-aastaste osakaal",
+   "unit": "%",
+   "source": "stat",
+   "table": "RV063U",
+   "trend_years": 9,
+   "ratio": {
+    "var": "näitaja",
+    "num": "vanuses 0-14",
+    "den": "^rahvaarv$",
+    "scale": 100
+   },
+   "higher_is_better": null
+  },
+  {
+   "id": "ylalpeetavad",
+   "group": "Rahvastik",
+   "name": "Ülalpeetavate määr",
+   "unit": "",
+   "source": "stat",
+   "table": "RV063U",
+   "trend_years": 9,
+   "select": {
+    "näitaja": "^ülalpeetavate määr$"
+   },
+   "higher_is_better": null,
+   "note": "0–14- ja 65+-aastaste arv 100 tööealise (15–64) kohta"
+  },
+  {
+   "id": "eluiga_mehed",
+   "group": "Tervise põhinäitajad",
+   "name": "Meeste oodatav eluiga sünnihetkel",
+   "unit": "aastat",
+   "source": "tai",
+   "find_regex": "oodatav eluiga.*(maakon|elukoh)",
+   "select": {
+    "sugu": "^mehed$",
+    "vanus": "^0$|^0 |sünnihetk|^0-"
+   },
+   "higher_is_better": true
+  },
+  {
+   "id": "eluiga_naised",
+   "group": "Tervise põhinäitajad",
+   "name": "Naiste oodatav eluiga sünnihetkel",
+   "unit": "aastat",
+   "source": "tai",
+   "find_regex": "oodatav eluiga.*(maakon|elukoh)",
+   "select": {
+    "sugu": "^naised$",
+    "vanus": "^0$|^0 |sünnihetk|^0-"
+   },
+   "higher_is_better": true
+  },
+  {
+   "id": "tervena_mehed",
+   "group": "Tervise põhinäitajad",
+   "name": "Meeste tervena elada jäänud aastad sünnihetkel",
+   "unit": "aastat",
+   "source": "tai",
+   "find_regex": "tervena elada jäänud.*(maakon|elukoh)",
+   "select": {
+    "sugu": "^mehed$",
+    "vanus": "^0$|^0 |sünnihetk|^0-"
+   },
+   "higher_is_better": true
+  },
+  {
+   "id": "tervena_naised",
+   "group": "Tervise põhinäitajad",
+   "name": "Naiste tervena elada jäänud aastad sünnihetkel",
+   "unit": "aastat",
+   "source": "tai",
+   "find_regex": "tervena elada jäänud.*(maakon|elukoh)",
+   "select": {
+    "sugu": "^naised$",
+    "vanus": "^0$|^0 |sünnihetk|^0-"
+   },
+   "higher_is_better": true
+  },
+  {
+   "id": "sur_vereringe",
+   "group": "Suremus",
+   "name": "Suremus vereringeelundite haigustesse",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "SD23",
+   "trend_years": 6,
+   "select": {
+    "kordaja": "^standarditud",
+    "surma põhjus": "vereringe",
+    "sugu": "^mehed ja naised$"
+   },
+   "higher_is_better": false,
+   "note": "standarditud kordaja"
+  },
+  {
+   "id": "sur_kasvajad",
+   "group": "Suremus",
+   "name": "Suremus pahaloomulistesse kasvajatesse",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "SD23",
+   "trend_years": 6,
+   "select": {
+    "kordaja": "^standarditud",
+    "surma põhjus": "pahaloomulised",
+    "sugu": "^mehed ja naised$"
+   },
+   "higher_is_better": false,
+   "note": "standarditud kordaja"
+  },
+  {
+   "id": "sur_vigastused",
+   "group": "Suremus",
+   "name": "Suremus õnnetustesse, mürgistustesse ja traumadesse",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "SD23",
+   "trend_years": 6,
+   "select": {
+    "kordaja": "^standarditud",
+    "surma põhjus": "õnnetus",
+    "sugu": "^mehed ja naised$"
+   },
+   "higher_is_better": false,
+   "note": "standarditud kordaja"
+  },
+  {
+   "id": "sur_alkohol",
+   "group": "Suremus",
+   "name": "Suremus alkoholi tarvitamisest põhjustatud haigustesse",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "SD40",
+   "trend_years": 6,
+   "select": {
+    "surma põhjus": "^standarditud suremuskordaja",
+    "sugu": "^mehed ja naised$"
+   },
+   "higher_is_better": false,
+   "note": "standarditud kordaja, ilma vigastussurmadeta"
+  },
+  {
+   "id": "suitsiid",
+   "group": "Suremus",
+   "name": "Suitsiidid",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "SD35",
+   "area_var": "kategooria",
+   "avg_years": 3,
+   "select": {
+    "näitaja": "^standarditud",
+    "sugu": "^mehed ja naised$"
+   },
+   "higher_is_better": false,
+   "note": "standarditud kordaja, 3 aasta keskmine"
+  },
+  {
+   "id": "diabeet2",
+   "group": "Haigestumus",
+   "name": "2. tüüpi diabeedi esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "EH04",
+   "trend_years": 6,
+   "select": {
+    "diagnoos": "II tüüpi",
+    "sugu": "^mehed ja naised$",
+    "vanuserühm": "^vanuserühmad kokku$"
+   },
+   "higher_is_better": false
+  },
+  {
+   "id": "vahk",
+   "group": "Haigestumus",
+   "name": "Pahaloomuliste kasvajate esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "PK40",
+   "trend_years": 6,
+   "select": {
+    "paige": "^kõik paikmed \\(C00-C97\\)$",
+    "sugu": "^mehed ja naised$"
+   },
+   "higher_is_better": false
+  },
+  {
+   "id": "vahk_kops_m",
+   "group": "Haigestumus",
+   "name": "Meeste hingamiselundite kasvajate esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "PK40",
+   "select": {
+    "paige": "^hingamis",
+    "sugu": "^mehed$"
+   },
+   "higher_is_better": false
+  },
+  {
+   "id": "vigastus_ravi",
+   "group": "Haigestumus",
+   "name": "Vigastuse tõttu ravi vajanud",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "VIG14",
+   "trend_years": 6,
+   "select": {
+    "välispõhjus": "kokku",
+    "sugu": "^mehed ja naised$",
+    "vanuserühm": "^vanuserühmad kokku$"
+   },
+   "higher_is_better": false
+  },
+  {
+   "id": "ylekaal_1kl",
+   "group": "Laste tervis",
+   "name": "1. klassi laste ülemäärane kehakaal",
+   "unit": "%",
+   "source": "tai",
+   "table": "COSI02",
+   "trend_years": 3,
+   "select": {
+    "klass": "^1\\. klass$",
+    "sugu": "^poisid ja tüdrukud$",
+    "meetod": "^WHO$",
+    "näitaja": "^protsent$",
+    "kategooria": "ülemäärane"
+   },
+   "higher_is_better": false,
+   "note": "WHO meetod; ülekaal koos rasvumisega"
+  },
+  {
+   "id": "soel_rind",
+   "group": "Sõeluuringud",
+   "name": "Rinnavähi sõeluuringu hõlmatus",
+   "unit": "%",
+   "source": "tai",
+   "table": "VSR03",
+   "select": {
+    "näitaja|tunnus": "hõlmatus"
+   },
+   "higher_is_better": true,
+   "trend_years": 11
+  },
+  {
+   "id": "soel_emakakael",
+   "group": "Sõeluuringud",
+   "name": "Emakakaelavähi sõeluuringu hõlmatus",
+   "unit": "%",
+   "source": "tai",
+   "table": "VSR13",
+   "select": {
+    "näitaja|tunnus": "sihtrühma uuringuga hõlmatus"
+   },
+   "higher_is_better": true,
+   "trend_years": 11
+  },
+  {
+   "id": "soel_sool",
+   "group": "Sõeluuringud",
+   "name": "Soolevähi sõeluuringu hõlmatus",
+   "unit": "%",
+   "source": "tai",
+   "table": "VSR23",
+   "select": {
+    "sugu": "mehed ja naised",
+    "näitaja|tunnus": "hõlmatus"
+   },
+   "higher_is_better": true,
+   "trend_years": 11
+  },
+  {
+   "id": "vakts_mmr",
+   "group": "Vaktsineerimine",
+   "name": "2-aastaste MMR-vaktsineerimise hõlmatus",
+   "unit": "%",
+   "source": "tai",
+   "table": "NH11",
+   "trend_years": 4,
+   "select": {
+    "haigus": "leetrid"
+   },
+   "higher_is_better": true
+  },
+  {
+   "id": "vakts_dtap",
+   "group": "Vaktsineerimine",
+   "name": "2-aastaste difteeria-teetanuse vaktsineerimise hõlmatus",
+   "unit": "%",
+   "source": "tai",
+   "table": "NH11",
+   "trend_years": 4,
+   "select": {
+    "haigus": "difteeria"
+   },
+   "higher_is_better": true
+  },
+  {
+   "id": "vt_uimasti",
+   "group": "Turvalisus",
+   "name": "Alaealiste uimastiväärteod",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "PO03",
+   "trend_years": 6,
+   "select": {
+    "näitaja": "kordaja",
+    "väärteo liik": "alaealiste"
+   },
+   "higher_is_better": false,
+   "note": "rikkumise toimumiskoha järgi"
+  },
+  {
+   "id": "vt_avalik",
+   "group": "Turvalisus",
+   "name": "Avaliku korra rikkumised",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "PO03",
+   "trend_years": 6,
+   "select": {
+    "näitaja": "kordaja",
+    "väärteo liik": "avaliku korra"
+   },
+   "higher_is_better": false,
+   "note": "rikkumise toimumiskoha järgi"
+  },
+  {
+   "id": "vt_alkoseadus",
+   "group": "Turvalisus",
+   "name": "Alkoholiseaduse rikkumised",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "PO03",
+   "trend_years": 6,
+   "select": {
+    "näitaja": "kordaja",
+    "väärteo liik": "alkoholiseaduse"
+   },
+   "higher_is_better": false,
+   "note": "rikkumise toimumiskoha järgi"
+  },
+  {
+   "id": "joobes_juhid",
+   "group": "Turvalisus",
+   "name": "Politsei tabatud joobes juhid",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "PO02",
+   "trend_years": 6,
+   "select": {
+    "näitaja": "kordaja"
+   },
+   "higher_is_better": false,
+   "note": "tabamiskoha järgi"
+  },
+  {
+   "id": "palk",
+   "group": "Palk ja sissetulek",
+   "name": "Keskmine brutokuupalk",
+   "unit": "€",
+   "source": "stat",
+   "table": "PA117",
+   "trend_years": 5,
+   "select": {
+    "näitaja": "^keskmine brutokuupalk"
+   },
+   "higher_is_better": true,
+   "note": "kvartal; võrdlus eelmise aasta sama kvartaliga"
+  },
+  {
+   "id": "palk_mediaan",
+   "group": "Palk ja sissetulek",
+   "name": "Brutokuupalga mediaan",
+   "unit": "€",
+   "source": "stat",
+   "table": "PA117",
+   "trend_years": 5,
+   "select": {
+    "näitaja": "mediaan"
+   },
+   "higher_is_better": true
+  },
+  {
+   "id": "pension",
+   "group": "Palk ja sissetulek",
+   "name": "Keskmine pension kuus",
+   "unit": "€",
+   "source": "stat",
+   "table": "SK154",
+   "trend_years": 6,
+   "higher_is_better": true
+  },
+  {
+   "id": "vaesus",
+   "group": "Palk ja sissetulek",
+   "name": "Suhtelise vaesuse määr",
+   "unit": "%",
+   "source": "stat",
+   "table": "LES20",
+   "trend_years": 6,
+   "select": {
+    "näitaja": "suhtelise vaesuse määr",
+    "vaesuspiir": "60|suhtelise",
+    "sugu": "kokku|mehed ja naised"
+   },
+   "higher_is_better": false
+  },
+  {
+   "id": "toimetulek",
+   "group": "Sotsiaalne olukord",
+   "name": "Toimetulekutoetuse rahuldatud taotlused",
+   "unit": "1000 el kohta",
+   "source": "stat",
+   "table": "SK410",
+   "trend_years": 6,
+   "select": {
+    "näitaja": "rahuldatud taotluste arv toimetulekupiiri tagamiseks 1000 elaniku kohta"
+   },
+   "higher_is_better": false
+  },
+  {
+   "id": "puue",
+   "group": "Sotsiaalne olukord",
+   "name": "Puudega inimeste osakaal",
+   "unit": "%",
+   "source": "stat",
+   "table": "THV21",
+   "trend_years": 6,
+   "select": {
+    "näitaja": "osatähtsus"
+   },
+   "higher_is_better": null
+  }
+ ]
 }

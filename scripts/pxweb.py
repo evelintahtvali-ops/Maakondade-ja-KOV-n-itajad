@@ -74,7 +74,7 @@ def build_query(m, years=None, select=None, area_var=None):
                     chosen = hits
                     break
         if chosen is None:
-            if v.get("time") or re.search(r"^(aasta|vaatlusperiood|periood|year)", text, re.I):
+            if v.get("time") or re.search(r"^(aasta|vaatlusperiood|periood|year|uuringu aasta)", text, re.I):
                 chosen = vals[-(years or 1):] if years else vals
                 info["time"] = code
             elif (area_var and (re.search(area_var, text, re.I) or re.search(area_var, code, re.I))) or (not area_var and AREA_RE.search(text)):
