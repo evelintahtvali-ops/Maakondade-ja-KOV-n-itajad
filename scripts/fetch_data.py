@@ -23,7 +23,11 @@ EESTI_RE = re.compile(r"^(kogu eesti|eesti kokku|eesti|kokku|eesti keskmine)$", 
 
 
 def clean(name):
-    return re.sub(r"^[.\s]+", "", str(name)).strip()
+    n = re.sub(r"^[.\s]+", "", str(name)).strip()
+    if n.isupper():  # nt "RAPLA MAAKOND" -> "Rapla maakond"
+        n = n.lower()
+        n = "-".join(w[:1].upper() + w[1:] for w in n.split("-"))
+    return n
 
 
 def level_of(name):
