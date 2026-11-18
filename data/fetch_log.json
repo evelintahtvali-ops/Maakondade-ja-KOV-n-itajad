@@ -1838,9 +1838,9 @@
     "eesti": 23.9,
     "n": 15,
     "sample": {
-     "Viljandi maakond": 27.3,
-     "Valga maakond": 22.2,
-     "Harju maakond": 21.0
+     "Järva maakond": 25.9,
+     "Ida-Viru maakond": 21.0,
+     "Saare maakond": 24.0
     }
    },
    "2023/2024": {
@@ -1848,9 +1848,9 @@
     "eesti": 24.2,
     "n": 15,
     "sample": {
-     "Harju maakond": 21.1,
-     "Tartu maakond": 33.6,
-     "Võru maakond": 25.2
+     "Hiiu maakond": 34.9,
+     "Lääne-Viru maakond": 27.9,
+     "Valga maakond": 21.4
     }
    },
    "2024/2025": {
@@ -1858,9 +1858,9 @@
     "eesti": 23.5,
     "n": 15,
     "sample": {
-     "Lääne-Viru maakond": 28.1,
-     "Ida-Viru maakond": 17.4,
-     "Võru maakond": 24.6
+     "Lääne maakond": 31.7,
+     "Viljandi maakond": 29.6,
+     "Saare maakond": 26.9
     }
    },
    "2025/2026": {
@@ -1868,9 +1868,9 @@
     "eesti": 22.7,
     "n": 15,
     "sample": {
-     "Võru maakond": 29.8,
-     "Lääne maakond": 33.7,
-     "Lääne-Viru maakond": 31.7
+     "Viljandi maakond": 23.7,
+     "Jõgeva maakond": 34.4,
+     "Põlva maakond": 33.7
     }
    },
    "2026/2027": {
@@ -1878,9 +1878,9 @@
     "eesti": 3.7,
     "n": 15,
     "sample": {
-     "Valga maakond": 6.7,
-     "Saare maakond": 7.1,
-     "Järva maakond": 4.6
+     "Põlva maakond": 10.0,
+     "Tartu maakond": 6.3,
+     "Valga maakond": 6.7
     }
    }
   },
@@ -1897,9 +1897,9 @@
     "eesti": 23.9,
     "n": 15,
     "sample": {
-     "Pärnu maakond": 23.3,
-     "Lääne maakond": 26.9,
-     "Jõgeva maakond": 30.8
+     "Hiiu maakond": 30.8,
+     "Põlva maakond": 31.0,
+     "Ida-Viru maakond": 21.0
     }
    },
    "2023/2024": {
@@ -1907,9 +1907,9 @@
     "eesti": 24.2,
     "n": 15,
     "sample": {
+     "Järva maakond": 27.9,
      "Põlva maakond": 30.4,
-     "Võru maakond": 25.2,
-     "Saare maakond": 26.5
+     "Valga maakond": 21.4
     }
    },
    "2024/2025": {
@@ -1917,9 +1917,9 @@
     "eesti": 23.5,
     "n": 15,
     "sample": {
-     "Võru maakond": 24.6,
-     "Hiiu maakond": 41.8,
-     "Jõgeva maakond": 30.2
+     "Tartu maakond": 31.4,
+     "Ida-Viru maakond": 17.4,
+     "Lääne-Viru maakond": 28.1
     }
    },
    "2025/2026": {
@@ -1927,8 +1927,8 @@
     "eesti": 22.7,
     "n": 15,
     "sample": {
-     "Saare maakond": 31.2,
-     "Võru maakond": 29.8,
+     "Lääne-Viru maakond": 31.7,
+     "Harju maakond": 14.7,
      "Tartu maakond": 35.4
     }
    },
@@ -1937,9 +1937,9 @@
     "eesti": 3.7,
     "n": 15,
     "sample": {
+     "Hiiu maakond": 11.0,
      "Rapla maakond": 0.7,
-     "Valga maakond": 6.7,
-     "Hiiu maakond": 11.0
+     "Põlva maakond": 10.0
     }
    }
   },

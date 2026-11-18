@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T17:33Z",
+ "generated": "2026-11-18T17:40Z",
  "indicators": [
   {
    "id": "rahvaarv",
@@ -867,6 +867,27 @@
     "Valga maakond": 72.88,
     "Viljandi maakond": 74.77,
     "Võru maakond": 73.86
+   },
+   "prev": {
+    "year": "2014/2015",
+    "eesti": 73.08,
+    "values": {
+     "Harju maakond": 74.11,
+     "Hiiu maakond": 71.59,
+     "Ida-Viru maakond": 69.11,
+     "Jõgeva maakond": 71.2,
+     "Järva maakond": 72.66,
+     "Lääne maakond": 71.89,
+     "Lääne-Viru maakond": 71.36,
+     "Põlva maakond": 71.73,
+     "Pärnu maakond": 72.68,
+     "Rapla maakond": 72.23,
+     "Saare maakond": 73.17,
+     "Tartu maakond": 74.4,
+     "Valga maakond": 73.12,
+     "Viljandi maakond": 72.25,
+     "Võru maakond": 71.85
+    }
    }
   },
   {
@@ -898,6 +919,27 @@
     "Valga maakond": 81.96,
     "Viljandi maakond": 82.68,
     "Võru maakond": 83.14
+   },
+   "prev": {
+    "year": "2014/2015",
+    "eesti": 81.85,
+    "values": {
+     "Harju maakond": 82.42,
+     "Hiiu maakond": 83.47,
+     "Ida-Viru maakond": 80.54,
+     "Jõgeva maakond": 81.1,
+     "Järva maakond": 81.49,
+     "Lääne maakond": 81.92,
+     "Lääne-Viru maakond": 81.88,
+     "Põlva maakond": 81.76,
+     "Pärnu maakond": 81.42,
+     "Rapla maakond": 83.15,
+     "Saare maakond": 82.7,
+     "Tartu maakond": 82.53,
+     "Valga maakond": 82.32,
+     "Viljandi maakond": 81.59,
+     "Võru maakond": 81.9
+    }
    }
   },
   {
@@ -928,6 +970,27 @@
     "Valga maakond": 50.2,
     "Viljandi maakond": 54.3,
     "Võru maakond": 47.9
+   },
+   "prev": {
+    "year": "2014/2015",
+    "eesti": 53.32,
+    "values": {
+     "Harju maakond": 56.24,
+     "Hiiu maakond": 54.99,
+     "Ida-Viru maakond": 49.67,
+     "Jõgeva maakond": 47.42,
+     "Järva maakond": 50.98,
+     "Lääne maakond": 58.18,
+     "Lääne-Viru maakond": 55.89,
+     "Põlva maakond": 41.52,
+     "Pärnu maakond": 53.66,
+     "Rapla maakond": 57.09,
+     "Saare maakond": 50.52,
+     "Tartu maakond": 52.46,
+     "Valga maakond": 50.29,
+     "Viljandi maakond": 48.43,
+     "Võru maakond": 46.18
+    }
    }
   },
   {
@@ -958,6 +1021,27 @@
     "Valga maakond": 53.4,
     "Viljandi maakond": 59.9,
     "Võru maakond": 53.1
+   },
+   "prev": {
+    "year": "2014/2015",
+    "eesti": 56.55,
+    "values": {
+     "Harju maakond": 58.43,
+     "Hiiu maakond": 59.07,
+     "Ida-Viru maakond": 51.34,
+     "Jõgeva maakond": 50.41,
+     "Järva maakond": 57.21,
+     "Lääne maakond": 66.78,
+     "Lääne-Viru maakond": 62.49,
+     "Põlva maakond": 49.35,
+     "Pärnu maakond": 56.83,
+     "Rapla maakond": 59.6,
+     "Saare maakond": 53.53,
+     "Tartu maakond": 56.66,
+     "Valga maakond": 50.37,
+     "Viljandi maakond": 53.53,
+     "Võru maakond": 51.23
+    }
    }
   },
   {
@@ -1183,20 +1267,20 @@
    "table": "SD35",
    "eesti": 13.11,
    "values": {
-    "Pärnu maakond": 15.17,
-    "Järva maakond": 14.38,
+    "Rapla maakond": 7.56,
+    "Ida-Viru maakond": 12.19,
+    "Põlva maakond": 21.89,
+    "Saare maakond": 23.45,
+    "Jõgeva maakond": 20.51,
+    "Võru maakond": 19.41,
     "Hiiu maakond": 13.25,
     "Valga maakond": 18.01,
-    "Harju maakond": 10.45,
-    "Võru maakond": 19.41,
-    "Lääne maakond": 18.18,
-    "Rapla maakond": 7.56,
-    "Saare maakond": 23.45,
-    "Põlva maakond": 21.89,
     "Lääne-Viru maakond": 24.21,
+    "Lääne maakond": 18.18,
+    "Järva maakond": 14.38,
+    "Pärnu maakond": 15.17,
     "Tartu maakond": 13.04,
-    "Jõgeva maakond": 20.51,
-    "Ida-Viru maakond": 12.19,
+    "Harju maakond": 10.45,
     "Viljandi maakond": 12.14
    },
    "note": "standarditud kordaja, 3 aasta keskmine"
@@ -1957,42 +2041,42 @@
    "table": "TEHIK avaandmed",
    "eesti": 22.7,
    "values": {
-    "Võru maakond": 29.8,
-    "Lääne maakond": 33.7,
-    "Lääne-Viru maakond": 31.7,
-    "Hiiu maakond": 45.2,
-    "Jõgeva maakond": 34.4,
-    "Harju maakond": 14.7,
     "Viljandi maakond": 23.7,
-    "Ida-Viru maakond": 18.5,
-    "Tartu maakond": 35.4,
-    "Saare maakond": 31.2,
-    "Pärnu maakond": 25.5,
-    "Järva maakond": 33.1,
-    "Valga maakond": 28.7,
+    "Jõgeva maakond": 34.4,
     "Põlva maakond": 33.7,
-    "Rapla maakond": 25.7
+    "Lääne maakond": 33.7,
+    "Rapla maakond": 25.7,
+    "Tartu maakond": 35.4,
+    "Harju maakond": 14.7,
+    "Pärnu maakond": 25.5,
+    "Hiiu maakond": 45.2,
+    "Võru maakond": 29.8,
+    "Ida-Viru maakond": 18.5,
+    "Valga maakond": 28.7,
+    "Järva maakond": 33.1,
+    "Lääne-Viru maakond": 31.7,
+    "Saare maakond": 31.2
    },
    "note": "TEHIK avaandmed; võrdlus eelmise hooajaga",
    "prev": {
     "year": "2024/2025",
     "eesti": 23.5,
     "values": {
-     "Lääne-Viru maakond": 28.1,
-     "Ida-Viru maakond": 17.4,
-     "Võru maakond": 24.6,
-     "Saare maakond": 26.9,
-     "Viljandi maakond": 29.6,
      "Lääne maakond": 31.7,
-     "Tartu maakond": 31.4,
-     "Jõgeva maakond": 30.2,
-     "Rapla maakond": 24.4,
-     "Järva maakond": 28.9,
-     "Põlva maakond": 30.8,
+     "Viljandi maakond": 29.6,
+     "Saare maakond": 26.9,
      "Harju maakond": 20.2,
+     "Valga maakond": 22.0,
+     "Järva maakond": 28.9,
+     "Võru maakond": 24.6,
+     "Rapla maakond": 24.4,
+     "Põlva maakond": 30.8,
+     "Lääne-Viru maakond": 28.1,
      "Hiiu maakond": 41.8,
      "Pärnu maakond": 23.8,
-     "Valga maakond": 22.0
+     "Ida-Viru maakond": 17.4,
+     "Tartu maakond": 31.4,
+     "Jõgeva maakond": 30.2
     }
    }
   },
@@ -2008,21 +2092,21 @@
    "table": "TEHIK avaandmed",
    "eesti": 3.7,
    "values": {
-    "Rapla maakond": 0.7,
-    "Valga maakond": 6.7,
     "Hiiu maakond": 11.0,
-    "Viljandi maakond": 2.7,
+    "Rapla maakond": 0.7,
     "Põlva maakond": 10.0,
-    "Lääne-Viru maakond": 11.0,
-    "Pärnu maakond": 4.9,
-    "Saare maakond": 7.1,
     "Jõgeva maakond": 0.6,
-    "Lääne maakond": 1.2,
-    "Ida-Viru maakond": 0.3,
     "Harju maakond": 2.4,
+    "Pärnu maakond": 4.9,
     "Võru maakond": 8.5,
+    "Viljandi maakond": 2.7,
+    "Lääne maakond": 1.2,
     "Järva maakond": 4.6,
-    "Tartu maakond": 6.3
+    "Saare maakond": 7.1,
+    "Ida-Viru maakond": 0.3,
+    "Lääne-Viru maakond": 11.0,
+    "Tartu maakond": 6.3,
+    "Valga maakond": 6.7
    },
    "note": "TEHIK avaandmed; hooaeg on pooleli"
   },
