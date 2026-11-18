@@ -6,7 +6,7 @@ on:
     - cron: "17 4 * * 1"   # iga esmaspäev ~07:17 Eesti aja järgi
   push:
     branches: [main]
-    paths: ["site/**", "config/**", "scripts/**", ".github/workflows/**"]
+    paths: ["site/**", "config/**", "scripts/**", ".github/workflows/update.yml", "!scripts/probe.py"]
 
 permissions:
   contents: write
