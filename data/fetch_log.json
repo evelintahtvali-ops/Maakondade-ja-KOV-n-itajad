@@ -1557,6 +1557,334 @@
   "eesti": 28.1
  },
  {
+  "id": "ylekaal_1kl_p",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/05Uuringud/10COSI/COSI02.px",
+  "title": "COSI02: 1., 4. ja 7. klassi laste kehamassiindeksi kategooriad erinevate meetodite, soo ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Uuringu aasta",
+    "text": "Uuringu aasta",
+    "n": 3,
+    "sample": [
+     "2015/2016",
+     "2018/2019",
+     "2021/2022"
+    ]
+   },
+   {
+    "code": "Klass",
+    "text": "Klass",
+    "n": 3,
+    "sample": [
+     "1. klass",
+     "4. klass",
+     "7. klass"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Poisid ja tüdrukud",
+     "Poisid",
+     "Tüdrukud"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 18,
+    "sample": [
+     "Eesti kokku",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   },
+   {
+    "code": "Meetod",
+    "text": "Meetod",
+    "n": 2,
+    "sample": [
+     "WHO",
+     "IOTF"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 2,
+    "sample": [
+     "arv",
+     "protsent"
+    ]
+   },
+   {
+    "code": "Kehamassiindeksi kategooria",
+    "text": "Kehamassiindeksi kategooria",
+    "n": 2,
+    "sample": [
+     "Normaalkaal",
+     "Ülemäärane kehakaal"
+    ]
+   }
+  ],
+  "year": "2021/2022",
+  "n_areas": 16,
+  "eesti": 30.9
+ },
+ {
+  "id": "ylekaal_1kl_t",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/05Uuringud/10COSI/COSI02.px",
+  "title": "COSI02: 1., 4. ja 7. klassi laste kehamassiindeksi kategooriad erinevate meetodite, soo ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Uuringu aasta",
+    "text": "Uuringu aasta",
+    "n": 3,
+    "sample": [
+     "2015/2016",
+     "2018/2019",
+     "2021/2022"
+    ]
+   },
+   {
+    "code": "Klass",
+    "text": "Klass",
+    "n": 3,
+    "sample": [
+     "1. klass",
+     "4. klass",
+     "7. klass"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Poisid ja tüdrukud",
+     "Poisid",
+     "Tüdrukud"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 18,
+    "sample": [
+     "Eesti kokku",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   },
+   {
+    "code": "Meetod",
+    "text": "Meetod",
+    "n": 2,
+    "sample": [
+     "WHO",
+     "IOTF"
+    ]
+   },
+   {
+    "code": "Näitaja",
+    "text": "Näitaja",
+    "n": 2,
+    "sample": [
+     "arv",
+     "protsent"
+    ]
+   },
+   {
+    "code": "Kehamassiindeksi kategooria",
+    "text": "Kehamassiindeksi kategooria",
+    "n": 2,
+    "sample": [
+     "Normaalkaal",
+     "Ülemäärane kehakaal"
+    ]
+   }
+  ],
+  "year": "2021/2022",
+  "n_areas": 15,
+  "eesti": 25.1
+ },
+ {
+  "id": "enesekahj_0_17",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/09Vigastused/VIG14.px",
+  "title": "VIG14: Vigastuse tõttu ravi vajanud isikud 100 000 elaniku kohta välispõhjuse, soo, vanuserühma ja elukoha järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 10,
+    "sample": [
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023"
+    ]
+   },
+   {
+    "code": "Elukoht",
+    "text": "Elukoht",
+    "n": 16,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Välispõhjus (RHK-10)",
+    "text": "Välispõhjus (RHK-10)",
+    "n": 14,
+    "sample": [
+     "Vigastuste välispõhjused kokku (V01-Y34 või põhjus teadmata)",
+     "Õnnetusjuhtumid (V01-X59)",
+     "..Sõidukiõnnetused (V01-V99)",
+     "..Muud juhuvigastuse põhjused (W00-X59)",
+     "....Kukkumine (W00-W19)",
+     "....Eluta mehhaanilise jõu toime (W20-W49)",
+     "....Elusolendi mehhaanilise jõu toime (W50-W64)",
+     "....Suitsu, tule ja leekide toime (X00-X09)"
+    ]
+   },
+   {
+    "code": "Vanuserühm",
+    "text": "Vanuserühm",
+    "n": 13,
+    "sample": [
+     "Vanuserühmad kokku",
+     "0-17",
+     "18 ja vanemad",
+     "0-4",
+     "5-14",
+     "15-24",
+     "25-34",
+     "35-44"
+    ]
+   }
+  ],
+  "year": "2023–2025",
+  "n_areas": 15,
+  "eesti": 134.7
+ },
+ {
+  "id": "vigastus_0_17",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/09Vigastused/VIG14.px",
+  "title": "VIG14: Vigastuse tõttu ravi vajanud isikud 100 000 elaniku kohta välispõhjuse, soo, vanuserühma ja elukoha järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 10,
+    "sample": [
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023"
+    ]
+   },
+   {
+    "code": "Elukoht",
+    "text": "Elukoht",
+    "n": 16,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Välispõhjus (RHK-10)",
+    "text": "Välispõhjus (RHK-10)",
+    "n": 14,
+    "sample": [
+     "Vigastuste välispõhjused kokku (V01-Y34 või põhjus teadmata)",
+     "Õnnetusjuhtumid (V01-X59)",
+     "..Sõidukiõnnetused (V01-V99)",
+     "..Muud juhuvigastuse põhjused (W00-X59)",
+     "....Kukkumine (W00-W19)",
+     "....Eluta mehhaanilise jõu toime (W20-W49)",
+     "....Elusolendi mehhaanilise jõu toime (W50-W64)",
+     "....Suitsu, tule ja leekide toime (X00-X09)"
+    ]
+   },
+   {
+    "code": "Vanuserühm",
+    "text": "Vanuserühm",
+    "n": 13,
+    "sample": [
+     "Vanuserühmad kokku",
+     "0-17",
+     "18 ja vanemad",
+     "0-4",
+     "5-14",
+     "15-24",
+     "25-34",
+     "35-44"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 93.2
+ },
+ {
   "id": "soel_rind",
   "ok": true,
   "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/07Soeluuringud/VSR03.px",
@@ -1838,9 +2166,9 @@
     "eesti": 23.9,
     "n": 15,
     "sample": {
-     "Viljandi maakond": 27.3,
-     "Põlva maakond": 31.0,
-     "Ida-Viru maakond": 21.0
+     "Rapla maakond": 23.7,
+     "Lääne-Viru maakond": 28.0,
+     "Pärnu maakond": 23.3
     }
    },
    "2023/2024": {
@@ -1848,9 +2176,9 @@
     "eesti": 24.2,
     "n": 15,
     "sample": {
-     "Järva maakond": 27.9,
      "Saare maakond": 26.5,
-     "Põlva maakond": 30.4
+     "Järva maakond": 27.9,
+     "Hiiu maakond": 34.9
     }
    },
    "2024/2025": {
@@ -1859,8 +2187,8 @@
     "n": 15,
     "sample": {
      "Põlva maakond": 30.8,
-     "Ida-Viru maakond": 17.4,
-     "Pärnu maakond": 23.8
+     "Rapla maakond": 24.4,
+     "Võru maakond": 24.6
     }
    },
    "2025/2026": {
@@ -1868,9 +2196,9 @@
     "eesti": 22.7,
     "n": 15,
     "sample": {
-     "Pärnu maakond": 25.5,
-     "Valga maakond": 28.7,
-     "Lääne maakond": 33.7
+     "Järva maakond": 33.1,
+     "Lääne-Viru maakond": 31.7,
+     "Harju maakond": 14.7
     }
    },
    "2026/2027": {
@@ -1879,8 +2207,8 @@
     "n": 15,
     "sample": {
      "Viljandi maakond": 2.7,
-     "Rapla maakond": 0.7,
-     "Võru maakond": 8.5
+     "Saare maakond": 7.1,
+     "Rapla maakond": 0.7
     }
    }
   },
@@ -1897,9 +2225,9 @@
     "eesti": 23.9,
     "n": 15,
     "sample": {
-     "Jõgeva maakond": 30.8,
-     "Hiiu maakond": 30.8,
-     "Järva maakond": 25.9
+     "Harju maakond": 21.0,
+     "Viljandi maakond": 27.3,
+     "Pärnu maakond": 23.3
     }
    },
    "2023/2024": {
@@ -1907,9 +2235,9 @@
     "eesti": 24.2,
     "n": 15,
     "sample": {
+     "Tartu maakond": 33.6,
      "Võru maakond": 25.2,
-     "Põlva maakond": 30.4,
-     "Saare maakond": 26.5
+     "Viljandi maakond": 30.1
     }
    },
    "2024/2025": {
@@ -1917,9 +2245,9 @@
     "eesti": 23.5,
     "n": 15,
     "sample": {
-     "Pärnu maakond": 23.8,
-     "Ida-Viru maakond": 17.4,
-     "Lääne-Viru maakond": 28.1
+     "Jõgeva maakond": 30.2,
+     "Harju maakond": 20.2,
+     "Ida-Viru maakond": 17.4
     }
    },
    "2025/2026": {
@@ -1927,9 +2255,9 @@
     "eesti": 22.7,
     "n": 15,
     "sample": {
-     "Järva maakond": 33.1,
-     "Harju maakond": 14.7,
-     "Tartu maakond": 35.4
+     "Hiiu maakond": 45.2,
+     "Valga maakond": 28.7,
+     "Lääne maakond": 33.7
     }
    },
    "2026/2027": {
@@ -1937,7 +2265,7 @@
     "eesti": 3.7,
     "n": 15,
     "sample": {
-     "Võru maakond": 8.5,
+     "Ida-Viru maakond": 0.3,
      "Harju maakond": 2.4,
      "Jõgeva maakond": 0.6
     }
