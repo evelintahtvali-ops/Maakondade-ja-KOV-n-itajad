@@ -100,6 +100,28 @@ def compute(ind, m, info, rows):
     return extract(rows, info)
 
 
+_UI_CACHE = {}
+
+
+def ui_url(source, api_url, code=None):
+    """Inimloetav tabeli link (PxWeb kasutajaliides)."""
+    try:
+        if source == "tai":
+            rest = api_url.split("/Andmebaas/", 1)[1]
+            parts = rest.split("/")
+            return "https://statistika.tai.ee/pxweb/et/Andmebaas/Andmebaas__" + "__".join(parts[:-1]) + "/" + parts[-1] + "/"
+        if source == "stat" and code:
+            if code not in _UI_CACHE:
+                hits = pxweb.get(f"{STAT_BASE}?query={code}")
+                hit = next((h for h in hits if h["id"].split(".")[0].upper() == code.upper()), None)
+                path = hit["path"].strip("/").replace("/", "__") if hit and hit.get("path") else None
+                _UI_CACHE[code] = f"https://andmed.stat.ee/et/stat/{path}/{hit['id']}" if path else None
+            return _UI_CACHE[code] or api_url
+    except Exception as e:  # noqa
+        print(f"  ! UI link {code}: {e}")
+    return api_url
+
+
 def main():
     cfg = json.load(open(CONFIG, encoding="utf-8"))
     catalog = json.load(open(CATALOG, encoding="utf-8")) if os.path.exists(CATALOG) else {}
@@ -163,7 +185,7 @@ def main():
                 prev = {"year": fy, "eesti": next((v for k, v in pv.items() if level_of(k) == "eesti"), None),
                         "values": {k: v for k, v in pv.items() if k in values}}
             base = {k: ind[k] for k in ("id", "group", "name", "unit", "higher_is_better")}
-            rec = {**base, "year": year_label, "source": ind["source"], "source_url": url, "table": (m.get("title") or "").split(":")[0], "eesti": eesti, "values": values}
+            rec = {**base, "year": year_label, "source": ind["source"], "source_url": ui_url(ind["source"], url, ind.get("table") or (m.get("title") or "").split(":")[0]), "api_url": url, "table": (m.get("title") or "").split(":")[0], "eesti": eesti, "values": values}
             if ind.get("note"):
                 rec["note"] = ind["note"]
             if prev:
@@ -187,7 +209,7 @@ def main():
                 ch = {k: round((v / first[k] - 1) * 100, 1) for k, v in values.items() if first.get(k)}
                 ee = round((eesti / first.get(next(k for k in first if level_of(k) == "eesti")) - 1) * 100, 1) if eesti else None
                 out["indicators"].append({"id": d["id"], "group": ind["group"], "name": f"{d['name']} {years[0]}–{last}", "unit": d["unit"], "higher_is_better": None,
-                                          "year": last, "source": ind["source"], "source_url": url, "eesti": ee, "values": ch})
+                                          "year": last, "source": ind["source"], "source_url": ui_url(ind["source"], url, ind.get("table")), "table": ind.get("table"), "eesti": ee, "values": ch})
             entry.update(ok=True, year=year_label, n_areas=len(values), eesti=eesti)
             print(f"OK  {ind['id']}: {last}, {len(values)} piirkonda, Eesti={eesti}")
         except Exception as e:

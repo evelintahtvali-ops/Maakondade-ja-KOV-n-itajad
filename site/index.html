@@ -57,6 +57,7 @@
   textarea{width:100%;min-height:180px;font:inherit;font-size:13px;padding:10px;border:1px solid #B8C4D3;border-radius:6px}
   a{color:var(--blue)}
   .up{color:var(--g)} .down{color:var(--r)}
+  a.dl{font-size:11px;font-weight:600;text-decoration:none;margin-left:6px;white-space:nowrap}
 </style>
 </head>
 <body>
@@ -97,6 +98,7 @@ const county = n => lvlOf(n)==='maakond' ? n : (S.data.kov_county[n]||'');
 const shortUnit = u => u==='%'?'%':(u==='€'?' €':'');
 const fmt = (v, unit) => v==null ? '–' : (Math.abs(v)>=1000 ? Math.round(v).toLocaleString('et-EE') : v.toLocaleString('et-EE',{maximumFractionDigits:1})) + shortUnit(unit);
 const unitTxt = u => (u && u!=='%' && u!=='€' && u!=='inimest') ? ` ${u}` : '';
+const srcName = i => ({tai:'Tervise Arengu Instituut',stat:'Statistikaamet',tehik:'TEHIK'})[i.source]||i.source;
 const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 function sorted(ind, names){
@@ -167,7 +169,7 @@ function renderProfile(){
       const rank = i.higher_is_better==null ? '' : `${ri.rank}/${ri.n} <span class="small">${own==null||!isKov?'maakondade':'KOV-ide'} seas</span>`;
       const valCell = own!=null ? `<td class="val ${st}">${fmt(v,i.unit)}</td>` : `<td class="val fromcounty">–</td>`;
       const mkCell = isKov ? `<td class="${own==null?'val '+st:'small'}">${fmt(i.values[mk],i.unit)}</td>` : '';
-      h += `<tr><td class="name">${esc(i.name)}${unitTxt(i.unit)?`<span class="small">,${unitTxt(i.unit)}</span>`:''} <span class="small">(${i.year}${i.note?'; '+esc(i.note):''})</span></td>${valCell}${mkCell}<td>${fmt(i.eesti,i.unit)}</td><td>${rank}</td><td>${changeTxt(i,who)}</td><td class="ctx">${context(i,v,ri)}</td></tr>`;
+      h += `<tr><td class="name">${esc(i.name)}${unitTxt(i.unit)?`<span class="small">,${unitTxt(i.unit)}</span>`:''} <span class="small">(${i.year}${i.note?'; '+esc(i.note):''})</span> <a class="dl" href="${i.source_url}" target="_blank" title="${esc(srcName(i))} ${esc(i.table||'')}">andmed ↗</a></td>${valCell}${mkCell}<td>${fmt(i.eesti,i.unit)}</td><td>${rank}</td><td>${changeTxt(i,who)}</td><td class="ctx">${context(i,v,ri)}</td></tr>`;
     }
     h += '</table>';
   }
@@ -189,7 +191,7 @@ function renderCmp(){
   const modeTxt = {maakond:'maakondade', kov:'KOV-ide', county:`${county(S.area)} KOV-ide`, all:'kõigi maakondade ja KOV-ide'}[mode];
 
   // kokkuvõttekaardid
-  let h = `<h2>${esc(ind.name)} (${ind.year})</h2>`;
+  let h = `<h2>${esc(ind.name)} (${ind.year}) <a class="dl" href="${ind.source_url}" target="_blank">andmed ↗</a></h2>`;
   if (!hasKov) h += `<p class="note">Selle näitaja kohta on andmed ainult maakonna tasemel.</p>`;
   if (ind.values[sel]!=null){
     const v = ind.values[sel], st = status(ind,v);
@@ -224,7 +226,7 @@ function renderCmp(){
     const diff = ind.eesti!=null ? (ind.unit==='%' ? `${v-ind.eesti>0?'+':''}${(v-ind.eesti).toLocaleString('et-EE',{maximumFractionDigits:1})} pp` : `${v>=ind.eesti?'+':''}${((v/ind.eesti-1)*100).toLocaleString('et-EE',{maximumFractionDigits:1})}%`) : '';
     h += `<tr class="${name===sel?'sel':''} ${isMk?'mk':''}" data-a="${esc(name)}"><td>${k}.</td><td>${esc(name)}${mode==='all'?`<span class="tag ${isMk?'mk':''}">${isMk?'maakond':'KOV'}</span>`:''}</td><td class="small">${isMk?'':esc(county(name))}</td><td class="num">${fmt(v,ind.unit)}</td><td class="num ${st==='n'?'':st}">${diff}</td><td class="small">${changeTxt(ind,name,true)}</td><td class="barcell"><div class="bar ${st==='n'?'':st}" style="width:${Math.max(1,Math.abs(v)/max*100)}%"></div></td></tr>`;
   }
-  h += `</table><p class="note">${ind.note?esc(ind.note)+' │ ':''}Ühik: ${esc(ind.unit||'—')} │ Allikas: <a href="${ind.source_url}" target="_blank">${({tai:'Tervise Arengu Instituut',stat:'Statistikaamet',tehik:'TEHIK'})[ind.source]||ind.source}, ${esc(ind.table||'')}</a> │ Klõpsa real, et see piirkond valida.</p>`;
+  h += `</table><p class="note">${ind.note?esc(ind.note)+' │ ':''}Ühik: ${esc(ind.unit||'—')} │ Allikas: <a href="${ind.source_url}" target="_blank">${srcName(ind)}, ${esc(ind.table||'')}</a> │ Klõpsa real, et see piirkond valida.</p>`;
   c.innerHTML = h;
   c.querySelectorAll('tr[data-a]').forEach(tr=>tr.onclick=()=>{S.area=tr.dataset.a;document.getElementById('area').value=S.area;render();});
   const selRow = c.querySelector('tr.sel'); if (selRow && S.scroll){ selRow.scrollIntoView({block:'center'}); S.scroll=false; }
@@ -242,7 +244,7 @@ function memoText(){
     const c=change(i,S.area);
     if (c){ const base = /^\d{4}$/.test(c.year) ? `${c.year}. aastaga` : `perioodiga ${c.year}`;
       t += `; ${base} võrreldes ` + (i.unit==='%' ? `${c.d>=0?'+':''}${c.d.toLocaleString('et-EE',{maximumFractionDigits:1})} pp` : `${c.rel>=0?'+':''}${c.rel.toLocaleString('et-EE',{maximumFractionDigits:1})}%`); }
-    lines.push('• '+t+'.');
+    lines.push('• '+t+'. Andmed: '+i.source_url);
   }
   return `${S.area}\n`+lines.join('\n');
 }
