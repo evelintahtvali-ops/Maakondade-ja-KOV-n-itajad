@@ -1,0 +1,87 @@
+{
+  "_juhend": "Iga näitaja: source = stat (Statistikaamet) või tai (Tervise Arengu Instituut). table = tabeli kood; TAI puhul võib anda ka find_regex, mille järgi tabel kataloogist otsitakse. select = {muutuja: väärtus} regulaaravaldistena. higher_is_better: true/false/null (null = ei värvi).",
+  "indicators": [
+    {
+      "id": "rahvaarv",
+      "group": "Rahvastik",
+      "name": "Rahvaarv (1. jaanuar)",
+      "unit": "inimest",
+      "source": "stat",
+      "table": "RV0240",
+      "years": 9,
+      "select": {"sugu": "mehed ja naised|kokku", "vanus": "kokku|vanuserühmad kokku"},
+      "higher_is_better": null,
+      "derive_change_from_first_year": {"id": "rahvaarvu_muutus", "name": "Rahvaarvu muutus", "unit": "%"}
+    },
+    {
+      "id": "eluiga_mehed",
+      "group": "Tervise põhinäitajad",
+      "name": "Meeste oodatav eluiga sünnihetkel",
+      "unit": "aastat",
+      "source": "tai",
+      "find_regex": "oodatav eluiga.*(maakon|elukoh)",
+      "select": {"sugu": "^mehed$", "vanus": "^0$|^0 |sünnihetk|^0-"},
+      "higher_is_better": true
+    },
+    {
+      "id": "eluiga_naised",
+      "group": "Tervise põhinäitajad",
+      "name": "Naiste oodatav eluiga sünnihetkel",
+      "unit": "aastat",
+      "source": "tai",
+      "find_regex": "oodatav eluiga.*(maakon|elukoh)",
+      "select": {"sugu": "^naised$", "vanus": "^0$|^0 |sünnihetk|^0-"},
+      "higher_is_better": true
+    },
+    {
+      "id": "tervena_mehed",
+      "group": "Tervise põhinäitajad",
+      "name": "Meeste tervena elada jäänud aastad sünnihetkel",
+      "unit": "aastat",
+      "source": "tai",
+      "find_regex": "tervena elada jäänud.*(maakon|elukoh)",
+      "select": {"sugu": "^mehed$", "vanus": "^0$|^0 |sünnihetk|^0-"},
+      "higher_is_better": true
+    },
+    {
+      "id": "tervena_naised",
+      "group": "Tervise põhinäitajad",
+      "name": "Naiste tervena elada jäänud aastad sünnihetkel",
+      "unit": "aastat",
+      "source": "tai",
+      "find_regex": "tervena elada jäänud.*(maakon|elukoh)",
+      "select": {"sugu": "^naised$", "vanus": "^0$|^0 |sünnihetk|^0-"},
+      "higher_is_better": true
+    },
+    {
+      "id": "soel_rind",
+      "group": "Sõeluuringud",
+      "name": "Rinnavähi sõeluuringu hõlmatus",
+      "unit": "%",
+      "source": "tai",
+      "table": "VSR03",
+      "select": {"näitaja|tunnus": "hõlmatus"},
+      "higher_is_better": true
+    },
+    {
+      "id": "soel_emakakael",
+      "group": "Sõeluuringud",
+      "name": "Emakakaelavähi sõeluuringu hõlmatus",
+      "unit": "%",
+      "source": "tai",
+      "table": "VSR13",
+      "select": {"näitaja|tunnus": "sihtrühma uuringuga hõlmatus"},
+      "higher_is_better": true
+    },
+    {
+      "id": "soel_sool",
+      "group": "Sõeluuringud",
+      "name": "Soolevähi sõeluuringu hõlmatus",
+      "unit": "%",
+      "source": "tai",
+      "table": "VSR23",
+      "select": {"sugu": "mehed ja naised", "näitaja|tunnus": "hõlmatus"},
+      "higher_is_better": true
+    }
+  ]
+}

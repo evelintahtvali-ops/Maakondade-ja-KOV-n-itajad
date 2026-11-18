@@ -1,0 +1,44 @@
+name: Andmete uuendamine ja veebileht
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * 1"   # iga esmaspäev ~07:17 Eesti aja järgi
+  push:
+    branches: [main]
+    paths: ["site/**", "config/**", "scripts/**", ".github/workflows/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Andmeallikate kataloog
+        run: python scripts/catalog.py
+      - name: Näitajate tõmbamine
+        run: python scripts/fetch_data.py
+      - name: Salvesta andmed repositooriumi
+        run: |
+          git config user.name "andmete-uuendaja"
+          git config user.email "actions@users.noreply.github.com"
+          git add data site/data
+          git diff --cached --quiet || git commit -m "Andmete uuendus $(date -u +%Y-%m-%d)"
+          git push || true
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

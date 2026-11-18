@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maakondade ja KOV-ide tervise- ja sotsiaalnäitajad</title>
+<style>
+  :root{--navy:#1A3C6E;--blue:#2E75B6;--tile:#EBF4FB;--g:#1E6B3C;--gf:#E2F0E8;--r:#B71C1C;--rf:#FDECEA;--a:#7B5800;--af:#FFF8E1;--muted:#666;--line:#DDE3EA;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Aptos,"Segoe UI",Calibri,Arial,sans-serif;font-size:15px;color:#222;background:#F7F9FC}
+  header{background:var(--navy);color:#fff;padding:18px 28px}
+  header h1{margin:0;font-size:22px;font-weight:700}
+  header .sub{color:#DCE6F2;font-size:13px;margin-top:4px}
+  main{max-width:1100px;margin:0 auto;padding:20px 20px 60px}
+  .controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin-bottom:16px}
+  .controls label{display:flex;flex-direction:column;font-size:12px;color:var(--muted);gap:4px}
+  select,button{font:inherit;padding:7px 10px;border:1px solid #B8C4D3;border-radius:6px;background:#fff}
+  button{cursor:pointer;background:var(--navy);color:#fff;border-color:var(--navy)}
+  button.secondary{background:#fff;color:var(--navy)}
+  .tabs{display:flex;gap:6px;margin-bottom:12px}
+  .tabs button{background:#fff;color:var(--navy)}
+  .tabs button.active{background:var(--navy);color:#fff}
+  h2{color:var(--navy);font-size:16px;border-bottom:2px solid var(--navy);padding-bottom:4px;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.02em}
+  table{width:100%;border-collapse:collapse;background:#fff}
+  th{background:var(--navy);color:#fff;text-align:left;font-weight:600;padding:8px 10px;font-size:13px}
+  td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+  td.name{background:#F5F5F5;font-weight:600;width:36%}
+  td.val{font-weight:700;white-space:nowrap}
+  td.ctx{color:var(--muted);font-style:italic;font-size:13px}
+  .g{background:var(--gf);color:var(--g)} .r{background:var(--rf);color:var(--r)} .a{background:var(--af);color:var(--a)} .n{background:var(--tile);color:var(--navy)}
+  .meter{position:relative;height:8px;background:linear-gradient(90deg,var(--rf),var(--af),var(--gf));border-radius:4px;min-width:120px}
+  .meter .dot{position:absolute;top:-4px;width:16px;height:16px;border-radius:50%;background:var(--navy);border:2px solid #fff;box-shadow:0 0 0 1px var(--navy);transform:translateX(-50%)}
+  .rank-list .row{display:grid;grid-template-columns:220px 1fr 80px;gap:10px;align-items:center;padding:3px 0}
+  .rank-list .bar{height:18px;background:#B8CCE4;border-radius:3px}
+  .rank-list .row.sel .bar{background:var(--navy)} .rank-list .row.sel .lbl{font-weight:700;color:var(--navy)}
+  .rank-list .row.eesti .bar{background:#F0A030} .rank-list .row.eesti .lbl{font-style:italic}
+  .rank-list .num{text-align:right;font-variant-numeric:tabular-nums}
+  .note{font-size:12px;color:var(--muted);margin-top:8px}
+  .empty{padding:20px;background:#fff;border:1px dashed #B8C4D3;border-radius:8px;color:var(--muted)}
+  textarea{width:100%;min-height:160px;font:inherit;font-size:13px;padding:10px;border:1px solid #B8C4D3;border-radius:6px}
+  a{color:var(--blue)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Maakondade ja KOV-ide tervise- ja sotsiaalnäitajad</h1>
+  <div class="sub" id="updated">Andmeid laaditakse…</div>
+</header>
+<main>
+  <div class="tabs">
+    <button id="tab-profile" class="active">Piirkonna profiil</button>
+    <button id="tab-rank">Edetabelid</button>
+  </div>
+  <div class="controls">
+    <label>Tase
+      <select id="level"><option value="maakond">Maakond</option><option value="kov">KOV</option></select>
+    </label>
+    <label>Piirkond <select id="area"></select></label>
+    <label id="ind-wrap" style="display:none">Näitaja <select id="indicator"></select></label>
+    <button id="copy" class="secondary">Kopeeri memo tekst</button>
+  </div>
+  <div id="content"></div>
+  <div id="memo-wrap" style="display:none">
+    <h2>Memo tekst</h2>
+    <textarea id="memo"></textarea>
+    <div class="note">Tekst on kopeeritud lõikelauale. Kontrolli enne memosse panemist üle.</div>
+  </div>
+  <p class="note">Värvid: <span class="g">&nbsp;roheline&nbsp;</span> Eesti keskmisest parem, <span class="a">&nbsp;kollane&nbsp;</span> keskmise lähedal, <span class="r">&nbsp;punane&nbsp;</span> keskmisest halvem. Koht 1 = parim. Andmed uuenevad automaatselt kord nädalas.</p>
+</main>
+<script>
+const S = {data:null, level:'maakond', area:null, tab:'profile', ind:null};
+const fmt = (v, unit) => v==null ? '–' : (Math.abs(v)>=1000 ? Math.round(v).toLocaleString('et-EE') : v.toLocaleString('et-EE',{maximumFractionDigits:1})) + (unit==='%'?'%':'');
+const lvlOf = n => /maakond$/i.test(n) ? 'maakond' : 'kov';
+
+function rankInfo(ind, name){
+  const entries = Object.entries(ind.values).filter(([k])=>lvlOf(k)===lvlOf(name));
+  const dir = ind.higher_is_better===false ? 1 : -1;
+  entries.sort((a,b)=> dir*(a[1]-b[1]));
+  const pos = entries.findIndex(([k])=>k===name);
+  return {rank: pos+1, n: entries.length, entries};
+}
+function status(ind, v){
+  if (ind.higher_is_better==null || v==null || ind.eesti==null) return 'n';
+  const rel = (v-ind.eesti)/Math.abs(ind.eesti||1);
+  const better = ind.higher_is_better ? rel : -rel;
+  if (better > 0.015) return 'g';
+  if (better < -0.015) return 'r';
+  return 'a';
+}
+function context(ind, v, ri){
+  if (v==null) return '';
+  const parts=[];
+  if (ind.eesti!=null){
+    const d = v-ind.eesti;
+    if (ind.higher_is_better==null) parts.push(d>0?'Eesti keskmisest kõrgem':'Eesti keskmisest madalam');
+    else parts.push(status(ind,v)==='g'?'Eesti keskmisest parem':status(ind,v)==='r'?'Eesti keskmisest halvem':'Eesti keskmise lähedal');
+  }
+  if (ind.higher_is_better!=null && ri.rank===ri.n) parts.push('viimane koht');
+  if (ind.higher_is_better!=null && ri.rank===1) parts.push('parim');
+  return parts.join(' │ ');
+}
+
+function renderProfile(){
+  const c = document.getElementById('content');
+  const inds = S.data.indicators.filter(i=>i.values[S.area]!=null);
+  if (!inds.length){ c.innerHTML='<div class="empty">Selle piirkonna kohta andmeid ei leitud.</div>'; return; }
+  const groups = {};
+  inds.forEach(i=> (groups[i.group] ||= []).push(i));
+  let h='';
+  const parent = S.level==='kov' ? S.data.kov_county[S.area] : null;
+  if (parent) h += `<p class="note">Maakond: <b>${parent}</b></p>`;
+  for (const [g, list] of Object.entries(groups)){
+    h += `<h2>${g}</h2><table><tr><th>Näitaja</th><th>${S.area}</th><th>Eesti</th><th>Koht</th><th>Kontekst</th></tr>`;
+    for (const i of list){
+      const v=i.values[S.area], ri=rankInfo(i,S.area), st=status(i,v);
+      const rank = i.higher_is_better==null ? '' : `${ri.rank}/${ri.n}`;
+      h += `<tr><td class="name">${i.name} <span class="note">(${i.year})</span></td><td class="val ${st}">${fmt(v,i.unit)}</td><td>${fmt(i.eesti,i.unit)}</td><td>${rank}</td><td class="ctx">${context(i,v,ri)}</td></tr>`;
+    }
+    h += '</table>';
+  }
+  c.innerHTML = h;
+}
+
+function renderRank(){
+  const c = document.getElementById('content');
+  const ind = S.data.indicators.find(i=>i.id===S.ind);
+  if (!ind){ c.innerHTML=''; return; }
+  const ri = rankInfo(ind, S.area);
+  let rows = ri.entries.slice();
+  if (ind.eesti!=null) rows.push(['Eesti keskmine', ind.eesti]);
+  const dir = ind.higher_is_better===false ? 1 : -1;
+  rows.sort((a,b)=>dir*(a[1]-b[1]));
+  const max = Math.max(...rows.map(r=>Math.abs(r[1])));
+  let h = `<h2>${ind.name} (${ind.year})</h2><div class="rank-list">`;
+  let k=0;
+  for (const [name,v] of rows){
+    const isE = name==='Eesti keskmine'; if(!isE) k++;
+    h += `<div class="row ${name===S.area?'sel':''} ${isE?'eesti':''}"><div class="lbl">${isE?'':k+'. '}${name}</div><div><div class="bar" style="width:${Math.max(2,Math.abs(v)/max*100)}%"></div></div><div class="num">${fmt(v,ind.unit)}</div></div>`;
+  }
+  h += `</div><p class="note">Allikas: <a href="${ind.source_url}" target="_blank">${ind.source==='tai'?'Tervise Arengu Instituut':'Statistikaamet'}</a>${ind.higher_is_better==null?'':' │ järjestus parimast halvimani'}</p>`;
+  c.innerHTML = h;
+}
+
+function memoText(){
+  const lines=[];
+  for (const i of S.data.indicators){
+    const v=i.values[S.area]; if (v==null) continue;
+    const ri=rankInfo(i,S.area);
+    let t = `${i.name}: ${fmt(v,i.unit)}${i.unit&&i.unit!=='%'?' '+i.unit:''}`;
+    if (i.eesti!=null) t += ` (Eesti ${fmt(i.eesti,i.unit)})`;
+    if (i.higher_is_better!=null) t += `, ${S.level==='kov'?'omavalitsuste':'maakondade'} seas ${ri.rank}. kohal`;
+    t += ` (${i.year}).`;
+    lines.push('• '+t);
+  }
+  return `${S.area}\n`+lines.join('\n');
+}
+
+function fillAreas(){
+  const sel=document.getElementById('area');
+  const list=S.data.areas[S.level]||[];
+  sel.innerHTML=list.map(a=>`<option>${a}</option>`).join('');
+  if (!list.includes(S.area)) S.area = list.includes('Rapla maakond')?'Rapla maakond':list[0];
+  sel.value=S.area;
+}
+function fillInds(){
+  const sel=document.getElementById('indicator');
+  const list=S.data.indicators.filter(i=>Object.keys(i.values).some(k=>lvlOf(k)===S.level));
+  sel.innerHTML=list.map(i=>`<option value="${i.id}">${i.group}: ${i.name}</option>`).join('');
+  if (!list.find(i=>i.id===S.ind)) S.ind=list[0]?.id;
+  sel.value=S.ind;
+}
+function render(){
+  document.getElementById('tab-profile').classList.toggle('active',S.tab==='profile');
+  document.getElementById('tab-rank').classList.toggle('active',S.tab==='rank');
+  document.getElementById('ind-wrap').style.display = S.tab==='rank'?'flex':'none';
+  S.tab==='profile'?renderProfile():renderRank();
+}
+document.getElementById('level').onchange=e=>{S.level=e.target.value;fillAreas();fillInds();render();};
+document.getElementById('area').onchange=e=>{S.area=e.target.value;render();};
+document.getElementById('indicator').onchange=e=>{S.ind=e.target.value;render();};
+document.getElementById('tab-profile').onclick=()=>{S.tab='profile';render();};
+document.getElementById('tab-rank').onclick=()=>{S.tab='rank';render();};
+document.getElementById('copy').onclick=async()=>{
+  const t=memoText(); document.getElementById('memo').value=t; document.getElementById('memo-wrap').style.display='block';
+  try{await navigator.clipboard.writeText(t);}catch(e){}
+};
+fetch('data/indicators.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+  S.data=d;
+  document.getElementById('updated').textContent=`Andmed uuendatud ${d.generated.replace('T',' ').replace('Z',' UTC')} │ ${d.indicators.length} näitajat │ ${d.areas.maakond.length} maakonda, ${d.areas.kov.length} KOV-i`;
+  fillAreas(); fillInds(); render();
+}).catch(e=>{document.getElementById('content').innerHTML='<div class="empty">Andmeid ei õnnestunud laadida. Kui leht on just loodud, käivita GitHubis andmete uuendamine (Actions).</div>';});
+</script>
+</body>
+</html>
