@@ -1114,6 +1114,72 @@
   "eesti": 723.3
  },
  {
+  "id": "vahk_m",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/04PahaloomulisedKasvajad/PK40.px",
+  "title": "PK40: Pahaloomuliste kasvajate haigestumuskordajad 100 000 elaniku kohta paikmegruppide / valitud paikmete, soo ja maakonna järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 25,
+    "sample": [
+     "2000",
+     "2001",
+     "2002",
+     "2003",
+     "2004",
+     "2005",
+     "2006",
+     "2007"
+    ]
+   },
+   {
+    "code": "Paige/paikmegrupp",
+    "text": "Paige/paikmegrupp",
+    "n": 29,
+    "sample": [
+     "Kõik paikmed (C00-C97)",
+     "Kõik paikmed v.a nahk (muu) (C00-C97 v.a C44)",
+     "Huul, suuõõs, neel (C00-C14)",
+     "Seedeelundid (C15-C26)",
+     "..Söögitoru (C15)",
+     "..Magu (C16)",
+     "..Käärsool (C18)",
+     "..Pärasool jm (C19-C21)"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Maakond",
+    "text": "Maakond",
+    "n": 18,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "..Tallinn",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond"
+    ]
+   }
+  ],
+  "year": "2024",
+  "n_areas": 16,
+  "eesti": 761.7
+ },
+ {
   "id": "vahk_n",
   "ok": true,
   "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/04PahaloomulisedKasvajad/PK40.px",
@@ -1391,6 +1457,87 @@
   "year": "2025",
   "n_areas": 15,
   "eesti": 82.2
+ },
+ {
+  "id": "vigastus_ravi_m",
+  "ok": true,
+  "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/09Vigastused/VIG14.px",
+  "title": "VIG14: Vigastuse tõttu ravi vajanud isikud 100 000 elaniku kohta välispõhjuse, soo, vanuserühma ja elukoha järgi",
+  "variables": [
+   {
+    "code": "Aasta",
+    "text": "Aasta",
+    "n": 10,
+    "sample": [
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023"
+    ]
+   },
+   {
+    "code": "Elukoht",
+    "text": "Elukoht",
+    "n": 16,
+    "sample": [
+     "Eesti",
+     "Harju maakond",
+     "Hiiu maakond",
+     "Ida-Viru maakond",
+     "Jõgeva maakond",
+     "Järva maakond",
+     "Lääne maakond",
+     "Lääne-Viru maakond"
+    ]
+   },
+   {
+    "code": "Sugu",
+    "text": "Sugu",
+    "n": 3,
+    "sample": [
+     "Mehed ja naised",
+     "Mehed",
+     "Naised"
+    ]
+   },
+   {
+    "code": "Välispõhjus (RHK-10)",
+    "text": "Välispõhjus (RHK-10)",
+    "n": 14,
+    "sample": [
+     "Vigastuste välispõhjused kokku (V01-Y34 või põhjus teadmata)",
+     "Õnnetusjuhtumid (V01-X59)",
+     "..Sõidukiõnnetused (V01-V99)",
+     "..Muud juhuvigastuse põhjused (W00-X59)",
+     "....Kukkumine (W00-W19)",
+     "....Eluta mehhaanilise jõu toime (W20-W49)",
+     "....Elusolendi mehhaanilise jõu toime (W50-W64)",
+     "....Suitsu, tule ja leekide toime (X00-X09)"
+    ]
+   },
+   {
+    "code": "Vanuserühm",
+    "text": "Vanuserühm",
+    "n": 13,
+    "sample": [
+     "Vanuserühmad kokku",
+     "0-17",
+     "18 ja vanemad",
+     "0-4",
+     "5-14",
+     "15-24",
+     "25-34",
+     "35-44"
+    ]
+   }
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 75.9
  },
  {
   "id": "vigastus_ravi_n",
@@ -2166,9 +2313,9 @@
     "eesti": 23.9,
     "n": 15,
     "sample": {
-     "Lääne maakond": 26.9,
-     "Valga maakond": 22.2,
-     "Harju maakond": 21.0
+     "Põlva maakond": 31.0,
+     "Pärnu maakond": 23.3,
+     "Järva maakond": 25.9
     }
    },
    "2023/2024": {
@@ -2176,9 +2323,9 @@
     "eesti": 24.2,
     "n": 15,
     "sample": {
-     "Pärnu maakond": 23.8,
-     "Ida-Viru maakond": 18.9,
-     "Rapla maakond": 23.8
+     "Võru maakond": 25.2,
+     "Lääne-Viru maakond": 27.9,
+     "Pärnu maakond": 23.8
     }
    },
    "2024/2025": {
@@ -2186,9 +2333,9 @@
     "eesti": 23.5,
     "n": 15,
     "sample": {
-     "Viljandi maakond": 29.6,
-     "Lääne maakond": 31.7,
-     "Pärnu maakond": 23.8
+     "Hiiu maakond": 41.8,
+     "Pärnu maakond": 23.8,
+     "Rapla maakond": 24.4
     }
    },
    "2025/2026": {
@@ -2196,9 +2343,9 @@
     "eesti": 26.2,
     "n": 15,
     "sample": {
-     "Rapla maakond": 25.7,
-     "Hiiu maakond": 45.2,
-     "Ida-Viru maakond": 18.5
+     "Jõgeva maakond": 34.4,
+     "Pärnu maakond": 25.5,
+     "Lääne-Viru maakond": 31.7
     }
    },
    "2026/2027": {
@@ -2206,9 +2353,9 @@
     "eesti": 9.9,
     "n": 15,
     "sample": {
-     "Pärnu maakond": 9.0,
-     "Viljandi maakond": 14.2,
-     "Lääne maakond": 11.8
+     "Harju maakond": 8.1,
+     "Saare maakond": 11.2,
+     "Rapla maakond": 5.6
     }
    }
   },
@@ -2225,9 +2372,9 @@
     "eesti": 23.9,
     "n": 15,
     "sample": {
-     "Hiiu maakond": 30.8,
-     "Pärnu maakond": 23.3,
-     "Võru maakond": 25.9
+     "Jõgeva maakond": 30.8,
+     "Põlva maakond": 31.0,
+     "Pärnu maakond": 23.3
     }
    },
    "2023/2024": {
@@ -2235,9 +2382,9 @@
     "eesti": 24.2,
     "n": 15,
     "sample": {
-     "Pärnu maakond": 23.8,
-     "Valga maakond": 21.4,
-     "Ida-Viru maakond": 18.9
+     "Ida-Viru maakond": 18.9,
+     "Rapla maakond": 23.8,
+     "Valga maakond": 21.4
     }
    },
    "2024/2025": {
@@ -2245,9 +2392,9 @@
     "eesti": 23.5,
     "n": 15,
     "sample": {
-     "Rapla maakond": 24.4,
-     "Viljandi maakond": 29.6,
-     "Tartu maakond": 31.4
+     "Võru maakond": 24.6,
+     "Lääne-Viru maakond": 28.1,
+     "Ida-Viru maakond": 17.4
     }
    },
    "2025/2026": {
@@ -2256,8 +2403,8 @@
     "n": 15,
     "sample": {
      "Võru maakond": 29.8,
-     "Hiiu maakond": 45.2,
-     "Ida-Viru maakond": 18.5
+     "Harju maakond": 22.5,
+     "Viljandi maakond": 34.5
     }
    },
    "2026/2027": {
@@ -2265,9 +2412,9 @@
     "eesti": 9.9,
     "n": 15,
     "sample": {
-     "Põlva maakond": 13.9,
-     "Lääne-Viru maakond": 14.6,
-     "Tartu maakond": 12.9
+     "Tartu maakond": 12.9,
+     "Saare maakond": 11.2,
+     "Rapla maakond": 5.6
     }
    }
   },
