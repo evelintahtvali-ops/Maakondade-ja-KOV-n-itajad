@@ -89,7 +89,7 @@
     <textarea id="memo"></textarea>
     <div class="note">Tekst on kopeeritud lõikelauale. Kontrolli enne memosse panemist üle.</div>
   </div>
-  <p class="note">Värvid: <span class="g">&nbsp;roheline&nbsp;</span> Eesti keskmisest parem, <span class="a">&nbsp;kollane&nbsp;</span> keskmise lähedal (±1,5%), <span class="r">&nbsp;punane&nbsp;</span> keskmisest halvem. Koht 1 = parim; kui näitajal pole head/halba suunda, on järjestus suuremast väiksemani. Andmed uuenevad automaatselt kord nädalas (Statistikaamet, Tervise Arengu Instituut, TEHIK).</p>
+  <p class="note">Värvid: <span class="g">&nbsp;roheline&nbsp;</span> Eesti keskmisest parem, <span class="a">&nbsp;kollane&nbsp;</span> keskmise lähedal (±1,5%), <span class="r">&nbsp;punane&nbsp;</span> keskmisest halvem. Koht 1 = parim; kui näitajal pole head/halba suunda, on järjestus suuremast väiksemani. Andmed uuenevad automaatselt kord nädalas (Statistikaamet, Tervise Arengu Instituut, TEHIK, Justiitsandmete statistika).</p>
 </main>
 <script>
 const S = {data:null, area:'Rapla maakond', tab:'profile', ind:null, filter:'kov'};
@@ -98,7 +98,7 @@ const county = n => lvlOf(n)==='maakond' ? n : (S.data.kov_county[n]||'');
 const shortUnit = u => u==='%'?'%':(u==='€'?' €':'');
 const fmt = (v, unit) => v==null ? '–' : (Math.abs(v)>=1000 ? Math.round(v).toLocaleString('et-EE') : v.toLocaleString('et-EE',{maximumFractionDigits:1})) + shortUnit(unit);
 const unitTxt = u => (u && u!=='%' && u!=='€' && u!=='inimest') ? ` ${u}` : '';
-const srcName = i => ({tai:'Tervise Arengu Instituut',stat:'Statistikaamet',tehik:'TEHIK'})[i.source]||i.source;
+const srcName = i => ({tai:'Tervise Arengu Instituut',stat:'Statistikaamet',tehik:'TEHIK',justdigi:'Justiitsandmete statistika'})[i.source]||i.source;
 const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 function sorted(ind, names){

@@ -11,6 +11,7 @@ HERE = os.path.dirname(__file__)
 sys.path.insert(0, HERE)
 import pxweb  # noqa: E402
 import tehik  # noqa: E402
+import justdigi  # noqa: E402
 
 ROOT = os.path.join(HERE, "..")
 CONFIG = os.path.join(ROOT, "config", "indicators.json")
@@ -130,6 +131,46 @@ def main():
     for ind in cfg["indicators"]:
         entry = {"id": ind["id"], "ok": False}
         try:
+            if ind["source"] == "justdigi":
+                csv_url, rows = justdigi.page_csv(ind["page"])
+                head = [h.strip().lower() for h in rows[0]]
+                ci, yi, ai, vi = head.index("kuriteod"), head.index("aasta"), head.index("maakond"), len(head) - 1
+                cats = sorted({r[ci] for r in rows[1:] if len(r) > vi})
+                entry["categories"] = cats
+                by_year = {}
+                for r in rows[1:]:
+                    if len(r) <= vi or not re.search(ind["category"], r[ci], re.I):
+                        continue
+                    try:
+                        v = float(r[vi].replace(",", ".").replace(" ", ""))
+                    except ValueError:
+                        continue
+                    by_year.setdefault(r[yi].strip(), {})[clean(r[ai])] = by_year.get(r[yi].strip(), {}).get(clean(r[ai]), 0) + v
+                if not by_year:
+                    raise RuntimeError(f"Kategooriat ei leitud; olemas: {cats}")
+                years = sorted(by_year)
+                last = years[-1]
+                pop = next((i["values"] for i in out["indicators"] if i["id"] == "rahvaarv"), {})
+
+                def eesti_of(vals):
+                    w = [(vals[k], pop[k]) for k in vals if k in pop]
+                    return round(sum(a * b for a, b in w) / sum(b for _, b in w), 1) if w else None
+                values = {k: v for k, v in by_year[last].items() if level_of(k) == "maakond"}
+                eesti = next((v for k, v in by_year[last].items() if level_of(k) == "eesti"), None) or eesti_of(values)
+                base = {k: ind[k] for k in ("id", "group", "name", "unit", "higher_is_better")}
+                page_url = justdigi.BASE + ind["page"]
+                rec = {**base, "year": last, "source": "justdigi", "source_url": page_url, "table": "Justiitsandmete statistika", "eesti": eesti, "values": values}
+                if ind.get("note"):
+                    rec["note"] = ind["note"]
+                if ind.get("trend_years", 1) > 1 and len(years) > 1:
+                    fy = years[max(0, len(years) - ind["trend_years"])]
+                    pv = {k: v for k, v in by_year[fy].items() if k in values}
+                    rec["prev"] = {"year": fy, "eesti": eesti_of(pv), "values": pv}
+                out["indicators"].append(rec)
+                entry.update(ok=True, year=last, n_areas=len(values), eesti=eesti, csv=csv_url)
+                print(f"OK  {ind['id']}: {last}, {len(values)} maakonda, Eesti={eesti}")
+                log.append(entry)
+                continue
             if ind["source"] == "tehik_flu":
                 res = tehik.flu_coverage(ind.get("age_filter", "AgeGroup2"), tuple(ind.get("ages", ["60-79", "80+"])))
                 seasons = sorted(res)

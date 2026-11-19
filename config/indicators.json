@@ -510,6 +510,54 @@
    "note": "TEHIK avaandmed; hooaeg on pooleli"
   },
   {
+   "id": "kuriteod_koik",
+   "group": "Turvalisus",
+   "name": "Registreeritud kuriteod (kõik nimetatud liigid kokku)",
+   "unit": "10 000 el kohta",
+   "source": "justdigi",
+   "page": "/kuritegevuse-statistika/uldine-statistika/kuriteod-10-000-inimese-kohta-maakondades",
+   "category": ".",
+   "trend_years": 8,
+   "higher_is_better": false,
+   "note": "Eesti keskmine arvutatud maakondade rahvaarvuga kaalutult"
+  },
+  {
+   "id": "kuriteod_vagivald",
+   "group": "Turvalisus",
+   "name": "Kehaline väärkohtlemine (KarS § 121)",
+   "unit": "10 000 el kohta",
+   "source": "justdigi",
+   "page": "/kuritegevuse-statistika/uldine-statistika/kuriteod-10-000-inimese-kohta-maakondades",
+   "category": "§ 121",
+   "trend_years": 8,
+   "higher_is_better": false,
+   "note": "Eesti keskmine arvutatud maakondade rahvaarvuga kaalutult"
+  },
+  {
+   "id": "kuriteod_vargus",
+   "group": "Turvalisus",
+   "name": "Vargused (KarS § 199)",
+   "unit": "10 000 el kohta",
+   "source": "justdigi",
+   "page": "/kuritegevuse-statistika/uldine-statistika/kuriteod-10-000-inimese-kohta-maakondades",
+   "category": "§ 199",
+   "trend_years": 8,
+   "higher_is_better": false,
+   "note": "Eesti keskmine arvutatud maakondade rahvaarvuga kaalutult"
+  },
+  {
+   "id": "kuriteod_joobes",
+   "group": "Turvalisus",
+   "name": "Mootorsõiduki juhtimine joobes (KarS § 424)",
+   "unit": "10 000 el kohta",
+   "source": "justdigi",
+   "page": "/kuritegevuse-statistika/uldine-statistika/kuriteod-10-000-inimese-kohta-maakondades",
+   "category": "§ 424",
+   "trend_years": 8,
+   "higher_is_better": false,
+   "note": "Eesti keskmine arvutatud maakondade rahvaarvuga kaalutult"
+  },
+  {
    "id": "vt_uimasti",
    "group": "Turvalisus",
    "name": "Alaealiste uimastiväärteod",
