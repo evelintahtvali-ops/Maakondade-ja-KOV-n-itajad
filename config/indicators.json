@@ -261,6 +261,20 @@
    "higher_is_better": false
   },
   {
+   "id": "vahk_m",
+   "group": "Haigestumus",
+   "name": "Meeste pahaloomuliste kasvajate esmashaigestumus",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "PK40",
+   "trend_years": 6,
+   "select": {
+    "paige": "^kõik paikmed \\(C00-C97\\)$",
+    "sugu": "^mehed$"
+   },
+   "higher_is_better": false
+  },
+  {
    "id": "vahk_n",
    "group": "Haigestumus",
    "name": "Naiste pahaloomuliste kasvajate esmashaigestumus",
@@ -311,6 +325,21 @@
    "select": {
     "välispõhjus": "kokku",
     "sugu": "^mehed ja naised$",
+    "vanuserühm": "^vanuserühmad kokku$"
+   },
+   "higher_is_better": false
+  },
+  {
+   "id": "vigastus_ravi_m",
+   "group": "Haigestumus",
+   "name": "Vigastuse tõttu ravi vajanud mehed",
+   "unit": "100 000 el kohta",
+   "source": "tai",
+   "table": "VIG14",
+   "trend_years": 6,
+   "select": {
+    "välispõhjus": "kokku",
+    "sugu": "^mehed$",
     "vanuserühm": "^vanuserühmad kokku$"
    },
    "higher_is_better": false
