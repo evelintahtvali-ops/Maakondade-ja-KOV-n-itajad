@@ -4,7 +4,7 @@
    "id": "SR001.px",
    "text": "SR001: Sünnid",
    "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/02Synnid/SR001.px",
-   "updated": "2026-10-16T09:59:12"
+   "updated": "2026-11-18T09:52:56"
   },
   {
    "id": "SR01.px",
@@ -94,7 +94,7 @@
    "id": "SR45.px",
    "text": "SR45: Sünnitamisviis tervishoiuteenuse osutaja maakonna ja naise vanuserühma järgi",
    "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/02Synnid/SR45.px",
-   "updated": "2026-11-09T13:09:20"
+   "updated": "2026-11-18T09:58:14"
   },
   {
    "id": "SR47.px",
@@ -190,7 +190,7 @@
    "id": "SR66.px",
    "text": "SR66: Vastsündinud soo ja sünnikuu järgi",
    "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/01Rahvastik/02Synnid/SR66.px",
-   "updated": "2026-11-09T13:19:27"
+   "updated": "2026-11-18T10:04:13"
   },
   {
    "id": "SR68.px",
@@ -682,7 +682,7 @@
    "id": "TB05.px",
    "text": "TB05: Tuberkuloosi haigestumise esialgsed registreerimisandmed maakonna ja kuu järgi",
    "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/03Tuberkuloos/TB05.px",
-   "updated": "2026-10-20T14:44:26"
+   "updated": "2026-11-18T11:59:42"
   },
   {
    "id": "TB10.px",
@@ -742,13 +742,13 @@
    "id": "TB71.px",
    "text": "TB71: Ravitulemused tuberkuloosi juhu tüübi ja paikme järgi (v.a multiravimresistentsed (MDR) vormid)",
    "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/03Tuberkuloos/TB71.px",
-   "updated": "2026-05-17T00:38:27"
+   "updated": "2026-11-18T13:32:33"
   },
   {
    "id": "TB72.px",
    "text": "TB72: Ravitulemused multiravimresistentse (MDR) vormi korral tuberkuloosi juhu tüübi ja paikme järgi",
    "url": "https://statistika.tai.ee/api/v1/et/Andmebaas/02Haigestumus/03Tuberkuloos/TB72.px",
-   "updated": "2026-05-17T16:05:00"
+   "updated": "2026-11-18T13:41:26"
   },
   {
    "id": "TB81.px",

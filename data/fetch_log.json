@@ -2166,9 +2166,9 @@
     "eesti": 23.9,
     "n": 15,
     "sample": {
-     "Rapla maakond": 23.7,
-     "Lääne-Viru maakond": 28.0,
-     "Pärnu maakond": 23.3
+     "Saare maakond": 24.0,
+     "Harju maakond": 21.0,
+     "Lääne maakond": 26.9
     }
    },
    "2023/2024": {
@@ -2176,9 +2176,9 @@
     "eesti": 24.2,
     "n": 15,
     "sample": {
-     "Saare maakond": 26.5,
-     "Järva maakond": 27.9,
-     "Hiiu maakond": 34.9
+     "Ida-Viru maakond": 18.9,
+     "Rapla maakond": 23.8,
+     "Lääne maakond": 29.0
     }
    },
    "2024/2025": {
@@ -2186,35 +2186,35 @@
     "eesti": 23.5,
     "n": 15,
     "sample": {
-     "Põlva maakond": 30.8,
-     "Rapla maakond": 24.4,
-     "Võru maakond": 24.6
+     "Valga maakond": 22.0,
+     "Järva maakond": 28.9,
+     "Tartu maakond": 31.4
     }
    },
    "2025/2026": {
     "date": "2026-09-27",
-    "eesti": 22.7,
+    "eesti": 26.2,
     "n": 15,
     "sample": {
-     "Järva maakond": 33.1,
-     "Lääne-Viru maakond": 31.7,
-     "Harju maakond": 14.7
+     "Jõgeva maakond": 34.4,
+     "Ida-Viru maakond": 18.5,
+     "Hiiu maakond": 45.2
     }
    },
    "2026/2027": {
-    "date": "2026-11-16",
-    "eesti": 3.7,
+    "date": "2026-11-17",
+    "eesti": 9.9,
     "n": 15,
     "sample": {
-     "Viljandi maakond": 2.7,
-     "Saare maakond": 7.1,
-     "Rapla maakond": 0.7
+     "Lääne maakond": 11.8,
+     "Põlva maakond": 13.9,
+     "Valga maakond": 9.6
     }
    }
   },
   "year": "2025/2026",
   "n_areas": 15,
-  "eesti": 22.7
+  "eesti": 26.2
  },
  {
   "id": "gripp60_jooksev",
@@ -2226,8 +2226,8 @@
     "n": 15,
     "sample": {
      "Harju maakond": 21.0,
-     "Viljandi maakond": 27.3,
-     "Pärnu maakond": 23.3
+     "Pärnu maakond": 23.3,
+     "Rapla maakond": 23.7
     }
    },
    "2023/2024": {
@@ -2235,9 +2235,9 @@
     "eesti": 24.2,
     "n": 15,
     "sample": {
-     "Tartu maakond": 33.6,
+     "Lääne maakond": 29.0,
      "Võru maakond": 25.2,
-     "Viljandi maakond": 30.1
+     "Lääne-Viru maakond": 27.9
     }
    },
    "2024/2025": {
@@ -2245,35 +2245,107 @@
     "eesti": 23.5,
     "n": 15,
     "sample": {
-     "Jõgeva maakond": 30.2,
-     "Harju maakond": 20.2,
-     "Ida-Viru maakond": 17.4
+     "Saare maakond": 26.9,
+     "Hiiu maakond": 41.8,
+     "Viljandi maakond": 29.6
     }
    },
    "2025/2026": {
     "date": "2026-09-27",
-    "eesti": 22.7,
+    "eesti": 26.2,
     "n": 15,
     "sample": {
-     "Hiiu maakond": 45.2,
      "Valga maakond": 28.7,
-     "Lääne maakond": 33.7
+     "Võru maakond": 29.8,
+     "Ida-Viru maakond": 18.5
     }
    },
    "2026/2027": {
-    "date": "2026-11-16",
-    "eesti": 3.7,
+    "date": "2026-11-17",
+    "eesti": 9.9,
     "n": 15,
     "sample": {
-     "Ida-Viru maakond": 0.3,
-     "Harju maakond": 2.4,
-     "Jõgeva maakond": 0.6
+     "Lääne-Viru maakond": 14.6,
+     "Ida-Viru maakond": 8.8,
+     "Lääne maakond": 11.8
     }
    }
   },
-  "year": "2026/2027 seis 2026-11-16",
+  "year": "2026/2027 seis 2026-11-17",
   "n_areas": 15,
-  "eesti": 3.7
+  "eesti": 9.9
+ },
+ {
+  "id": "kuriteod_koik",
+  "ok": true,
+  "categories": [
+   "Isikuvastased kuriteod",
+   "Liikluskuriteod",
+   "Registreeritud kuriteod kokku",
+   "Varavastased kuriteod",
+   "§ 121. Kehaline väärkohtlemine",
+   "§ 121. Kehaline väärkohtlemine ",
+   "§ 199. Vargus",
+   "§ 424. Mootorsõiduki juhtimine joobeseisundis"
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 511.6,
+  "csv": "https://statistika.justdigi.ee/sites/default/files/2026-02/Registreeritud%20kuritegude%20arv%2010000%20inimese%20kohta%20maakondades_3.csv"
+ },
+ {
+  "id": "kuriteod_vagivald",
+  "ok": true,
+  "categories": [
+   "Isikuvastased kuriteod",
+   "Liikluskuriteod",
+   "Registreeritud kuriteod kokku",
+   "Varavastased kuriteod",
+   "§ 121. Kehaline väärkohtlemine",
+   "§ 121. Kehaline väärkohtlemine ",
+   "§ 199. Vargus",
+   "§ 424. Mootorsõiduki juhtimine joobeseisundis"
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 37.9,
+  "csv": "https://statistika.justdigi.ee/sites/default/files/2026-02/Registreeritud%20kuritegude%20arv%2010000%20inimese%20kohta%20maakondades_3.csv"
+ },
+ {
+  "id": "kuriteod_vargus",
+  "ok": true,
+  "categories": [
+   "Isikuvastased kuriteod",
+   "Liikluskuriteod",
+   "Registreeritud kuriteod kokku",
+   "Varavastased kuriteod",
+   "§ 121. Kehaline väärkohtlemine",
+   "§ 121. Kehaline väärkohtlemine ",
+   "§ 199. Vargus",
+   "§ 424. Mootorsõiduki juhtimine joobeseisundis"
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 78.4,
+  "csv": "https://statistika.justdigi.ee/sites/default/files/2026-02/Registreeritud%20kuritegude%20arv%2010000%20inimese%20kohta%20maakondades_3.csv"
+ },
+ {
+  "id": "kuriteod_joobes",
+  "ok": true,
+  "categories": [
+   "Isikuvastased kuriteod",
+   "Liikluskuriteod",
+   "Registreeritud kuriteod kokku",
+   "Varavastased kuriteod",
+   "§ 121. Kehaline väärkohtlemine",
+   "§ 121. Kehaline väärkohtlemine ",
+   "§ 199. Vargus",
+   "§ 424. Mootorsõiduki juhtimine joobeseisundis"
+  ],
+  "year": "2025",
+  "n_areas": 15,
+  "eesti": 15.5,
+  "csv": "https://statistika.justdigi.ee/sites/default/files/2026-02/Registreeritud%20kuritegude%20arv%2010000%20inimese%20kohta%20maakondades_3.csv"
  },
  {
   "id": "vt_uimasti",
