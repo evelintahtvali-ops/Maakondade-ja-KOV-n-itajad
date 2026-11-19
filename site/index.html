@@ -86,8 +86,9 @@
   <div id="content"></div>
   <div id="memo-wrap" style="display:none">
     <h2>Memo tekst</h2>
+    <label class="small" style="display:block;margin-bottom:6px"><input type="checkbox" id="memo-all"> näita kõiki näitajaid (vaikimisi ainult Eesti keskmisest selgelt erinevad)</label>
     <textarea id="memo"></textarea>
-    <div class="note">Tekst on kopeeritud lõikelauale. Kontrolli enne memosse panemist üle.</div>
+    <div class="note">Tekst on kopeeritud lõikelauale. Sissejuhatavad laused on mustand – vaata üle ja teravda enne memosse panemist.</div>
   </div>
   <p class="note">Värvid: <span class="g">&nbsp;roheline&nbsp;</span> Eesti keskmisest parem, <span class="a">&nbsp;kollane&nbsp;</span> keskmise lähedal (±1,5%), <span class="r">&nbsp;punane&nbsp;</span> keskmisest halvem. Koht 1 = parim; kui näitajal pole head/halba suunda, on järjestus suuremast väiksemani. Andmed uuenevad automaatselt kord nädalas (Statistikaamet, Tervise Arengu Instituut, TEHIK, Justiitsandmete statistika).</p>
 </main>
@@ -280,20 +281,72 @@ function renderCmp(){
 }
 
 /* ---------- MEMO TEKST ---------- */
-function memoText(){
-  const lines=[], isKov=lvlOf(S.area)==='kov';
+const plainName = n => n.replace(/\s*\(KarS[^)]*\)/,'').replace(/\s*\(.*?hooaeg\)/,'');
+const lowFirst = n => /^[A-ZÕÄÖÜŠŽ][a-zõäöüšž]/.test(n) && !/^(Eesti|Rapla)/.test(n) ? n[0].toLowerCase()+n.slice(1) : n;
+const unitShort = u => u==='%'?'%':u==='€'?' €':u==='aastat'?' a':(u&&u!=='inimest'?` ${u}`:'');
+const nf = v => v==null?'–':(Math.abs(v)>=1000?Math.round(v).toLocaleString('et-EE'):num1(v));
+function cmpWords(ind){ return ind.unit==='aastat' ? ['pikem','lühem'] : ['kõrgem','madalam']; }
+function notable(ind, v, ri){
+  if (ind.eesti==null || ind.unit==='inimest') return false;
+  const d=v-ind.eesti, rel=Math.abs(d/ind.eesti);
+  if (ind.unit==='aastat') return Math.abs(d)>=0.5 || (ind.higher_is_better!=null && (ri.rank<=3 || ri.rank>ri.n-3));
+  if (ind.unit==='%') return Math.abs(d)>=1.5 || rel>=0.05;
+  return rel>=0.05 || (ind.higher_is_better!=null && ri.n>3 && (ri.rank===1 || ri.rank===ri.n));
+}
+function joinEt(a){ return a.length<2 ? a.join('') : a.slice(0,-1).join(', ')+' ja '+a[a.length-1]; }
+function relTxt(x){ const a=Math.abs(x); return (a>=10?Math.round(a):num1(a))+'%'; }
+function memoBullet(ind, name, v, ri, lvlWord){
+  const [hi,lo] = cmpWords(ind), u = unitShort(ind.unit), au = absUnit(ind.unit);
+  let t = `${plainName(ind.name)} ${nf(v)}${u}`;
+  if (ind.eesti!=null && ind.unit!=='inimest'){
+    const d=v-ind.eesti;
+    if (Math.abs(d/ind.eesti)<0.005) t += ` on Eesti keskmisel tasemel`;
+    else t += ` on Eesti keskmisest ${au ? num1(Math.abs(d))+au : relTxt(d/ind.eesti*100)} ${d>0?hi:lo}`;
+    t += ` (Eesti ${nf(ind.eesti)}${au||ind.unit==='€'?u:''}; ${ind.year})`;
+  } else t += ` (${ind.year})`;
+  t += '.';
+  const c = change(ind,name);
+  if (c){
+    const amt = (d,rel) => au ? signed(d)+au : (Math.abs(rel)<0.05?'±0%':(rel>0?'+':'−')+relTxt(rel));
+    t += ` ${/^\d{4}$/.test(c.year)?c.year+'. aastaga':'Perioodiga '+c.year} võrreldes ${amt(c.d,c.rel)}`;
+    const pe = ind.prev && ind.prev.eesti;
+    if (pe!=null && ind.eesti!=null) t += ` (Eesti ${amt(ind.eesti-pe,(ind.eesti/pe-1)*100)})`;
+    t += '.';
+    if (/^\d{4}$/.test(c.year)) t = t.replace(` ${c.year}. aastaga võrreldes`, ` Võrreldes ${c.year}. aastaga`);
+  }
+  if (ind.higher_is_better!=null && ri.n>1){
+    if (ri.rank===1) t += ` Parim ${lvlWord} seas.`;
+    else if (ri.rank===ri.n) t += ` Viimane ${lvlWord} seas.`;
+    else if (ri.rank>ri.n-3 || ri.rank<=3) t += ` ${ri.rank}. koht ${ri.n} ${lvlWord.replace('-ide','-i').replace('maakondade','maakonna')} seas.`;
+  }
+  return '• '+t;
+}
+function memoText(all){
+  const isKov=lvlOf(S.area)==='kov', lvlWord=isKov?'KOV-ide':'maakondade';
+  const groups={};
   for (const i of S.data.indicators){
     const v=i.values[S.area]; if (v==null) continue;
     const ri=rankIn(i,S.area,poolFor(i,lvlOf(S.area)));
-    let t = `${i.name}${String(i.name).includes(String(i.year).slice(0,4))?'':' ('+i.year+')'}: ${fmt(v,i.unit)}${unitTxt(i.unit)}`;
-    if (i.eesti!=null && i.unit!=='inimest') t += ` (Eesti ${fmt(i.eesti,i.unit)})`;
-    if (i.higher_is_better!=null) t += `, ${isKov?'KOV-ide':'maakondade'} seas ${ri.rank}. kohal (${ri.n}-st)`;
-    const c=change(i,S.area);
-    if (c){ const base = /^\d{4}$/.test(c.year) ? `${c.year}. aastaga` : `perioodiga ${c.year}`;
-      t += `; ${base} võrreldes ` + (i.unit==='%' ? `${c.d>=0?'+':''}${c.d.toLocaleString('et-EE',{maximumFractionDigits:1})} pp` : `${c.rel>=0?'+':''}${c.rel.toLocaleString('et-EE',{maximumFractionDigits:1})}%`); }
-    lines.push('• '+t+'. Andmed: '+i.source_url);
+    if (!all && !notable(i,v,ri)) continue;
+    (groups[i.group] ||= []).push({i,v,ri,st:status(i,v)});
   }
-  return `${S.area}\n`+lines.join('\n');
+  const out=[`${S.area.toUpperCase()}`];
+  for (const [g,list] of Object.entries(groups)){
+    const dev = x => Math.abs((x.v-x.i.eesti)/(x.i.eesti||1));
+    const isSex = x => /^(Meeste|Naiste|1\. klassi (poiste|tüdrukute))|( mehed| naised)$/.test(x.i.name);
+    const hasTotal = x => list.some(y=>y!==x && !isSex(y) && x.i.id.startsWith(y.i.id));
+    const pick = st => list.filter(x=>x.st===st && !(isSex(x) && hasTotal(x) && list.find(y=>!isSex(y)&&x.i.id.startsWith(y.i.id)&&y.st===st)))
+      .sort((a,b)=>dev(b)-dev(a)).slice(0,2).map(x=>lowFirst(plainName(x.i.name)).replace(/ sünnihetkel/,''));
+    const pos=pick('g'), neg=pick('r');
+    let intro;
+    if (pos.length && neg.length) intro = `${joinEt(pos)} on Eesti keskmisest paremal tasemel, kuid ${joinEt(neg)} halvemal:`;
+    else if (pos.length) intro = `${joinEt(pos)} on Eesti keskmisest paremal tasemel:`;
+    else if (neg.length) intro = `${joinEt(neg)} on Eesti keskmisest halvemal tasemel:`;
+    else intro = `${g}:`;
+    out.push('', g.toUpperCase(), intro[0].toUpperCase()+intro.slice(1));
+    for (const x of list) out.push(memoBullet(x.i,S.area,x.v,x.ri,lvlWord));
+  }
+  return out.join('\n');
 }
 
 /* ---------- JUHTIMINE ---------- */
@@ -330,9 +383,10 @@ document.querySelectorAll('#filter button').forEach(b=>b.onclick=()=>{S.filter=b
 document.getElementById('tab-profile').onclick=()=>{S.tab='profile';render();};
 document.getElementById('tab-cmp').onclick=()=>{S.tab='cmp';S.scroll=true;render();};
 document.getElementById('copy').onclick=async()=>{
-  const t=memoText(); document.getElementById('memo').value=t; document.getElementById('memo-wrap').style.display='block';
+  const t=memoText(document.getElementById('memo-all').checked); document.getElementById('memo').value=t; document.getElementById('memo-wrap').style.display='block';
   try{await navigator.clipboard.writeText(t);}catch(e){}
 };
+document.getElementById('memo-all').onchange=()=>document.getElementById('copy').click();
 fetch('data/indicators.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
   S.data=d;
   try{ const p=new URLSearchParams(location.hash.slice(1)); if(p.get('t'))S.tab=p.get('t'); if(p.get('a'))S.area=p.get('a'); if(p.get('n'))S.ind=p.get('n'); if(p.get('f'))S.filter=p.get('f'); }catch(e){}
