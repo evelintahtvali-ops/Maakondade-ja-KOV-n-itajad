@@ -3619,8 +3619,8 @@
     "#main-content",
     "/",
     "//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap",
-    "/cdn-cgi/l/email-protection#670e090108270d121413030e000e490202",
-    "/cdn-cgi/l/email-protection#f49d9a929bb49e818780da9191",
+    "/cdn-cgi/l/email-protection#0d64636b624d67787e7969646a64236868",
+    "/cdn-cgi/l/email-protection#3e575058517e544b4d4a105b5b",
     "/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
     "/core/assets/vendor/jquery/jquery.min.js?v=3.7.1",
     "/core/assets/vendor/once/once.min.js?v=1.0.1",
@@ -3712,5 +3712,251 @@
    "api": [],
    "head": "#\n# robots.txt\n#\n# This file is to prevent the crawling and indexing of certain parts\n# of your site by web crawlers and spiders run by sites like Yahoo!\n# and Google. By telling these \"robots\" where not to go on your site,\n# you save bandwidth and server resources.\n#\n# This file will be ignored unless it is at the root of your host:\n# Used:    http://example.com/robots.txt\n# Ignored: http://example.com/site/robots.txt\n#\n# For more information about the robots.txt standard, see:\n# http://www.robotstxt.org/robotstxt.html\n\nUser-agent: *\n# CSS, JS, Images\nAllow: /core/*.css$\nAllow: /core/*.css?\nAllow: /core/*.js$\nAllow: /core/*.js?\nAllow: /core/*.gif\nAllow: /core/*.jpg\nAllow: /core/*.jpeg\nAllow: /core/*.png\nAllow: /core/*.svg\nAllow: /profiles/*.css$\nAllow: /profiles/*.css?\nAllow: /profiles/*.js$\nAllow: /profiles/*.js?\nAllow: /profiles/*.gif\nAllow: /profiles/*.jpg\nAllow: /profiles/*.jpeg\nAllow: /profiles/*.png\nAllow: /profiles/*.svg\n# Directories\nDisallow: /core/\nDisallow: /profiles/\n# Files\nDisallow: /README.md\nDisallow: /composer/Metapackage/README.txt\nDisallow: /composer/Plugin/ProjectMessage/README.md\nDisallow: /composer/Plugin/Scaffold/README.md\nDisallow: /composer/Plugin/VendorHardening/README.txt\nDisallow: /composer/Template/README.txt\nDisallow: /modules/README.txt\nDisallow: /sites/README.txt\nDisallow: /themes/README.txt\nDisallow: /web.config\n# Paths (clean URLs)\nDisallow: /admin/\nDisallow: /comment/reply/\nDisallow: /filter/tips\nDisallow: /node/add/\nDisallow: /search/\nDisallow: /user/register\nDisallow: /user/password\nDisallow: /user/login\nDisallow: /user/logout\nDisallow: /media/oembed\nDisallow: /*/media/oembed\n# Paths (no clean URLs)\nDisallow: /index.php/admin/\nDisallow: /index.php/comment/reply/\nDisallow: /index.php/filter/tips\nDisallow: /index.php/node/add/\nDisallow: /index.php/search/\nDisallow: /index.php/user/password\nDisallow: /index.php/user/register\nDisallow: /index.php/user/login\nDisallow: /index.php/user/logout\nDisallow: /index.php/media/oembed\nDisallow: /index.php/*/media/oembed\n"
   }
+ },
+ "justdigi_csv": {
+  "url": "https://statistika.justdigi.ee/sites/default/files/2026-02/Registreeritud%20kuritegude%20arv%2010000%20inimese%20kohta%20maakondades_3.csv",
+  "n": 841,
+  "rows": [
+   [
+    "Kuriteod",
+    "Aasta",
+    " Maakond",
+    "Arv 10 000 inimese kohta"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Harju maakond",
+    "42"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Hiiu maakond",
+    "17"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Ida-Viru maakond",
+    "88"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Jõgeva maakond",
+    "34"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Järva maakond",
+    "37"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Lääne maakond",
+    "58"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Lääne-Viru maakond",
+    "46"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Põlva maakond",
+    "55"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Pärnu maakond",
+    "37"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Rapla maakond",
+    "37"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Saare maakond",
+    "23"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Tartu maakond",
+    "32"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Valga maakond",
+    "58"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Viljandi maakond",
+    "25"
+   ],
+   [
+    "§ 121. Kehaline väärkohtlemine",
+    "2018",
+    "Võru maakond",
+    "41"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Harju maakond",
+    "74"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Hiiu maakond",
+    "4"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Ida-Viru maakond",
+    "45"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Jõgeva maakond",
+    "29"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Järva maakond",
+    "31"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Lääne maakond",
+    "51"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Lääne-Viru maakond",
+    "44"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Põlva maakond",
+    "28"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Pärnu maakond",
+    "38"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Rapla maakond",
+    "32"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Saare maakond",
+    "16"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Tartu maakond",
+    "56"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Valga maakond",
+    "36"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Viljandi maakond",
+    "28"
+   ],
+   [
+    "§ 199. Vargus",
+    "2018",
+    "Võru maakond",
+    "32"
+   ],
+   [
+    "§ 424. Mootorsõiduki juhtimine joobeseisundis",
+    "2018",
+    "Harju maakond",
+    "15"
+   ],
+   [
+    "§ 424. Mootorsõiduki juhtimine joobeseisundis",
+    "2018",
+    "Hiiu maakond",
+    "29"
+   ],
+   [
+    "§ 424. Mootorsõiduki juhtimine joobeseisundis",
+    "2018",
+    "Ida-Viru maakond",
+    "23"
+   ],
+   [
+    "§ 424. Mootorsõiduki juhtimine joobeseisundis",
+    "2018",
+    "Jõgeva maakond",
+    "28"
+   ],
+   [
+    "§ 424. Mootorsõiduki juhtimine joobeseisundis",
+    "2018",
+    "Järva maakond",
+    "23"
+   ],
+   [
+    "§ 424. Mootorsõiduki juhtimine joobeseisundis",
+    "2018",
+    "Lääne maakond",
+    "30"
+   ],
+   [
+    "§ 424. Mootorsõiduki juhtimine joobeseisundis",
+    "2018",
+    "Lääne-Viru maakond",
+    "34"
+   ],
+   [
+    "§ 424. Mootorsõiduki juhtimine joobeseisundis",
+    "2018",
+    "Põlva maakond",
+    "21"
+   ],
+   [
+    "§ 424. Mootorsõiduki juhtimine joobeseisundis",
+    "2018",
+    "Pärnu maakond",
+    "16"
+   ]
+  ]
  }
 }
