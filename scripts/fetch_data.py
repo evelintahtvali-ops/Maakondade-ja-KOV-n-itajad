@@ -135,17 +135,17 @@ def main():
                 csv_url, rows = justdigi.page_csv(ind["page"])
                 head = [h.strip().lower() for h in rows[0]]
                 ci, yi, ai, vi = head.index("kuriteod"), head.index("aasta"), head.index("maakond"), len(head) - 1
-                cats = sorted({r[ci] for r in rows[1:] if len(r) > vi})
+                cats = sorted({r[ci].strip() for r in rows[1:] if len(r) > vi})
                 entry["categories"] = cats
                 by_year = {}
                 for r in rows[1:]:
-                    if len(r) <= vi or not re.search(ind["category"], r[ci], re.I):
+                    if len(r) <= vi or not re.search(ind["category"], r[ci].strip(), re.I):
                         continue
                     try:
                         v = float(r[vi].replace(",", ".").replace(" ", ""))
                     except ValueError:
                         continue
-                    by_year.setdefault(r[yi].strip(), {})[clean(r[ai])] = by_year.get(r[yi].strip(), {}).get(clean(r[ai]), 0) + v
+                    by_year.setdefault(r[yi].strip(), {})[clean(r[ai])] = v
                 if not by_year:
                     raise RuntimeError(f"Kategooriat ei leitud; olemas: {cats}")
                 years = sorted(by_year)
