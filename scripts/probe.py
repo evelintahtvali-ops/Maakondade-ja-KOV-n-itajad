@@ -35,5 +35,11 @@ for u in ["https://statistika.justdigi.ee/kuritegevuse-statistika/uldine-statist
                                              "api": sorted(set(re.findall(r'["\'](/[^"\']*(?:api|data|json|csv)[^"\']*)["\']', html, re.I)))[:100], "head": html[:3000]}
     except Exception as e:
         out.setdefault("justdigi", {})[u] = str(e)[:300]
+try:
+    import justdigi
+    u, rows = justdigi.page_csv("/kuritegevuse-statistika/uldine-statistika/kuriteod-10-000-inimese-kohta-maakondades")
+    out["justdigi_csv"] = {"url": u, "n": len(rows), "rows": rows[:40]}
+except Exception as e:
+    out["justdigi_csv"] = str(e)[:300]
 json.dump(out, open("data/probe.json", "w"), ensure_ascii=False, indent=1)
 print("ok", len(out["tables"]))
