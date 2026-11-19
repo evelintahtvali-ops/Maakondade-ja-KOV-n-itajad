@@ -3349,171 +3349,368 @@
   }
  },
  "search": {
-  "lastekaitse": [],
-  "asendushooldus": [],
-  "abivajav laps": [],
-  "laste vaesus": [
+  "kuriteod": [
    [
-    "LES81.px",
-    "LES81: LASTE VAESUS JA ILMAJÄETUS VANUSERÜHMA JA SOO JÄRGI"
+    "JS055.PX",
+    "JS055: POLITSEIS AVASTATUD KURITEOD ASTME JÄRGI (1995–2007)"
    ],
    [
-    "LES81.PX",
-    "LES81: LASTE VAESUS JA ILMAJÄETUS VANUSERÜHMA JA SOO JÄRGI"
+    "JS04.PX",
+    "JS04: REGISTREERITUD KURITEOD LIIGI JÄRGI (1995–2001)"
    ],
    [
-    "LES84.PX",
-    "LES84: LASTE VAESUSE JA ILMAJÄETUSE MÄÄR LEIBKONNAPEA / LEIBKONNA TÜÜBI JÄRGI"
+    "JS041.PX",
+    "JS041: POLITSEIS REGISTREERITUD KURITEOD LIIGI JÄRGI (1999–2007)"
    ],
    [
-    "LES85.PX",
-    "LES85: LASTE VAESUSE JA ILMAJÄETUSE MÄÄR ELUKOHA JÄRGI"
+    "JS008.PX",
+    "JS008: LÕPLIKU MENETLUSOTSUSEGA JA LAHENDATUD KURITEOD ASTME JÄRGI (2006–2016)"
    ],
    [
-    "LES87.PX",
-    "LES87: 0−14-AASTASED LAPSED ASUTUSEKESKSES LASTEHOIUS VANUSERÜHMA, OSALETUD TUNDIDE ARVU JA SOO JÄRGI"
+    "JS25.PX",
+    "JS25: KRIMINAALHOOLDUSALUSTE TOIME PANDUD KURITEOD LIIGI JÄRGI, 31. DETSEMBER (1998–2014)"
    ],
    [
-    "LES821.PX",
-    "LES821: LAPSED ILMAJÄETUSEGA LEIBKONDADES ILMAJÄETUST ISELOOMUSTAVA KOMPONENDI JÄRGI"
+    "JS050.PX",
+    "JS050: POLITSEIS AVASTATUD KURITEOD LIIGI JÄRGI (1999–2007)"
    ],
    [
-    "LES86.PX",
-    "LES86: MAKSERASKUSTES LEIBKONNAD MAKSERASKUSE LIIGI JA LEIBKONNA TÜÜBI (LAPSE VANUS 0−17) JÄRGI"
+    "JS01.PX",
+    "JS01: POLITSEIS REGISTREERITUD KURITEOD TOIMEPANEKU PAIGA JÄRGI (1995–2007)"
    ],
    [
-    "LES88.PX",
-    "LES88: LEIBKONNA LASTEHOIUKULUTUSED KUUS LEIBKONNA TÜÜBI (LAPSE VANUS 0−17) JÄRGI"
+    "JS05.PX",
+    "JS05: AVASTATUD KURITEOD LIIGI JÄRGI (1995–2001)"
    ],
    [
-    "LES93.PX",
-    "LES93: SUHTLEMINE KONTAKTISIKUGA VÄHEMALT KORD NÄDALAS JA ELUSOLEVATE LASTE KESKMINE ARV VANEMAEALISE SOO, VANUSE JA ELUKOHA/RAHVUSE JÄRGI"
+    "JS001.PX",
+    "JS001: REGISTREERITUD KURITEOD ASTME/LIIGI JÄRGI (2003–2021)"
    ],
    [
-    "LES83.PX",
-    "LES83: LASTE SÜGAVA MATERIAALSE ILMAJÄETUSE MÄÄR VAESUSPIIRI JÄRGI (2005–2018)"
+    "JS009.PX",
+    "JS009: REGISTREERITUD KURITEOD ASTME/LIIGI JA MAAKONNA JÄRGI (2006–2021)"
    ],
    [
-    "LES39.PX",
-    "LES39: 15−34-AASTASED MITTETÖÖTAVAD NOORED, KES EI ÕPI EGA OSALE KOOLITUSEL (NEET-NOORED) VANUSERÜHMA JA ISIKUTE RÜHMA (SUGU, RAHVUS, HARIDUSTASE JM) JÄRGI"
+    "JS060.PX",
+    "JS060: EELUURIMISE PEATAMISE MÄÄR KURITEO ASTME JÄRGI (1995–2001)"
+   ],
+   [
+    "JS022.PX",
+    "JS022: REGISTREERITUD KURITEOD TOIMEPANEKUPAIGA JA KURITEO LIIGI JÄRGI (1994–2001)"
+   ],
+   [
+    "JS02.PX",
+    "JS02: POLITSEIS REGISTREERITUD KURITEOD TOIMEPANEKUPAIGA JA KURITEO LIIGI JÄRGI (2002–2007)"
+   ],
+   [
+    "JS154.PX",
+    "JS154: VANGLAASUTUSTES VIIBIVAD SÜÜDIMÕISTETUD KURITEO LIIGI JÄRGI, 31. DETSEMBER (1995–2015)"
+   ],
+   [
+    "JS004.PX",
+    "JS004: KURITEOD KRIMINAALMENETLUSE LÕPETAMISE ALUSE JA KURITEO ASTME JÄRGI (2007–2016)"
+   ],
+   [
+    "JS007.PX",
+    "JS007: KOHTUSSE SAADETUD KURITEOD MENETLUSLIIGI JA KURITEO ASTME JÄRGI (2006–2016)"
+   ],
+   [
+    "JS092.PX",
+    "JS092: JÕUSTUNUD KOHTUOTSUSEGA ALAEALISED SÜÜDIMÕISTETUD KURITEO LIIGI JA KARISTUSE JÄRGI (1998–2004)"
+   ],
+   [
+    "JST52.PX",
+    "JST52: KURITEGUDE OHVRIKS LANGEMINE 15-74-AASTASTE SEAS VIIMASE 12 KUU JOOKSUL RAHVUSE/KODAKONDSUSE JÄRGI, 2008/2009"
+   ],
+   [
+    "JST53.PX",
+    "JST53: KURITEGUDE OHVRIKS LANGEMINE 15-74-AASTASTE SEAS VIIMASE 12 KUU JOOKSUL HARIDUSTASEME JÄRGI, 2008/2009"
+   ],
+   [
+    "JST54.PX",
+    "JST54: KURITEGUDE OHVRIKS LANGEMINE 15-74-AASTASTE SEAS VIIMASE 12 KUU JOOKSUL VANUSE JÄRGI, 2008/2009"
+   ],
+   [
+    "JST56.PX",
+    "JST56: KURITEGUDE OHVRIKS LANGEMINE 15-74-AASTASTE SEAS VIIMASE 12 KUU JOOKSUL TÖÖALASE SEISUNDI JÄRGI KÜSITLUSE HETKEL, 2008/2009"
+   ],
+   [
+    "JST57.PX",
+    "JST57: KURITEGUDE OHVRIKS LANGEMINE 15-74-AASTASTE SEAS VIIMASE 12 KUU JOOKSUL LEIBKONNA MAJANDUSLIKU TOIMETULEKU JÄRGI KÜSITLUSE HETKEL, 2008/2009"
+   ],
+   [
+    "JS091.PX",
+    "JS091: JÕUSTUNUD KOHTUOTSUSEGA SÜÜDIMÕISTETUD KURITEO LIIGI JA KARISTUSE JÄRGI (1998–2003)"
+   ],
+   [
+    "JS06.PX",
+    "JS06: EELUURIMISE PEATAMISE MÄÄR KURITEO LIIGI JÄRGI (1995–2001)"
+   ],
+   [
+    "JST51.PX",
+    "JST51: KURITEGUDE OHVRIKS LANGEMINE 15-74-AASTASTE SEAS VIIMASE 12 KUU JOOKSUL ELUKOHA JÄRGI, 2008/2009"
+   ],
+   [
+    "JST55.PX",
+    "JST55: KURITEGUDE OHVRIKS LANGEMINE 15-74-AASTASTE SEAS VIIMASE 12 KUU JOOKSUL LEIBKONNA TÜÜBI JÄRGI KÜSITLUSE HETKEL, 2008/2009"
+   ],
+   [
+    "JST58.PX",
+    "JST58: KURITEGUDE OHVRIKS LANGEMINE 15-74-AASTASTE SEAS VIIMASE 12 KUU JOOKSUL SOO JA ELUKOHA/VANUSE/HARIDUSE/RAHVUSE/ TÖÖALASE SEISUNDI/ LEIBKONNA TÜÜBI JÄRGI KÜSITLUSE HETKEL, 2008/2009"
    ]
   ],
-  "noored": [
+  "registreeritud kuriteod": [
    [
-    "TT81.PX",
-    "TT81: 15–34-AASTASED ISIKUTE RÜHMA JA ÕPINGUTE AJAL TÖÖTAMISE JÄRGI, 2016"
+    "JS04.PX",
+    "JS04: REGISTREERITUD KURITEOD LIIGI JÄRGI (1995–2001)"
    ],
    [
-    "TT82.PX",
-    "TT82: 15–34-AASTASED ISIKUTE RÜHMA JA VIIMASTE ÕPINGUTE JÄRGI, 2016"
+    "JS041.PX",
+    "JS041: POLITSEIS REGISTREERITUD KURITEOD LIIGI JÄRGI (1999–2007)"
    ],
    [
-    "TT83.PX",
-    "TT83: 15–34-AASTASED ISIKUTE RÜHMA NING TÖÖGA SEOTUD KOLIMISE JA KODUST KAUGEL TÖÖLKÄIMISE JÄRGI, 2016"
+    "JS022.PX",
+    "JS022: REGISTREERITUD KURITEOD TOIMEPANEKUPAIGA JA KURITEO LIIGI JÄRGI (1994–2001)"
    ],
    [
-    "TT84.PX",
-    "TT84: 15–34-AASTASED HÕIVATUD HÕIVATUTE RÜHMA, TÖÖSAAMISVIISI NING TÖÖ JA HARIDUSTASEME VASTAVUSE JÄRGI, 2016"
+    "JS01.PX",
+    "JS01: POLITSEIS REGISTREERITUD KURITEOD TOIMEPANEKU PAIGA JÄRGI (1995–2007)"
    ],
    [
-    "KU109.PX",
-    "KU109: TEATRITE ETENDUSED SIHTGRUPI JÄRGI"
+    "JS001.PX",
+    "JS001: REGISTREERITUD KURITEOD ASTME/LIIGI JÄRGI (2003–2021)"
    ],
    [
-    "NH01.PX",
-    "NH01: NOORED VANUSERÜHMA, SOO JA HALDUSÜKSUSE JÄRGI, 1. JAANUAR"
+    "JS009.PX",
+    "JS009: REGISTREERITUD KURITEOD ASTME/LIIGI JA MAAKONNA JÄRGI (2006–2021)"
    ],
    [
-    "LES39.PX",
-    "LES39: 15−34-AASTASED MITTETÖÖTAVAD NOORED, KES EI ÕPI EGA OSALE KOOLITUSEL (NEET-NOORED) VANUSERÜHMA JA ISIKUTE RÜHMA (SUGU, RAHVUS, HARIDUSTASE JM) JÄRGI"
-   ],
-   [
-    "NH10.PX",
-    "NH10: HUVIKOOLIS ÕPPIVAD NOORED VANUSERÜHMA, HUVIALA VALDKONNA JA ELUKOHA HALDUSÜKSUSE JÄRGI"
-   ],
-   [
-    "NH15.px",
-    "NH15: MADALA HARIDUSTASEMEGA NOORED SOO, VANUSERÜHMA, MAAKONNA JA ASUSTUSPIIRKONNA LIIGI JÄRGI, 1. JAANUAR"
-   ],
-   [
-    "NH16.px",
-    "NH16: 18-26-AASTASED MADALA HARIDUSTASEMEGA NOORED SOO JA HALDUSÜKSUSE JÄRGI, 1. JAANUAR"
-   ],
-   [
-    "TLN37.px",
-    "TLN37: 18-24-AASTASED ESIMESE TASEME VÕI MADALAMA HARIDUSEGA ÕPINGUID MITTEJÄTKAVAD TALLINNA NOORED"
-   ],
-   [
-    "LES37.PX",
-    "LES37: 18-24-AASTASED ESIMESE TASEME VÕI MADALAMA HARIDUSEGA ÕPINGUID MITTEJÄTKAVAD NOORED RAHVUSE JÄRGI (2000–2019)"
-   ],
-   [
-    "LES38.PX",
-    "LES38: 18-24-AASTASED ESIMESE TASEME VÕI MADALAMA HARIDUSEGA ÕPINGUID MITTEJÄTKAVAD NOORED KODAKONDSUSE JÄRGI (2000–2019)"
-   ],
-   [
-    "LES11.PX",
-    "LES11: 18−24-AASTASED ESIMESE TASEME VÕI MADALAMA HARIDUSEGA ÕPINGUID MITTEJÄTKAVAD NOORED ISIKUTE RÜHMA (SUGU, RAHVUS, KODAKONDSUS) JÄRGI"
-   ],
-   [
-    "KU206.PX",
-    "KU206: SPORDIKLUBID MAAKONNA JÄRGI (2003–2009)"
-   ],
-   [
-    "KU62.PX",
-    "KU62: RAHVAKULTUURI HARRASTAJAD MAAKONNA, TEGEVUSVALDKONNA JA EA JÄRGI"
-   ],
-   [
-    "KU18.PX",
-    "KU18: TALIOLÜMPIAALADEL TEGUTSEJAD SPORDIALA JA MAAKONNA JÄRGI (1995–2009)"
-   ],
-   [
-    "KU17.PX",
-    "KU17: SUVEOLÜMPIAALADEL TEGUTSEJAD SPORDIALA JA MAAKONNA JÄRGI (1995–2009)"
-   ],
-   [
-    "KU19.PX",
-    "KU19: ROK-I TUNNUSTATUD SPORDIALADEL (V.A OLÜMPIAALAD) TEGUTSEJAD SPORDIALA JA MAAKONNA JÄRGI (1995–2009)"
-   ],
-   [
-    "KU20.PX",
-    "KU20: ROK-I POOLT TUNNUSTAMATA SPORDIALADEL TEGUTSEJAD SPORDIALA JA MAAKONNA JÄRGI (1995–2009)"
-   ],
-   [
-    "SN10.PX",
-    "SN10: SÄÄSTVA ARENGU NÄITAJAD ÜRO EESMÄRKIDE PÕHJAL (2000-2021)"
-   ],
-   [
-    "SN11.px",
-    "SN11: SÄÄSTVA ARENGU NÄITAJAD ÜRO EESMÄRKIDE PÕHJAL"
+    "JS02.PX",
+    "JS02: POLITSEIS REGISTREERITUD KURITEOD TOIMEPANEKUPAIGA JA KURITEO LIIGI JÄRGI (2002–2007)"
    ]
   ],
-  "puudega lapsed": [],
-  "perekonnas hooldamine": [],
-  "huviharidus": [
+  "kuritegevus": [
    [
-    "RR302.PX",
-    "RR302: KOHALIKE EELARVETE PÕHITEGEVUSE KULUD JA INVESTEERIMISTEGEVUSE VÄLJAMINEKUD PIIRKONNA/HALDUSÜKSUSE JÄRGI"
+    "LER32.PX",
+    "LER32: LEIBKONNALIIKMETE ELURUUMIGA SEOTUD PROBLEEMID HÕIVESEISUNDI JÄRGI"
    ],
    [
-    "RR301.PX",
-    "RR301: KOHALIKE EELARVETE PÕHITEGEVUSE KULUD JA INVESTEERIMISTEGEVUSE VÄLJAMINEKUD PIIRKONNA/HALDUSÜKSUSE JÄRGI (2012–2017)"
-   ]
-  ],
-  "koolist väljalangenud": [],
-  "NEET": [
-   [
-    "LES39.PX",
-    "LES39: 15−34-AASTASED MITTETÖÖTAVAD NOORED, KES EI ÕPI EGA OSALE KOOLITUSEL (NEET-NOORED) VANUSERÜHMA JA ISIKUTE RÜHMA (SUGU, RAHVUS, HARIDUSTASE JM) JÄRGI"
+    "JS001.PX",
+    "JS001: REGISTREERITUD KURITEOD ASTME/LIIGI JÄRGI (2003–2021)"
    ],
    [
-    "NH24.PX",
-    "NH24: NEET-NOORTE OSATÄHTSUS 15-26-AASTASTE HULGAS SOO JÄRGI (2005-2024)"
+    "JS004.PX",
+    "JS004: KURITEOD KRIMINAALMENETLUSE LÕPETAMISE ALUSE JA KURITEO ASTME JÄRGI (2007–2016)"
    ],
    [
-    "VK11.px",
-    "VK11: KAUPADE EKSPORT JA IMPORT KAUBA (KN4) JA RIIGI JÄRGI (2018–2022, KUUD)"
+    "JS005.PX",
+    "JS005: ISIKUD KRIMINAALMENETLUSE LÕPETAMISE ALUSE JÄRGI (2006–2016)"
+   ],
+   [
+    "JS006.PX",
+    "JS006: KOHTUSSE SAADETUD ISIKUD MENETLUSLIIGI JÄRGI (2006–2016)"
+   ],
+   [
+    "JS007.PX",
+    "JS007: KOHTUSSE SAADETUD KURITEOD MENETLUSLIIGI JA KURITEO ASTME JÄRGI (2006–2016)"
+   ],
+   [
+    "JS008.PX",
+    "JS008: LÕPLIKU MENETLUSOTSUSEGA JA LAHENDATUD KURITEOD ASTME JÄRGI (2006–2016)"
+   ],
+   [
+    "JS009.PX",
+    "JS009: REGISTREERITUD KURITEOD ASTME/LIIGI JA MAAKONNA JÄRGI (2006–2021)"
+   ],
+   [
+    "JS01.PX",
+    "JS01: POLITSEIS REGISTREERITUD KURITEOD TOIMEPANEKU PAIGA JÄRGI (1995–2007)"
+   ],
+   [
+    "JS02.PX",
+    "JS02: POLITSEIS REGISTREERITUD KURITEOD TOIMEPANEKUPAIGA JA KURITEO LIIGI JÄRGI (2002–2007)"
+   ],
+   [
+    "JS022.PX",
+    "JS022: REGISTREERITUD KURITEOD TOIMEPANEKUPAIGA JA KURITEO LIIGI JÄRGI (1994–2001)"
+   ],
+   [
+    "JS03.PX",
+    "JS03: KURITEGUDES SÜÜDISTATAVAD KURITEO TOIMEPANEKU PAIGA JÄRGI (1994–2001)"
+   ],
+   [
+    "JS04.PX",
+    "JS04: REGISTREERITUD KURITEOD LIIGI JÄRGI (1995–2001)"
+   ],
+   [
+    "JS041.PX",
+    "JS041: POLITSEIS REGISTREERITUD KURITEOD LIIGI JÄRGI (1999–2007)"
+   ],
+   [
+    "JS05.PX",
+    "JS05: AVASTATUD KURITEOD LIIGI JÄRGI (1995–2001)"
+   ],
+   [
+    "JS050.PX",
+    "JS050: POLITSEIS AVASTATUD KURITEOD LIIGI JÄRGI (1999–2007)"
+   ],
+   [
+    "JS055.PX",
+    "JS055: POLITSEIS AVASTATUD KURITEOD ASTME JÄRGI (1995–2007)"
+   ],
+   [
+    "JS06.PX",
+    "JS06: EELUURIMISE PEATAMISE MÄÄR KURITEO LIIGI JÄRGI (1995–2001)"
+   ],
+   [
+    "JS060.PX",
+    "JS060: EELUURIMISE PEATAMISE MÄÄR KURITEO ASTME JÄRGI (1995–2001)"
+   ],
+   [
+    "JS07.PX",
+    "JS07: KURITEGUDES SÜÜDISTATAVAD (1995–2004)"
+   ],
+   [
+    "JS070.PX",
+    "JS070: KURITEGUDES SÜÜDISTATAVAD SOO JÄRGI (1995–2004)"
+   ],
+   [
+    "JS075.PX",
+    "JS075: AVASTATUD KURITEGUDES SÜÜDISTATAVAD KURITEO TOIMEPANEKU PAIGA JÄRGI (1995–2001)"
+   ],
+   [
+    "JS08.PX",
+    "JS08: PÕHIKARISTUSE OSATÄHTSUS KARISTUSE LIIGI JÄRGI (1995–2004)"
+   ],
+   [
+    "JS080.PX",
+    "JS080: ALAEALISTE PÕHIKARISTUSE OSATÄHTSUS KARISTUSE LIIGI JÄRGI (1995–2003)"
+   ],
+   [
+    "JS09.PX",
+    "JS09: JÕUSTUNUD KOHTUOTSUSEGA SÜÜDIMÕISTETUD (1995–2004)"
+   ],
+   [
+    "JS090.PX",
+    "JS090: JÕUSTUNUD KOHTUOTSUSEGA SÜÜDIMÕISTETUD SOO JÄRGI (1995–2004)"
+   ],
+   [
+    "JS091.PX",
+    "JS091: JÕUSTUNUD KOHTUOTSUSEGA SÜÜDIMÕISTETUD KURITEO LIIGI JA KARISTUSE JÄRGI (1998–2003)"
+   ],
+   [
+    "JS092.PX",
+    "JS092: JÕUSTUNUD KOHTUOTSUSEGA ALAEALISED SÜÜDIMÕISTETUD KURITEO LIIGI JA KARISTUSE JÄRGI (1998–2004)"
+   ],
+   [
+    "JS101.PX",
+    "JS101: KURITEGUDE ARV 10000 ELANIKU KOHTA MAAKONNA JÄRGI (1993–2004)"
+   ],
+   [
+    "JS103.PX",
+    "JS103: KURITEGUDE TÕTTU HUKKUNUD KURITEO TOIMEPANEKU PAIGA JÄRGI (1993–2004)"
    ]
   ]
+ },
+ "justdigi": {
+  "https://statistika.justdigi.ee/kuritegevuse-statistika/uldine-statistika/kuriteod-10-000-inimese-kohta-maakondades": {
+   "len": 24430,
+   "urls": [
+    "#main-content",
+    "/",
+    "//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap",
+    "/cdn-cgi/l/email-protection#670e090108270d121413030e000e490202",
+    "/cdn-cgi/l/email-protection#f49d9a929bb49e818780da9191",
+    "/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+    "/core/assets/vendor/jquery/jquery.min.js?v=3.7.1",
+    "/core/assets/vendor/once/once.min.js?v=1.0.1",
+    "/core/misc/drupal.init.js?v=10.4.7",
+    "/core/misc/drupal.js?v=10.4.7",
+    "/core/misc/drupalSettingsLoader.js?v=10.4.7",
+    "/core/themes/stable9/css/filter/filter.caption.css?tormop",
+    "/core/themes/stable9/css/media/filter.caption.css?tormop",
+    "/core/themes/stable9/css/system/components/align.module.css?tormop",
+    "/core/themes/stable9/css/system/components/clearfix.module.css?tormop",
+    "/core/themes/stable9/css/system/components/container-inline.module.css?tormop",
+    "/core/themes/stable9/css/system/components/details.module.css?tormop",
+    "/core/themes/stable9/css/system/components/fieldgroup.module.css?tormop",
+    "/core/themes/stable9/css/system/components/hidden.module.css?tormop",
+    "/core/themes/stable9/css/system/components/item-list.module.css?tormop",
+    "/core/themes/stable9/css/system/components/js.module.css?tormop",
+    "/core/themes/stable9/css/system/components/nowrap.module.css?tormop",
+    "/core/themes/stable9/css/system/components/position-container.module.css?tormop",
+    "/core/themes/stable9/css/system/components/reset-appearance.module.css?tormop",
+    "/core/themes/stable9/css/system/components/resize.module.css?tormop",
+    "/core/themes/stable9/css/system/components/system-status-counter.css?tormop",
+    "/core/themes/stable9/css/system/components/system-status-report-counters.css?tormop",
+    "/core/themes/stable9/css/system/components/system-status-report-general-info.css?tormop",
+    "/core/themes/stable9/css/system/components/tablesort.module.css?tormop",
+    "/en/crime-statistics/overall-statistics/crimes-10-000-people-counties",
+    "/kuritegevuse-statistika",
+    "/kuritegevuse-statistika#uldine-statistika",
+    "/kuritegevuse-statistika/uldine-statistika/kuriteod-10-000-inimese-kohta-maakondades",
+    "/libraries/chosen/chosen.css?tormop",
+    "/libraries/chosen/chosen.min.js?v=3.0.0",
+    "/ligipaasetavuse-teatis",
+    "/modules/contrib/chosen/css/chosen-drupal.css?tormop",
+    "/modules/contrib/chosen/js/chosen.js?tormop",
+    "/modules/contrib/entity_embed/css/entity_embed.filter.caption.css?tormop",
+    "/modules/contrib/matomo/js/matomo.js?v=10.4.7",
+    "/modules/contrib/paragraphs/css/paragraphs.unpublished.css?tormop",
+    "/ohvriuuring",
+    "/otsing?field_tags%5B47%5D=47",
+    "/sites/default/files/2024-06/jm-et.svg",
+    "/sites/default/files/2026-02/Registreeritud%20kuritegude%20arv%2010000%20inimese%20kohta%20maakondades_3.csv",
+    "/sites/default/files/favicon.png",
+    "/sites/default/files/languages/et_IEoSXCoqAVBlG959lk15KER7mOUA0jx-LrN4t1B30-k.js?tormop",
+    "/themes/custom/jmstat/css/components/branding.css?tormop",
+    "/themes/custom/jmstat/css/components/breadcrumb.css?tormop",
+    "/themes/custom/jmstat/css/components/charts.css?tormop",
+    "/themes/custom/jmstat/css/components/forms.css?tormop",
+    "/themes/custom/jmstat/css/components/hamburger.css?tormop",
+    "/themes/custom/jmstat/css/components/language.css?tormop",
+    "/themes/custom/jmstat/css/components/lists.css?tormop",
+    "/themes/custom/jmstat/css/components/menu.css?tormop",
+    "/themes/custom/jmstat/css/components/messages.css?tormop",
+    "/themes/custom/jmstat/css/components/modal.css?tormop",
+    "/themes/custom/jmstat/css/components/pager.css?tormop",
+    "/themes/custom/jmstat/css/components/search.css?tormop",
+    "/themes/custom/jmstat/css/components/tables.css?tormop",
+    "/themes/custom/jmstat/css/components/throbber.css?tormop",
+    "/themes/custom/jmstat/css/components/ui-components.css?tormop",
+    "/themes/custom/jmstat/css/footer.css?tormop",
+    "/themes/custom/jmstat/css/global-layout.css?tormop",
+    "/themes/custom/jmstat/css/header.css?tormop",
+    "/themes/custom/jmstat/css/main.css?tormop",
+    "/themes/custom/jmstat/css/print.css?tormop",
+    "/themes/custom/jmstat/css/vars.css?tormop",
+    "/themes/custom/jmstat/js/charts.min.js?v=10.4.7",
+    "/themes/custom/jmstat/js/chosen-options.js?tormop",
+    "/themes/custom/jmstat/js/main.js?v=10.4.7",
+    "/themes/custom/jmstat/js/map.js?v=10.4.7",
+    "/themes/custom/jmstat/js/vendor/MorphSVGPlugin.min.js?v=10.4.7",
+    "/themes/custom/jmstat/js/vendor/ScrollTrigger.min.js?v=10.4.7",
+    "/themes/custom/jmstat/js/vendor/d3.v7.min.js?v=10.4.7",
+    "/themes/custom/jmstat/js/vendor/gsap.min.js?v=10.4.7",
+    "/themes/custom/jmstat/logo.svg",
+    "/ulevaade-lobikohtumised?year%5B0%5D=2025&amp;quarter%5B0%5D=III&amp;body=&amp;items_per_page=10",
+    "https://app.recommy.com/SI/SIR.aspx?tid=5QgY",
+    "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+    "https://statistika.justdigi.ee/en/crime-statistics/overall-statistics/crimes-10-000-people-counties",
+    "https://statistika.justdigi.ee/kuritegevuse-statistika/uldine-statistika/kuriteod-10-000-inimese-kohta-maakondades",
+    "https://statistika.justdigi.ee/node/28"
+   ],
+   "api": [
+    "//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap",
+    "/sites/default/files/2026-02/Registreeritud%20kuritegude%20arv%2010000%20inimese%20kohta%20maakondades_3.csv"
+   ],
+   "head": "<!DOCTYPE html>\n<html lang=\"et\" dir=\"ltr\">\n  <head>\n    <meta charset=\"utf-8\" />\n<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>\n</noscript><script>var _paq = _paq || [];(function(){var u=((\"https:\" == document.location.protocol) ? \"https://statistika.rik.ee/\" : \"http://statistika.rik.ee/\");_paq.push([\"setSiteId\", \"41\"]);_paq.push([\"setTrackerUrl\", u+\"matomo.php\"]);_paq.push([\"setDoNotTrack\", 1]);_paq.push([\"disableCookies\"]);if (!window.matomo_search_results_active) {_paq.push([\"trackPageView\"]);}_paq.push([\"setIgnoreClasses\", [\"no-tracking\",\"colorbox\"]]);_paq.push([\"enableLinkTracking\"]);var d=document,g=d.createElement(\"script\"),s=d.getElementsByTagName(\"script\")[0];g.type=\"text/javascript\";g.defer=true;g.async=true;g.src=u+\"matomo.js\";s.parentNode.insertBefore(g,s);})();</script>\n<meta name=\"Generator\" content=\"Drupal 10 (https://www.drupal.org)\" />\n<meta name=\"MobileOptimized\" content=\"width\" />\n<meta name=\"HandheldFriendly\" content=\"true\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n<link rel=\"icon\" href=\"/sites/default/files/favicon.png\" type=\"image/png\" />\n<link rel=\"alternate\" hreflang=\"et\" href=\"https://statistika.justdigi.ee/kuritegevuse-statistika/uldine-statistika/kuriteod-10-000-inimese-kohta-maakondades\" />\n<link rel=\"alternate\" hreflang=\"en\" href=\"https://statistika.justdigi.ee/en/crime-statistics/overall-statistics/crimes-10-000-people-counties\" />\n<link rel=\"canonical\" href=\"https://statistika.justdigi.ee/kuritegevuse-statistika/uldine-statistika/kuriteod-10-000-inimese-kohta-maakondades\" />\n<link rel=\"shortlink\" href=\"https://statistika.justdigi.ee/node/28\" />\n\n    <title>Kuriteod 10 000 inimese kohta maakondades | Justiitsandmete statistika</title>\n    <link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/system/components/align.module.css?tormop\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/system/components/fieldgroup.module.css?tormop\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/system/components/container-inline.module.css?tormop\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/system/components/clearfix.module.css?tormop\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/system/components/details.module.css?tormop\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/system/components/hidden.module.css?tormop\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/system/components/item-list.module.css?tormop\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/system/components/js.module.css?tormop\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/system/components/nowrap.module.css?tormop\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/system/components/position-container.module.css?tormop\" />\n<link rel=\"stylesheet\" media=\"all\" href=\"/core/themes/stable9/css/"
+  },
+  "https://statistika.justdigi.ee/robots.txt": {
+   "len": 2027,
+   "urls": [],
+   "api": [],
+   "head": "#\n# robots.txt\n#\n# This file is to prevent the crawling and indexing of certain parts\n# of your site by web crawlers and spiders run by sites like Yahoo!\n# and Google. By telling these \"robots\" where not to go on your site,\n# you save bandwidth and server resources.\n#\n# This file will be ignored unless it is at the root of your host:\n# Used:    http://example.com/robots.txt\n# Ignored: http://example.com/site/robots.txt\n#\n# For more information about the robots.txt standard, see:\n# http://www.robotstxt.org/robotstxt.html\n\nUser-agent: *\n# CSS, JS, Images\nAllow: /core/*.css$\nAllow: /core/*.css?\nAllow: /core/*.js$\nAllow: /core/*.js?\nAllow: /core/*.gif\nAllow: /core/*.jpg\nAllow: /core/*.jpeg\nAllow: /core/*.png\nAllow: /core/*.svg\nAllow: /profiles/*.css$\nAllow: /profiles/*.css?\nAllow: /profiles/*.js$\nAllow: /profiles/*.js?\nAllow: /profiles/*.gif\nAllow: /profiles/*.jpg\nAllow: /profiles/*.jpeg\nAllow: /profiles/*.png\nAllow: /profiles/*.svg\n# Directories\nDisallow: /core/\nDisallow: /profiles/\n# Files\nDisallow: /README.md\nDisallow: /composer/Metapackage/README.txt\nDisallow: /composer/Plugin/ProjectMessage/README.md\nDisallow: /composer/Plugin/Scaffold/README.md\nDisallow: /composer/Plugin/VendorHardening/README.txt\nDisallow: /composer/Template/README.txt\nDisallow: /modules/README.txt\nDisallow: /sites/README.txt\nDisallow: /themes/README.txt\nDisallow: /web.config\n# Paths (clean URLs)\nDisallow: /admin/\nDisallow: /comment/reply/\nDisallow: /filter/tips\nDisallow: /node/add/\nDisallow: /search/\nDisallow: /user/register\nDisallow: /user/password\nDisallow: /user/login\nDisallow: /user/logout\nDisallow: /media/oembed\nDisallow: /*/media/oembed\n# Paths (no clean URLs)\nDisallow: /index.php/admin/\nDisallow: /index.php/comment/reply/\nDisallow: /index.php/filter/tips\nDisallow: /index.php/node/add/\nDisallow: /index.php/search/\nDisallow: /index.php/user/password\nDisallow: /index.php/user/register\nDisallow: /index.php/user/login\nDisallow: /index.php/user/logout\nDisallow: /index.php/media/oembed\nDisallow: /index.php/*/media/oembed\n"
+  }
  }
 }
